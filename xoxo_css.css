@@ -1447,7 +1447,7 @@ min-width:0;
 }
 
 .afcred {
-font-size:11px;
+font-size:12px;
 line-height:130%;
 text-align:justify;
 overflow:auto;
@@ -1980,7 +1980,7 @@ color:var(--color1);
 
 .ms-soft-title {
 font-family:var(--fuente1);
-font-size:11px;
+font-size:12px;
 font-weight:900;
 text-transform:uppercase;
 letter-spacing:2px;
@@ -2731,7 +2731,7 @@ justify-content:center;
 background:var(--fondo2);
 border:var(--borde2);
 font-family:var(--fuente1);
-font-size:11px;
+font-size:12px;
 font-weight:900;
 letter-spacing:2px;
 text-transform:uppercase;
@@ -2935,7 +2935,7 @@ margin-bottom:5px;
 .ms-bottom-text span {
 display:block;
 font-family:var(--fuente1);
-font-size:11px;
+font-size:12px;
 line-height:130%;
 text-align:justify;
 color:var(--textobase);
@@ -3186,7 +3186,7 @@ color:var(--textobase);
 display:flex;
 align-items:center;
 padding-left:15px;
-font-size:11px;
+font-size:12px;
 line-height:100%;
 }
 
@@ -3213,7 +3213,7 @@ color:var(--textobase);
 }
 
 .post-contenido {
-  width: 100%;
+  width: 95%;
     margin: 0;
     padding: 0px;
     box-sizing: border-box;
@@ -4724,7 +4724,7 @@ max-width:100%;
 
 .pb-control label {
 font-family:var(--fuente1);
-font-size:11px;
+font-size:12px;
 line-height:150%;
 color:var(--textobase);
 }
@@ -4734,7 +4734,7 @@ display:inline-flex;
 align-items:center;
 gap:4px;
 margin:3px 8px 3px 0;
-font-size:11px;
+font-size:12px;
 }
 
 .pb-editor-grid {
@@ -5107,7 +5107,7 @@ background:var(--fondo2);
 border:var(--borde2);
 padding:12px!important;
 font-family:var(--fuente1);
-font-size:11px;
+font-size:12px;
 font-weight:900;
 text-transform:uppercase;
 letter-spacing:1px;
@@ -5384,7 +5384,7 @@ color:var(--color1);
 display:block;
 padding:15px;
 font-family:monospace;
-font-size:11px;
+font-size:12px;
 line-height:145%;
 color:var(--textobase);
 white-space:pre-wrap;
@@ -5675,7 +5675,7 @@ margin-top:10px;
 background:rgba(255,255,255,.025);
 padding-top:9px;
 padding-bottom:9px;
-font-size:10px;
+font-size:12px;
 }
 
 .xoxoadmin-tab {
@@ -5684,7 +5684,7 @@ margin:10px 0 0 22px;
 padding:10px 13px;
 background:rgba(255,255,255,.025);
 border-left:3px solid var(--color1);
-font-size:11px;
+font-size:12px;
 line-height:145%;
 text-align:justify;
 color:var(--xadm-muted);
@@ -6661,7 +6661,7 @@ margin-top:14px;
 background:rgba(204,186,217,.09);
 border:var(--borde2);
 padding:16px;
-font-size:11px;
+font-size:12px;
 line-height:155%;
 text-align:justify;
 color:var(--gb-soft);
@@ -6832,7 +6832,7 @@ color:var(--color1);
 
 .xgb-alt-text {
 margin-top:13px;
-font-size:11px;
+font-size:12px;
 line-height:155%;
 text-align:justify;
 color:var(--gb-text);
@@ -6875,7 +6875,7 @@ margin:0 0 9px;
 padding:11px 13px 11px 42px;
 background:var(--gb-bg2);
 border:var(--borde2);
-font-size:11px;
+font-size:12px;
 line-height:145%;
 text-align:justify;
 color:var(--gb-text);
@@ -7043,7 +7043,7 @@ margin:35px auto;
 background:var(--xf-bg);
 border:var(--borde2);
 font-family:var(--fuente1);
-font-size:11px;
+font-size:12px;
 line-height:150%;
 color:var(--xf-text);
 position:relative;
@@ -7379,7 +7379,7 @@ color:var(--xf-text);
 background:var(--xf-bg-dark);
 border:var(--borde2);
 padding:15px;
-font-size:11px;
+font-size:12px;
 line-height:155%;
 text-align:justify;
 color:var(--xf-text);
@@ -7429,7 +7429,7 @@ margin:18px 0;
 padding:16px;
 background:var(--xf-bg-dark);
 border:var(--borde2);
-font-size:11px;
+font-size:12px;
 line-height:155%;
 text-align:center;
 color:var(--xf-muted);
@@ -7621,7 +7621,7 @@ margin-top:14px;
 background:var(--xf-bg-dark);
 border:var(--borde2);
 padding:18px;
-font-size:11px;
+font-size:12px;
 line-height:160%;
 text-align:justify;
 color:var(--xf-text);
