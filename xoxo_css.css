@@ -1507,6 +1507,7 @@ color:var(--textobase);
 
 .ps-poss-card span {
 display:block;
+width:100%;
 font-size:11px;
 line-height:135%;
 text-align:left;
@@ -1516,6 +1517,8 @@ max-height:45px;
 overflow:auto;
 padding-right:4px;
 box-sizing:border-box;
+word-break:normal;
+overflow-wrap:break-word;
 }
 
 .ps-poss-card:hover span {
@@ -1537,13 +1540,18 @@ gap:12px 16px;
 overflow:auto;
 }
 
-.ps-medals-scroll br {
-display:none!important;
+.ps-medals-scroll br,
+.ps-medals-scroll div,
+.ps-medals-scroll center,
+.ps-medals-scroll p {
+display:contents!important;
 }
 
 .ps-medals-scroll img {
-width:50px;
-height:50px;
+width:50px!important;
+height:50px!important;
+max-width:none!important;
+max-height:none!important;
 object-fit:cover;
 display:block;
 border:var(--borde2);
