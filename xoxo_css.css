@@ -3076,8 +3076,8 @@ object-position:center;
 }
 
 .perfilt:hover .perfilt-avatar img {
-opacity:0.3;
-transform:scale(1.1);
+opacity:0.25;
+transform:scale(1.08);
 filter:blur(2px);
 transition:0.4s;
 }
@@ -3099,22 +3099,76 @@ transition:0.4s;
 left:0;
 }
 
+/* CONTENIDO INTERNO DEL PERFIL */
+
 .pto-dentro {
-padding:30px;
+padding:26px 30px;
 display:flex;
 height:100%;
 box-sizing:border-box;
 flex-direction:column;
+justify-content:flex-start;
+align-items:stretch;
+gap:0;
+overflow:hidden;
 }
 
+/* ICONO PERSONALIZADO 80x80 */
+
+.pto-icono {
+width:80px;
+height:80px;
+margin:0 auto 12px;
+background:rgba(255,255,255,.75);
+border:var(--borde2);
+display:flex;
+align-items:center;
+justify-content:center;
+overflow:hidden;
+flex:0 0 80px;
+}
+
+.pto-icono img {
+width:80px;
+height:80px;
+display:block;
+object-fit:cover;
+object-position:center;
+filter:grayscale(1) contrast(1.05);
+}
+
+/* FRASE PERSONALIZADA BAJO EL ICONO */
+
+.pto-frase {
+width:100%;
+margin:0 auto 18px;
+padding:0 7px;
+box-sizing:border-box;
+font-size:9px;
+line-height:135%;
+font-style:italic;
+font-weight:600;
+text-align:justify;
+color:var(--textobase);
+opacity:.95;
+}
+
+/* CAMPOS DEL PERFIL MÁS JUNTOS */
+
 .campo-p {
-height:100%;
+height:auto;
+min-height:46px;
+flex:0 0 auto;
 border-bottom:var(--borde2);
 display:flex;
 align-items:center;
 justify-content:space-between;
+gap:15px;
 font-size:13px;
+line-height:120%;
 font-style:italic;
+padding:8px 0;
+box-sizing:border-box;
 }
 
 .campo-p:last-of-type {
@@ -3123,6 +3177,8 @@ border:none;
 
 .campp-label {
 font-size:0;
+flex:0 0 auto;
+max-width:120px;
 }
 
 .campp-label span.label span {
@@ -3133,6 +3189,8 @@ color:#d7d7d7!important;
 padding:3px;
 position:relative;
 font-style:normal;
+line-height:100%;
+display:inline-block;
 }
 
 .campp-label span.label span:after {
@@ -3144,6 +3202,25 @@ bottom:-5px;
 left:0;
 background:var(--grupo-color);
 border-radius:3px;
+}
+
+.campo-p .field_uneditable,
+.campo-p .field_editable,
+.campo-p > span:not(.campp-label),
+.campo-p > div:not(.campp-label) {
+flex:1 1 auto;
+min-width:0;
+text-align:right;
+font-size:13px;
+line-height:120%;
+font-style:italic;
+color:var(--textobase);
+}
+
+/* Oculta los campos originales Icono y Frase después de que el JS los copie arriba */
+
+.campo-p.pto-hide-field {
+display:none!important;
 }
 
 .post-post {
