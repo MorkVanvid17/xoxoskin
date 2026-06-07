@@ -5394,11 +5394,12 @@ background:rgba(255,255,255,.06)!important;
 opacity:1;
 }
 
-/* Icono interno del botón */
+/* Icono interno del botón: conserva el sprite original de ForoActivo */
+
 .sceditor-button div,
 .pb-wrap .sceditor-button div {
-width:20px!important;
-height:20px!important;
+width:16px!important;
+height:16px!important;
 
 display:block!important;
 
@@ -5408,9 +5409,9 @@ padding:0!important;
 float:none!important;
 
 background-repeat:no-repeat!important;
-background-position:center center!important;
+/* NO tocar background-position: cada botón lo necesita para mostrar su icono correcto */
 
-line-height:20px!important;
+line-height:16px!important;
 box-sizing:border-box!important;
 }
 
