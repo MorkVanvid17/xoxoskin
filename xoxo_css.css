@@ -1875,23 +1875,20 @@ Así deja de verse más angosto que el marco general.
 */
 
 .ms-tablon {
-width:calc(100% + 30px);
+width:100%;
 max-width:none;
 height:620px;
-
-margin:0 -15px 35px;
-
+margin:0 auto 35px;
 background:var(--fondo2);
 border:var(--borde2);
 color:var(--textobase);
 font-family:var(--fuente1);
-
 position:relative;
 overflow:hidden;
-
 display:grid;
 grid-template-rows:82px 1fr 95px;
 isolation:isolate;
+box-sizing:border-box;
 }
 
 .ms-tablon:before {
