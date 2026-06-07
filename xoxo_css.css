@@ -1193,7 +1193,7 @@ position:relative;
 z-index:2;
 }
 
-/**** COLUMNA AVATAR ****/
+/**** AVATAR ****/
 
 .ps-left {
 border-right:var(--borde2);
@@ -1241,7 +1241,7 @@ display:block;
 filter:grayscale(1) contrast(1.05);
 }
 
-/**** COLUMNA PRINCIPAL ****/
+/**** CUERPO ****/
 
 .ps-main {
 padding:22px;
@@ -1297,7 +1297,7 @@ line-height:100%;
 color:var(--grupo-color);
 }
 
-/**** CAMPOS AGRUPADOS EN UNA SOLA CAJA ****/
+/**** EXPEDIENTE ****/
 
 .ps-fields-box {
 grid-column:1 / 2;
@@ -1317,9 +1317,9 @@ align-content:start;
 .pscfield {
 background:var(--fondo3);
 border:var(--borde2);
-min-height:62px;
+min-height:58px;
 box-sizing:border-box;
-padding:11px 12px;
+padding:10px 12px;
 display:flex;
 flex-direction:column;
 justify-content:center;
@@ -1366,12 +1366,7 @@ font-style:italic;
 color:var(--textobase);
 }
 
-/**** CONTENIDOS DINÁMICOS ****/
-
-.ps-dyn-content {
-padding:16px;
-box-sizing:border-box;
-}
+/**** VACÍO ****/
 
 .ps-empty {
 background:var(--fondo3);
@@ -1393,40 +1388,28 @@ opacity:.65;
 grid-column:2 / 3;
 }
 
-.ps-poss-grid {
+.ps-poss-content {
+padding:16px;
 display:flex;
 flex-direction:column;
 gap:8px;
 }
 
-.ps-poss-card {
+.ps-poss-content > div {
 background:var(--fondo3);
 border:var(--borde2);
-min-height:62px;
-display:grid;
-grid-template-columns:42px 1fr;
-gap:12px;
-align-items:center;
-padding:10px 12px;
+min-height:58px;
+padding:11px 13px;
 box-sizing:border-box;
+font-size:11px;
+line-height:135%;
+text-align:justify;
+color:var(--textobase);
 }
 
-.ps-poss-card em {
-width:34px;
-height:34px;
-display:flex;
-align-items:center;
-justify-content:center;
-background:var(--fondo2);
-border:var(--borde2);
-font-size:17px;
-line-height:100%;
-color:var(--grupo-color);
-font-style:normal;
-}
-
-.ps-poss-card b {
+.ps-poss-content > div b {
 display:block;
+margin-bottom:7px;
 font-size:10px;
 font-weight:900;
 line-height:100%;
@@ -1435,80 +1418,103 @@ text-transform:uppercase;
 color:var(--textobase);
 }
 
-.ps-poss-card span {
-display:block;
-margin-top:5px;
-font-size:11px;
-line-height:130%;
-text-align:justify;
-color:var(--textobase);
-opacity:.85;
+.ps-poss-content > div b:before {
+content:"✦ ";
+color:var(--grupo-color);
 }
 
-/**** TELÉFONO / MENCIONES ****/
+/**** GOSSIP GIRL / MINI FEED ****/
 
-.ps-phone-box {
+.ps-gossip-box {
 grid-column:1 / 2;
 }
 
-.ps-phone-grid {
-display:grid;
-grid-template-columns:repeat(3, 1fr);
+.ps-gossip-content {
+padding:16px;
+}
+
+.ps-gossip-feed {
+height:185px;
+overflow:auto;
+padding-right:6px;
+display:flex;
+flex-direction:column;
 gap:10px;
 }
 
-.ps-phone-card {
-min-height:132px;
-background:var(--fondo3);
+.ps-gossip-feed > div {
+background:linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,.015));
 border:var(--borde2);
-border-radius:14px 14px 0 0;
+border-radius:18px 18px 8px 8px;
 overflow:hidden;
-text-align:center;
-display:flex;
-flex-direction:column;
-justify-content:center;
 position:relative;
 }
 
-.ps-phone-head {
+.ps-gossip-feed > div:before {
+content:"";
 position:absolute;
-top:0;
 left:0;
 right:0;
-height:30px;
+top:0;
+height:3px;
+background:var(--gradient1);
+opacity:.9;
+}
+
+.ps-gossip-feed > div b {
 display:flex;
 align-items:center;
-justify-content:center;
+justify-content:space-between;
+min-height:30px;
+padding:0 13px;
 background:var(--fondo2);
 border-bottom:var(--borde2);
 font-size:8px;
 font-weight:900;
 line-height:100%;
-letter-spacing:1px;
+letter-spacing:2px;
 text-transform:uppercase;
 color:var(--grupo-color);
 }
 
-.ps-phone-card strong {
-display:block;
-font-size:29px;
-line-height:100%;
-font-weight:900;
-color:var(--textobase);
-margin-top:18px;
-}
-
-.ps-phone-card span {
-display:block;
-margin:8px auto 0;
-width:80%;
+.ps-gossip-feed > div b:before {
+content:"xoxo";
+margin-right:8px;
 font-size:8px;
-font-weight:800;
-line-height:130%;
-letter-spacing:1px;
+font-weight:900;
+letter-spacing:2px;
 text-transform:uppercase;
 color:var(--textobase);
 opacity:.75;
+}
+
+.ps-gossip-feed > div span {
+display:block;
+padding:13px;
+font-size:10px;
+line-height:150%;
+text-align:justify;
+color:var(--textobase);
+}
+
+.ps-gossip-feed > div span:before {
+content:"“";
+font-family:var(--fuente2);
+font-size:24px;
+line-height:0;
+color:var(--grupo-color);
+margin-right:4px;
+vertical-align:-7px;
+}
+
+.ps-gossip-feed > div span:after {
+content:"”";
+font-family:var(--fuente2);
+font-size:20px;
+line-height:0;
+color:var(--grupo-color);
+margin-left:4px;
+vertical-align:-6px;
 }
 
 /**** MEDALLERO ****/
@@ -1518,7 +1524,8 @@ grid-column:2 / 3;
 }
 
 .ps-medals-scroll {
-height:132px;
+height:185px;
+padding:16px;
 box-sizing:border-box;
 display:flex;
 flex-wrap:wrap;
@@ -1544,7 +1551,7 @@ filter:grayscale(0);
 opacity:1;
 }
 
-/**** BOTONES DE CONTACTO ****/
+/**** CONTACTO ****/
 
 .ps-ccon {
 border-left:var(--borde2);
@@ -1583,7 +1590,6 @@ max-width:22px;
 max-height:22px;
 object-fit:contain;
 }
-
 /**** SPOILER , CODE , QUOTE , HIDE ****/
 
 dl.codebox.hidecode {
