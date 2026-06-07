@@ -1,5 +1,3 @@
-
-
 :root {
   --imagen-fondo:url(https://i.imgur.com/Zx61S0K.jpeg);
   --imagen-logo: url(https://i.imgur.com/f3PkI1Y.png);  
@@ -1340,12 +1338,24 @@ blockquote div {
 
 
 /**** AFILIADOS ****/
+
+#footer,
+#footer * {
+box-sizing:border-box;
+}
+
+/*
+El footer debe usar el mismo ancho visual que #wrap.
+Antes estaba en 1180px o en calc(100% - 30px), por eso se veía cortado.
+*/
+
 #footer {
-width:calc(100% - 30px);
-max-width:1180px;
+width:1280px;
+max-width:calc(100vw - 30px);
+margin:35px auto;
 background:var(--fondo2);
 border:var(--borde2);
-font-family:var(--fuente1), sans-serif;
+font-family:var(--fuente1);
 color:var(--textobase);
 overflow:hidden;
 }
@@ -1359,6 +1369,7 @@ padding:5px;
 display:flex;
 justify-content:space-between;
 flex-wrap:wrap;
+gap:0;
 }
 
 #grupos-footer:empty {
@@ -1368,7 +1379,7 @@ display:none;
 #grupos-footer a.grupoforo {
 border:var(--borde2);
 padding:18px;
-flex:1;
+flex:1 1 200px;
 margin:5px;
 height:20px;
 display:flex;
@@ -1392,6 +1403,7 @@ display:grid;
 grid-template-columns:330px 250px 1fr;
 background:var(--fondo3);
 border-bottom:var(--borde2);
+min-width:0;
 }
 
 .af1 {
@@ -1401,6 +1413,7 @@ display:grid;
 grid-template-rows:55px 1fr;
 gap:10px;
 min-width:0;
+overflow:hidden;
 }
 
 .afnecro {
@@ -1411,6 +1424,7 @@ align-items:center;
 background:var(--fondo2);
 border:var(--borde2);
 padding:5px;
+min-width:0;
 }
 
 .afnecro img {
@@ -1430,6 +1444,7 @@ letter-spacing:1px;
 line-height:120%;
 text-transform:uppercase;
 color:var(--color1);
+min-width:0;
 }
 
 .afcred {
@@ -1510,12 +1525,15 @@ filter:grayscale(0);
 opacity:1;
 }
 
+/**** FOOTER NAVBAR FOROACTIVO ****/
+
 #fanavbar {
 height:40px;
 background:var(--fondo3);
 display:flex;
 align-items:center;
 justify-content:center;
+border-top:0;
 }
 
 #fanavbar ul.linklist {
@@ -1544,8 +1562,8 @@ display:none;
 }
 
 #fadmin {
-width:calc(100% - 30px);
-max-width:1180px;
+width:1280px;
+max-width:calc(100vw - 30px);
 margin:0 auto 25px;
 justify-content:center;
 font-size:10px;
@@ -1745,35 +1763,36 @@ background: var(--gradient1);
 
 .realfoot2 {
 width:calc(100% + 30px);
-  max-width:none;
-    height: 40px;
-    background: var(--fondo3);
-    border-top: var(--borde2);
-    margin-bottom: 15px;
-    margin-left: -15px;
-    position: relative;
+height:40px;
+background:var(--fondo3);
+border-top:var(--borde2);
+margin:0 -15px 15px;
+position:relative;
+box-sizing:border-box;
 }
 
 .realfoot2 ul.linklist {
-    width: 100%;
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    text-transform: uppercase;
-    font-size: 9px;
-    font-weight: 700;
-    color: var(--color1);
+width:100%;
+display:flex!important;
+align-items:center;
+justify-content:center;
+height:100%;
+text-transform:uppercase;
+font-size:9px;
+font-weight:700;
+color:var(--color1);
+margin:0!important;
+padding:0!important;
 }
 
 .realfoot2 li.footer-home {
-    display: none;
+display:none;
 }
 
 .realfoot2 ul.linklist a {
-    color: var(--textobase);
-    font-weight: normal;
-    margin: 10px;
+color:var(--textobase);
+font-weight:normal;
+margin:10px;
 }
 
 /** LEYENDA AUTOMATICA **/
@@ -1849,17 +1868,27 @@ scrollbar-width:thin;
 scrollbar-color:var(--color1) transparent;
 }
 
+/*
+El tablón ahora ocupa todo el ancho útil visual del wrap.
+Como está dentro de #wrap, se expande hacia los bordes usando márgenes negativos.
+Así deja de verse más angosto que el marco general.
+*/
+
 .ms-tablon {
-width:1180px;
-max-width:1180px;
+width:calc(100% + 30px);
+max-width:none;
 height:620px;
-margin:0 auto 35px;
+
+margin:0 -15px 35px;
+
 background:var(--fondo2);
 border:var(--borde2);
 color:var(--textobase);
 font-family:var(--fuente1);
+
 position:relative;
 overflow:hidden;
+
 display:grid;
 grid-template-rows:82px 1fr 95px;
 isolation:isolate;
@@ -1952,7 +1981,6 @@ letter-spacing:2px;
 color:var(--color1);
 line-height:100%;
 }
-
 /**** CABECERA DEL TABLÓN ****/
 
 .ms-top {
@@ -1961,6 +1989,7 @@ grid-template-columns:290px 1fr 82px;
 border-bottom:var(--borde2);
 background:var(--fondo3);
 min-height:0;
+overflow:hidden;
 }
 
 .ms-brand {
@@ -1983,6 +2012,7 @@ justify-content:center;
 background:var(--fondo2);
 font-size:22px;
 font-weight:900;
+line-height:100%;
 color:var(--color1);
 flex:0 0 auto;
 }
@@ -1992,6 +2022,7 @@ display:flex;
 flex-direction:column;
 line-height:100%;
 text-transform:uppercase;
+min-width:0;
 }
 
 .ms-brand-text strong {
@@ -1999,7 +2030,9 @@ font-family:var(--fuente1);
 font-size:24px;
 font-weight:900;
 letter-spacing:1px;
+line-height:100%;
 color:var(--textobase);
+white-space:nowrap;
 }
 
 .ms-brand-text span {
@@ -2007,18 +2040,24 @@ font-family:var(--fuente1);
 font-size:9px;
 font-weight:800;
 letter-spacing:3px;
+line-height:100%;
 color:var(--color1);
 margin-top:7px;
+white-space:nowrap;
 }
 
-/* Mantiene la estructura original de 8 columnas.
-   Esto es lo que alineaba visualmente la cabecera con el resto del tablón. */
+/*
+Mantengo la lógica visual original de 8 columnas.
+Eso conserva los cortes verticales del diseño.
+Solo bajo un poco tracking/padding para que “Ambientación” no se pegue.
+*/
 
 .ms-nav {
 display:grid;
-grid-template-columns:repeat(8, 1fr);
+grid-template-columns:repeat(8, minmax(0, 1fr));
 gap:0;
 min-width:0;
+overflow:hidden;
 }
 
 .ms-nav a {
@@ -2036,7 +2075,7 @@ text-transform:uppercase;
 font-family:var(--fuente1);
 font-size:9px;
 font-weight:800;
-letter-spacing:1.15px;
+letter-spacing:1.05px;
 line-height:115%;
 text-align:center;
 
@@ -2125,7 +2164,6 @@ margin:0!important;
 padding:0!important;
 border:0!important;
 }
-
 /**** CUERPO DEL TABLÓN ****/
 
 .ms-body {
@@ -4154,32 +4192,62 @@ content: '\e06f';
 /**** BASICO ****/
 
 body {
-    max-width:100%;
-    overflow-x:hidden;
-    background: var(--imagen-fondo)!important;
-    background-size: cover!important;
-    background-attachment: fixed!important;
-    font-family: var(--fuente1);
-    font-size: 12px;
-    line-height: 110%;padding:0px;
-    color:var(--textobase);}
+background:var(--imagen-fondo)!important;
+background-size:cover!important;
+background-attachment:fixed!important;
+background-position:center!important;
+background-repeat:no-repeat!important;
 
-#wrap { background:var(--fondo1);
-margin:0 auto 50px;
-margin-top:-28px!important;
+font-family:var(--fuente1);
+font-size:12px;
+line-height:110%;
+color:var(--textobase);
 
-width:1280px;
+padding:0!important;
+margin:0!important;
+
+overflow-x:auto;
+}
+
+/* 
+MARCO GENERAL DEL FORO
+El foro mantiene su ancho visual original, pero no fuerza min-width.
+Esto evita que a algunos usuarios se les vea gigante,
+sin romper la composición central.
+*/
+
+#wrap {
+--xoxo-wrap-width:1280px;
+--xoxo-wrap-padding:15px;
+
+width:var(--xoxo-wrap-width);
 max-width:calc(100vw - 30px);
 min-width:0!important;
 
-padding:15px!important;
-padding-top:83px!important;
-box-sizing:border-box;
+margin:0 auto 50px;
+margin-top:-28px!important;
 
+padding:var(--xoxo-wrap-padding)!important;
+padding-top:83px!important;
+
+box-sizing:border-box;
 position:relative;
+
+background:var(--fondo1);
 backdrop-filter:blur(1px);
 outline:var(--borde1);
-overflow:hidden;}
+
+overflow:visible;
+}
+
+/* 
+Elementos que deben usar el ancho interno normal del foro.
+Sirve para que no se vayan a 1280px si están dentro del padding.
+*/
+
+#wrap > * {
+box-sizing:border-box;
+}
 
 #search-box {display: none;}
 
