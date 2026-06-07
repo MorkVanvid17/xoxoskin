@@ -1332,6 +1332,12 @@ height:100%;
 display:none;
 }
 
+/**** FUENTE OCULTA ****/
+
+.ps-fields-source {
+display:none!important;
+}
+
 /**** EXPEDIENTE ****/
 
 .intro-psc {
@@ -1573,15 +1579,22 @@ align-items:center;
 justify-content:center;
 box-sizing:border-box;
 overflow:hidden;
-font-size:0;
+font-size:11px;
 line-height:100%;
 text-transform:uppercase;
 text-align:center;
 color:var(--textobase);
 }
 
-.ps-profile-imgbox.ps-img-empty {
+.ps-profile-imgbox span {
 background:#bfbfbf;
+color:#111;
+width:100%;
+height:100%;
+display:flex;
+align-items:center;
+justify-content:center;
+opacity:1;
 }
 
 .ps-profile-imgbox img {
