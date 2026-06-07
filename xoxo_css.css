@@ -1395,21 +1395,55 @@ flex-direction:column;
 gap:8px;
 }
 
-.ps-poss-content > div {
+.ps-poss-card {
 background:var(--fondo3);
 border:var(--borde2);
 min-height:58px;
-padding:11px 13px;
+padding:10px 12px;
 box-sizing:border-box;
-font-size:11px;
-line-height:135%;
-text-align:justify;
+display:grid;
+grid-template-columns:38px 1fr;
+gap:11px;
+align-items:center;
+text-decoration:none!important;
+color:var(--textobase)!important;
+transition:.3s ease;
+}
+
+.ps-poss-card:hover {
+background:var(--fondo2);
+border-color:var(--grupo-color);
+color:var(--textobase)!important;
+}
+
+.ps-poss-card em {
+width:34px;
+height:34px;
+display:flex;
+align-items:center;
+justify-content:center;
+background:var(--fondo2);
+border:var(--borde2);
+font-size:17px;
+line-height:100%;
+color:var(--grupo-color);
+font-style:normal;
+transition:.3s ease;
+}
+
+.ps-poss-card:hover em {
+background:var(--fondo3);
+border-color:var(--grupo-color);
 color:var(--textobase);
 }
 
-.ps-poss-content > div b {
+.ps-poss-card div {
+min-width:0;
+}
+
+.ps-poss-card b {
 display:block;
-margin-bottom:7px;
+margin-bottom:6px;
 font-size:10px;
 font-weight:900;
 line-height:100%;
@@ -1418,9 +1452,17 @@ text-transform:uppercase;
 color:var(--textobase);
 }
 
-.ps-poss-content > div b:before {
-content:"✦ ";
-color:var(--grupo-color);
+.ps-poss-card span {
+display:block;
+font-size:11px;
+line-height:135%;
+text-align:justify;
+color:var(--textobase);
+opacity:.85;
+}
+
+.ps-poss-card:hover span {
+opacity:1;
 }
 
 /**** GOSSIP GIRL / MINI FEED ****/
@@ -1442,7 +1484,9 @@ flex-direction:column;
 gap:10px;
 }
 
-.ps-gossip-feed > div {
+/* Cada rumor individual */
+
+.ps-gossip-card {
 background:linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,.015));
 border:var(--borde2);
 border-radius:18px 18px 8px 8px;
@@ -1450,7 +1494,7 @@ overflow:hidden;
 position:relative;
 }
 
-.ps-gossip-feed > div:before {
+.ps-gossip-card:before {
 content:"";
 position:absolute;
 left:0;
@@ -1461,11 +1505,13 @@ background:var(--gradient1);
 opacity:.9;
 }
 
-.ps-gossip-feed > div b {
+/* Fecha */
+
+.ps-gossip-date {
+min-height:30px;
 display:flex;
 align-items:center;
 justify-content:space-between;
-min-height:30px;
 padding:0 13px;
 background:var(--fondo2);
 border-bottom:var(--borde2);
@@ -1477,7 +1523,7 @@ text-transform:uppercase;
 color:var(--grupo-color);
 }
 
-.ps-gossip-feed > div b:before {
+.ps-gossip-date:before {
 content:"xoxo";
 margin-right:8px;
 font-size:8px;
@@ -1488,7 +1534,9 @@ color:var(--textobase);
 opacity:.75;
 }
 
-.ps-gossip-feed > div span {
+/* Texto del rumor */
+
+.ps-gossip-rumor {
 display:block;
 padding:13px;
 font-size:10px;
@@ -1497,7 +1545,7 @@ text-align:justify;
 color:var(--textobase);
 }
 
-.ps-gossip-feed > div span:before {
+.ps-gossip-rumor:before {
 content:"“";
 font-family:var(--fuente2);
 font-size:24px;
@@ -1507,7 +1555,7 @@ margin-right:4px;
 vertical-align:-7px;
 }
 
-.ps-gossip-feed > div span:after {
+.ps-gossip-rumor:after {
 content:"”";
 font-family:var(--fuente2);
 font-size:20px;
