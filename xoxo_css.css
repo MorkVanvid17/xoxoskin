@@ -4255,9 +4255,10 @@ padding-top:25px!important;
 box-sizing:border-box;
 position:relative;
 
-background:transparent;
-backdrop-filter:none;
-outline:0!important;
+background:var(--fondo1);
+backdrop-filter:blur(1px);
+
+outline:var(--borde1);
 border:0!important;
 
 overflow:visible!important;
