@@ -1366,6 +1366,27 @@ font-style:italic;
 color:var(--textobase);
 }
 
+/**** CONTENIDOS DINÁMICOS ****/
+
+.ps-dyn-content {
+padding:16px;
+box-sizing:border-box;
+}
+
+.ps-empty {
+background:var(--fondo3);
+border:var(--borde2);
+padding:14px;
+font-size:10px;
+font-weight:900;
+letter-spacing:1px;
+line-height:140%;
+text-transform:uppercase;
+text-align:center;
+color:var(--textobase);
+opacity:.65;
+}
+
 /**** POSESIONES ****/
 
 .ps-possessions {
@@ -1373,7 +1394,6 @@ grid-column:2 / 3;
 }
 
 .ps-poss-grid {
-padding:16px;
 display:flex;
 flex-direction:column;
 gap:8px;
@@ -1432,7 +1452,6 @@ grid-column:1 / 2;
 }
 
 .ps-phone-grid {
-padding:16px;
 display:grid;
 grid-template-columns:repeat(3, 1fr);
 gap:10px;
@@ -1500,7 +1519,6 @@ grid-column:2 / 3;
 
 .ps-medals-scroll {
 height:132px;
-padding:16px;
 box-sizing:border-box;
 display:flex;
 flex-wrap:wrap;
