@@ -1850,7 +1850,7 @@ scrollbar-color:var(--color1) transparent;
 }
 
 .ms-tablon {
-width:100%;
+width:1180px;
 max-width:1180px;
 height:620px;
 margin:0 auto 35px;
@@ -1967,6 +1967,13 @@ overflow:hidden;
 .ms-brand {
 height:82px;
 border-right:var(--borde2);
+display:flex;
+align-items:center;
+justify-content:flex-start;
+gap:16px;
+padding:0 22px;
+box-sizing:border-box;
+overflow:hidden;
 }
 
 .ms-brand-mark {
@@ -1979,13 +1986,16 @@ justify-content:center;
 background:var(--fondo2);
 font-size:22px;
 font-weight:900;
+line-height:100%;
 color:var(--color1);
-flex:0 0 auto;
+flex:0 0 42px;
 }
 
 .ms-brand-text {
 display:flex;
 flex-direction:column;
+justify-content:center;
+min-width:0;
 line-height:100%;
 text-transform:uppercase;
 }
@@ -1995,7 +2005,9 @@ font-family:var(--fuente1);
 font-size:24px;
 font-weight:900;
 letter-spacing:1px;
+line-height:100%;
 color:var(--textobase);
+white-space:nowrap;
 }
 
 .ms-brand-text span {
@@ -2003,8 +2015,10 @@ font-family:var(--fuente1);
 font-size:9px;
 font-weight:800;
 letter-spacing:3px;
+line-height:100%;
 color:var(--color1);
 margin-top:7px;
+white-space:nowrap;
 }
 
 .ms-nav {
@@ -2017,27 +2031,33 @@ background:var(--fondo3);
 }
 
 .ms-nav a {
-width:150px;
 height:82px;
-flex:0 0 150px;
+flex:1 1 0;
+min-width:0;
+
 display:flex;
 align-items:center;
 justify-content:center;
+
 box-sizing:border-box;
-padding:0 18px;
+padding:0 16px;
+
 border-right:var(--borde2);
 background:transparent;
+
 font-family:var(--fuente1);
 font-size:9px;
 font-weight:900;
 line-height:115%;
-letter-spacing:1.7px;
+letter-spacing:1.45px;
 text-align:center;
 text-transform:uppercase;
 color:var(--textobase)!important;
 text-decoration:none!important;
+
 white-space:nowrap;
 word-break:normal;
+
 position:relative;
 overflow:hidden;
 transition:.3s ease;
@@ -2048,14 +2068,14 @@ border-left:0;
 }
 
 .ms-nav a:last-child {
-border-right:var(--borde2);
+border-right:0;
 }
 
 .ms-nav a:before {
 content:"";
 position:absolute;
-left:18px;
-right:18px;
+left:16px;
+right:16px;
 bottom:23px;
 height:2px;
 background:var(--gradient1);
@@ -2087,9 +2107,17 @@ bottom:21px;
 opacity:1;
 }
 
+/**** CONEXIÓN / AVATAR DEL TABLÓN ****/
+
 .ms-access-mini {
 height:82px;
 border-left:var(--borde2);
+display:flex;
+align-items:center;
+justify-content:center;
+box-sizing:border-box;
+padding:0;
+overflow:hidden;
 }
 
 .ms-connect-slot {
@@ -2101,6 +2129,7 @@ display:flex;
 align-items:center;
 justify-content:center;
 overflow:hidden;
+box-sizing:border-box;
 }
 
 .ms-connect-slot:empty:before {
