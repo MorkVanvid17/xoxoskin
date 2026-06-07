@@ -1992,7 +1992,6 @@ display:flex;
 flex-direction:column;
 line-height:100%;
 text-transform:uppercase;
-min-width:0;
 }
 
 .ms-brand-text strong {
@@ -2001,7 +2000,6 @@ font-size:24px;
 font-weight:900;
 letter-spacing:1px;
 color:var(--textobase);
-white-space:nowrap;
 }
 
 .ms-brand-text span {
@@ -2011,14 +2009,14 @@ font-weight:800;
 letter-spacing:3px;
 color:var(--color1);
 margin-top:7px;
-white-space:nowrap;
 }
 
-/* NAV: mismo sistema original, pero adaptado a 5 botones reales */
+/* Mantiene la estructura original de 8 columnas.
+   Esto es lo que alineaba visualmente la cabecera con el resto del tablón. */
 
 .ms-nav {
 display:grid;
-grid-template-columns:repeat(5, minmax(0, 1fr));
+grid-template-columns:repeat(8, 1fr);
 gap:0;
 min-width:0;
 }
@@ -2030,7 +2028,7 @@ justify-content:center;
 height:100%;
 
 box-sizing:border-box;
-padding:0 14px;
+padding:0 6px;
 
 border-right:var(--borde2);
 
@@ -2038,7 +2036,7 @@ text-transform:uppercase;
 font-family:var(--fuente1);
 font-size:9px;
 font-weight:800;
-letter-spacing:1.35px;
+letter-spacing:1.15px;
 line-height:115%;
 text-align:center;
 
@@ -2050,15 +2048,11 @@ transition:.3s ease;
 white-space:nowrap;
 }
 
-.ms-nav a:last-child {
-border-right:0;
-}
-
 .ms-nav a:before {
 content:"";
 position:absolute;
-left:16px;
-right:16px;
+left:12px;
+right:12px;
 top:50%;
 height:2px;
 background:var(--gradient1);
@@ -2072,12 +2066,10 @@ color:var(--textobase)!important;
 }
 
 .ms-nav a:hover:before {
-left:22px;
-right:22px;
+left:18px;
+right:18px;
 opacity:1;
 }
-
-/**** CONEXIÓN / AVATAR DEL TABLÓN ****/
 
 .ms-access-mini {
 padding:12px;
