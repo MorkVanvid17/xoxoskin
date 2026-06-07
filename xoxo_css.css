@@ -1341,8 +1341,8 @@ blockquote div {
 
 /**** AFILIADOS ****/
 #footer {
-width:1180px;
-margin:35px auto;
+width:calc(100% - 30px);
+max-width:1180px;
 background:var(--fondo2);
 border:var(--borde2);
 font-family:var(--fuente1), sans-serif;
@@ -1544,7 +1544,8 @@ display:none;
 }
 
 #fadmin {
-width:1180px;
+width:calc(100% - 30px);
+max-width:1180px;
 margin:0 auto 25px;
 justify-content:center;
 font-size:10px;
@@ -1743,7 +1744,8 @@ background: var(--gradient1);
 }
 
 .realfoot2 {
-width: 1179px;
+width:calc(100% + 30px);
+  max-width:none;
     height: 40px;
     background: var(--fondo3);
     border-top: var(--borde2);
@@ -1848,7 +1850,8 @@ scrollbar-color:var(--color1) transparent;
 }
 
 .ms-tablon {
-width:1180px;
+width:100%;
+max-width:1180px;
 height:620px;
 margin:0 auto 35px;
 background:var(--fondo2);
@@ -4162,7 +4165,10 @@ content: '\e06f';
 
 /**** BASICO ****/
 
-body {background: var(--imagen-fondo)!important;
+html, body {
+    max-width:100%;
+    overflow-x:hidden;
+    background: var(--imagen-fondo)!important;
     background-size: cover!important;
     background-attachment: fixed!important;
     font-family: var(--fuente1);
@@ -4170,14 +4176,18 @@ body {background: var(--imagen-fondo)!important;
     line-height: 110%;padding:0px;
     color:var(--textobase);}
 
-#wrap {    background: var(--fondo1);
-    margin-bottom: 50px;
-    margin-top: -28px!important;
-    width: 1280px;
-    min-width: 1150px!important;
-    padding: 15px!important;padding-top: 83px!important;
-    position: relative;
-    backdrop-filter: blur(1px);outline: var(--borde1);}
+#wrap { background:var(--fondo1);
+margin:0 auto 50px;
+margin-top:-28px!important;
+width:calc(100% - 30px);
+max-width:1280px;
+min-width:0!important;
+padding:15px!important;
+padding-top:83px!important;
+box-sizing:border-box;
+position:relative;
+backdrop-filter:blur(1px);
+outline:var(--borde1);}
 
 #search-box {display: none;}
 
@@ -5019,7 +5029,8 @@ accent-color:var(--color1);
 }
 
 .pb-jumpbox {
-width:1180px;
+width:100%;
+max-width:1180px;
 margin:0 auto 35px;
 font-family:var(--fuente1);
 }
@@ -5084,7 +5095,8 @@ line-height:150%!important;
 /**** POSTING PREVIEW PERSONALIZADO ****/
 
 .pb-preview-box {
-width:1180px;
+width:100%;
+max-width:1180px;
 margin:0 auto 18px;
 background:var(--fondo3);
 border:var(--borde2);
