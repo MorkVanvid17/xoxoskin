@@ -1762,11 +1762,11 @@ background: var(--gradient1);
 }
 
 .realfoot2 {
-width:calc(100% + 30px);
+width:100%;
 height:40px;
 background:var(--fondo3);
 border-top:var(--borde2);
-margin:0 -15px 15px;
+margin:0 0 15px;
 position:relative;
 box-sizing:border-box;
 }
@@ -3945,65 +3945,88 @@ display:none;
 /**** HEADER ****/
 
 .newlogo {
-    position: relative;
+width:100%;
+height:500px;
+margin:0 auto;
+margin-bottom:0;
+border:var(--borde1);
+border-bottom:0;
+box-sizing:border-box;
+background:var(--imagen-logo);
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+position:relative;
+display:flex;
+align-items:center;
+justify-content:center;
+overflow:hidden;
+}
+
+.newlogo:before {
+content:"";
+position:absolute;
+inset:0;
+background:rgba(0,0,0,.18);
+pointer-events:none;
+z-index:1;
 }
 
 .titulo-foro {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: fit-content;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+width:fit-content;
+max-width:100%;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+z-index:2;
+}
+
+.titulo-foro a {
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+width:fit-content;
+max-width:100%;
+text-decoration:none!important;
 }
 
 .titulo-foro a,
 .titulo-foro b {
-    background: var(--gradient1);
-    -webkit-background-clip: text;
-    color: transparent;
-    text-decoration: none;
-    line-height: 85%;
-    display: block;
+background:var(--gradient1);
+-webkit-background-clip:text;
+background-clip:text;
+color:transparent;
+line-height:85%;
 }
 
 .titulo-foro a {
-    font-family: var(--fuente3);
-    font-size: 95px;
-    font-weight: 900;
-    letter-spacing: 8px;
-    text-align: center;
-    white-space: nowrap;
+font-family:var(--fuente3);
+font-size:95px;
+font-weight:900;
+letter-spacing:8px;
+text-align:center;
+white-space:nowrap;
 }
 
 .titulo-foro b {
-    font-family: var(--fuente2);
-    font-size: 50px;
-    font-weight: 900;
-    letter-spacing: 20px;
-    margin-top: 20px;
-    text-align: justify;
-    text-align-last: justify;
-    text-transform: uppercase;
-    width: 100%;
+display:block;
+width:100%;
+font-family:var(--fuente2);
+font-size:50px;
+font-weight:900;
+letter-spacing:20px;
+margin-top:20px;
+text-align:justify;
+text-align-last:justify;
+text-transform:uppercase;
+white-space:nowrap;
 }
-
-.newlogo {
-border: var(--borde1);
-    height: 500px;
-    background: var(--imagen-logo);
-    margin: -16px;
-    box-sizing: border-box;
-    margin-bottom: 0px;
-    position: relative;
-    display: flex;
-    align-items: flex-end;
-}
-
-
-/**** NAVBAR ****/
 
 /**** NAVBAR ****/
 
@@ -4206,41 +4229,30 @@ margin:0!important;
 overflow-x:auto;
 }
 
-/* 
-MARCO GENERAL DEL FORO
-El foro mantiene su ancho visual original, pero no fuerza min-width.
-Esto evita que a algunos usuarios se les vea gigante,
-sin romper la composición central.
+/* CONTENEDOR GENERAL
+   El wrap deja de ser una caja visible.
+   Su función será ordenar el contenido, no dibujar un marco alrededor.
 */
 
 #wrap {
---xoxo-wrap-width:1280px;
---xoxo-wrap-padding:15px;
-
-width:var(--xoxo-wrap-width);
-max-width:calc(100vw - 30px);
+width:1280px;
+max-width:calc(100vw - 120px);
 min-width:0!important;
 
-margin:0 auto 50px;
-margin-top:-28px!important;
-
-padding:var(--xoxo-wrap-padding)!important;
-padding-top:83px!important;
+margin:0 auto 50px!important;
+padding:0!important;
+padding-top:25px!important;
 
 box-sizing:border-box;
 position:relative;
 
-background:var(--fondo1);
-backdrop-filter:blur(1px);
-outline:var(--borde1);
+background:transparent;
+backdrop-filter:none;
+outline:0!important;
+border:0!important;
 
-overflow:visible;
+overflow:visible!important;
 }
-
-/* 
-Elementos que deben usar el ancho interno normal del foro.
-Sirve para que no se vayan a 1280px si están dentro del padding.
-*/
 
 #wrap > * {
 box-sizing:border-box;
