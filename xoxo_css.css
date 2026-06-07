@@ -1332,6 +1332,12 @@ height:100%;
 display:none;
 }
 
+/**** FUENTE OCULTA ****/
+
+.ps-fields-source {
+display:none!important;
+}
+
 /**** EXPEDIENTE ****/
 
 .intro-psc {
