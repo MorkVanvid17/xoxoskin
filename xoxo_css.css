@@ -1344,15 +1344,10 @@ blockquote div {
 box-sizing:border-box;
 }
 
-/*
-El footer debe usar el mismo ancho visual que #wrap.
-Antes estaba en 1180px o en calc(100% - 30px), por eso se veía cortado.
-*/
-
 #footer {
-width:1280px;
-max-width:calc(100vw - 30px);
-margin:35px auto;
+width:100%;
+max-width:100%;
+margin:35px 0;
 background:var(--fondo2);
 border:var(--borde2);
 font-family:var(--fuente1);
@@ -1361,6 +1356,7 @@ overflow:hidden;
 }
 
 #grupos-footer {
+width:100%;
 margin:0;
 border:0;
 border-bottom:var(--borde2);
@@ -1398,12 +1394,14 @@ border-color:var(--borde1-c);
 }
 
 #afiliados {
+width:100%;
 height:170px;
 display:grid;
-grid-template-columns:330px 250px 1fr;
+grid-template-columns:330px 250px minmax(0, 1fr);
 background:var(--fondo3);
 border-bottom:var(--borde2);
 min-width:0;
+overflow:hidden;
 }
 
 .af1 {
@@ -1418,13 +1416,14 @@ overflow:hidden;
 
 .afnecro {
 display:grid;
-grid-template-columns:55px 1fr;
+grid-template-columns:55px minmax(0, 1fr);
 gap:12px;
 align-items:center;
 background:var(--fondo2);
 border:var(--borde2);
 padding:5px;
 min-width:0;
+overflow:hidden;
 }
 
 .afnecro img {
@@ -1463,18 +1462,20 @@ color:var(--color1)!important;
 .af {
 padding:15px;
 overflow:auto;
+min-width:0;
 }
 
 .afherm {
 border-right:var(--borde2);
 display:flex;
-flex-direction:column;
+flex-direction:row;
 gap:8px;
+min-width:0;
 }
 
 .afherm a {
 display:block;
-width:100%;
+width:55px;
 height:30px;
 border:var(--borde2);
 background:var(--fondo2);
@@ -1500,6 +1501,7 @@ display:flex;
 flex-wrap:wrap;
 gap:6px;
 align-content:flex-start;
+min-width:0;
 }
 
 .afelite a {
@@ -1509,6 +1511,7 @@ height:45px;
 border:var(--borde2);
 background:var(--fondo2);
 overflow:hidden;
+flex:0 0 45px;
 }
 
 .afelite img {
@@ -1528,15 +1531,19 @@ opacity:1;
 /**** FOOTER NAVBAR FOROACTIVO ****/
 
 #fanavbar {
+width:100%;
 height:40px;
 background:var(--fondo3);
 display:flex;
 align-items:center;
 justify-content:center;
 border-top:0;
+overflow:hidden;
 }
 
 #fanavbar ul.linklist {
+width:100%;
+height:100%;
 margin:0!important;
 padding:0!important;
 display:flex!important;
@@ -1547,6 +1554,7 @@ font-size:9px;
 text-transform:uppercase;
 font-weight:700;
 letter-spacing:1px;
+white-space:nowrap;
 }
 
 #fanavbar li {
@@ -1562,21 +1570,20 @@ display:none;
 }
 
 #fadmin {
-width:1280px;
-max-width:calc(100vw - 30px);
-margin:0 auto 25px;
+width:100%;
+max-width:100%;
+margin:0 0 25px;
 justify-content:center;
 font-size:10px;
 text-transform:uppercase;
 font-weight:900;
 letter-spacing:1px;
+box-sizing:border-box;
 }
 
 #fadmin a {
 color:var(--color1)!important;
 }
-
-/**** ESTADISTICAS ****/
 
 .esr-envo {
     padding: 25px;
@@ -1769,6 +1776,7 @@ border-top:var(--borde2);
 margin:0 0 15px;
 position:relative;
 box-sizing:border-box;
+overflow:hidden;
 }
 
 .realfoot2 ul.linklist {
@@ -1783,6 +1791,7 @@ font-weight:700;
 color:var(--color1);
 margin:0!important;
 padding:0!important;
+white-space:nowrap;
 }
 
 .realfoot2 li.footer-home {
