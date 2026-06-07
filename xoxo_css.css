@@ -1310,8 +1310,10 @@ padding:16px;
 display:grid;
 grid-template-columns:1fr 1fr;
 gap:8px;
-align-items:stretch;
+align-items:start;
 align-content:start;
+max-height:360px;
+overflow:auto;
 }
 
 .pscfield {
@@ -1327,6 +1329,7 @@ align-items:center;
 font-size:12px;
 text-transform:lowercase;
 text-align:center;
+overflow:hidden;
 }
 
 .psclabel {
@@ -1632,6 +1635,11 @@ max-width:22px;
 max-height:22px;
 object-fit:contain;
 }
+
+.ps-fields-source {
+display:none!important;
+}
+
 /**** SPOILER , CODE , QUOTE , HIDE ****/
 
 dl.codebox.hidecode {
