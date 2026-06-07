@@ -7717,7 +7717,7 @@ overflow:hidden;
 
 .xr2-mainimg{
     width: 100%;
-    height: 310px;
+    height: 300px;
     display: block;
     object-fit: cover;
     filter: none;
@@ -7764,7 +7764,7 @@ backdrop-filter:blur(3px);
 }
 
 .xr2-rumor{
-    width: 700px;
+    width: 695px;
     padding: 24px;
     display: flex;
     flex-direction: column;
