@@ -1958,21 +1958,18 @@ line-height:100%;
 .ms-top {
 display:grid;
 grid-template-columns:290px 1fr 82px;
-height:82px;
 border-bottom:var(--borde2);
 background:var(--fondo3);
-overflow:hidden;
+min-height:0;
 }
 
 .ms-brand {
-height:82px;
+padding:18px 22px;
 border-right:var(--borde2);
 display:flex;
 align-items:center;
-justify-content:flex-start;
-gap:16px;
-padding:0 22px;
-box-sizing:border-box;
+gap:15px;
+position:relative;
 overflow:hidden;
 }
 
@@ -1986,18 +1983,16 @@ justify-content:center;
 background:var(--fondo2);
 font-size:22px;
 font-weight:900;
-line-height:100%;
 color:var(--color1);
-flex:0 0 42px;
+flex:0 0 auto;
 }
 
 .ms-brand-text {
 display:flex;
 flex-direction:column;
-justify-content:center;
-min-width:0;
 line-height:100%;
 text-transform:uppercase;
+min-width:0;
 }
 
 .ms-brand-text strong {
@@ -2005,7 +2000,6 @@ font-family:var(--fuente1);
 font-size:24px;
 font-weight:900;
 letter-spacing:1px;
-line-height:100%;
 color:var(--textobase);
 white-space:nowrap;
 }
@@ -2015,56 +2009,45 @@ font-family:var(--fuente1);
 font-size:9px;
 font-weight:800;
 letter-spacing:3px;
-line-height:100%;
 color:var(--color1);
 margin-top:7px;
 white-space:nowrap;
 }
 
+/* NAV: mismo sistema original, pero adaptado a 5 botones reales */
+
 .ms-nav {
-height:82px;
-display:flex;
-align-items:stretch;
-justify-content:flex-start;
-overflow:hidden;
-background:var(--fondo3);
+display:grid;
+grid-template-columns:repeat(5, minmax(0, 1fr));
+gap:0;
+min-width:0;
 }
 
 .ms-nav a {
-height:82px;
-flex:1 1 0;
-min-width:0;
-
 display:flex;
 align-items:center;
 justify-content:center;
+height:100%;
 
 box-sizing:border-box;
-padding:0 16px;
+padding:0 14px;
 
 border-right:var(--borde2);
-background:transparent;
 
+text-transform:uppercase;
 font-family:var(--fuente1);
 font-size:9px;
-font-weight:900;
+font-weight:800;
+letter-spacing:1.35px;
 line-height:115%;
-letter-spacing:1.45px;
 text-align:center;
-text-transform:uppercase;
+
 color:var(--textobase)!important;
-text-decoration:none!important;
-
-white-space:nowrap;
-word-break:normal;
-
 position:relative;
 overflow:hidden;
 transition:.3s ease;
-}
 
-.ms-nav a:first-child {
-border-left:0;
+white-space:nowrap;
 }
 
 .ms-nav a:last-child {
@@ -2076,20 +2059,10 @@ content:"";
 position:absolute;
 left:16px;
 right:16px;
-bottom:23px;
+top:50%;
 height:2px;
 background:var(--gradient1);
 opacity:0;
-transition:.3s ease;
-}
-
-.ms-nav a:after {
-content:"";
-position:absolute;
-inset:0;
-background:linear-gradient(135deg, rgba(204,186,217,.08), transparent 55%);
-opacity:0;
-pointer-events:none;
 transition:.3s ease;
 }
 
@@ -2099,24 +2072,19 @@ color:var(--textobase)!important;
 }
 
 .ms-nav a:hover:before {
-opacity:1;
-bottom:21px;
-}
-
-.ms-nav a:hover:after {
+left:22px;
+right:22px;
 opacity:1;
 }
 
 /**** CONEXIÓN / AVATAR DEL TABLÓN ****/
 
 .ms-access-mini {
-height:82px;
-border-left:var(--borde2);
+padding:12px;
 display:flex;
 align-items:center;
 justify-content:center;
-box-sizing:border-box;
-padding:0;
+border-left:var(--borde2);
 overflow:hidden;
 }
 
@@ -2129,7 +2097,6 @@ display:flex;
 align-items:center;
 justify-content:center;
 overflow:hidden;
-box-sizing:border-box;
 }
 
 .ms-connect-slot:empty:before {
