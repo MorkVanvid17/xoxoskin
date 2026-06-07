@@ -1115,7 +1115,6 @@ margin-top: 10px;
  
 #fa_toolbar, #fa_toolbar_hidden {display: none !important;}
 
-
 /**** PERFIL ****/
 
 .ps-lastvisit {
@@ -1246,10 +1245,15 @@ filter:grayscale(1) contrast(1.05);
 .ps-main {
 padding:22px;
 display:grid;
-grid-template-columns:1fr 1fr;
+grid-template-columns:1fr 300px;
+grid-template-areas:
+"expediente posesiones"
+"medallero imagen"
+"gossip imagen";
 grid-auto-rows:min-content;
 gap:15px;
 min-width:0;
+align-content:start;
 }
 
 .ps-box {
@@ -1297,61 +1301,99 @@ line-height:100%;
 color:var(--grupo-color);
 }
 
-/**** EXPEDIENTE ****/
+/**** POSICIÓN DE CAJAS ****/
 
 .ps-fields-box {
-grid-column:1 / 2;
+grid-area:expediente;
 }
+
+.ps-possessions {
+grid-area:posesiones;
+}
+
+.ps-medals-box {
+grid-area:medallero;
+}
+
+.ps-gossip-box {
+grid-area:gossip;
+}
+
+.ps-profile-image {
+grid-area:imagen;
+background:transparent;
+border:0;
+overflow:visible;
+}
+
+.ps-profile-image:before {
+display:none;
+}
+
+/**** FUENTE OCULTA ****/
+
+.ps-fields-source {
+display:none!important;
+}
+
+/**** EXPEDIENTE ****/
 
 .intro-psc {
 width:100%;
 box-sizing:border-box;
 padding:16px;
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:8px;
-align-items:start;
-align-content:start;
-max-height:360px;
-overflow:auto;
-}
-
-.pscfield {
-background:var(--fondo3);
-border:var(--borde2);
-min-height:58px;
-box-sizing:border-box;
-padding:10px 12px;
 display:flex;
 flex-direction:column;
-justify-content:center;
+gap:0;
+max-height:none;
+overflow:visible;
+background:rgba(0,0,0,.08);
+}
+
+.intro-psc .pscfield {
+background:rgba(255,255,255,.015);
+border:0;
+border-bottom:var(--borde2);
+min-height:42px;
+box-sizing:border-box;
+padding:8px 18px;
+display:grid;
+grid-template-columns:120px 1fr;
 align-items:center;
+justify-content:initial;
 font-size:12px;
-text-transform:lowercase;
-text-align:center;
+text-transform:none;
+text-align:left;
 overflow:hidden;
 }
 
-.psclabel {
-font-size:0;
-margin-bottom:8px;
+.intro-psc .pscfield:last-child {
+border-bottom:0;
 }
 
-.psclabel span,
-.psclabel {
+.intro-psc .psclabel {
+font-size:0;
+margin:0;
+}
+
+.intro-psc .psclabel span,
+.intro-psc .psclabel {
 color:var(--textobase)!important;
 }
 
-.psclabel span {
+.intro-psc .psclabel span,
+.intro-psc .psclabel:not(:empty) {
 font-size:10px;
-font-weight:800;
+font-weight:900;
 line-height:100%;
 text-transform:uppercase;
 position:relative;
 display:inline-block;
+font-style:normal;
 }
 
-.psclabel span:after {
+.intro-psc .psclabel span:after,
+.intro-psc .psclabel:not(:empty):after {
 content:"";
 width:100%;
 height:3px;
@@ -1362,11 +1404,13 @@ bottom:-6px;
 border-radius:2px;
 }
 
-.psccont {
+.intro-psc .psccont {
 font-size:13px;
 line-height:120%;
 font-style:italic;
+font-weight:700;
 color:var(--textobase);
+text-align:right;
 }
 
 /**** VACÍO ****/
@@ -1387,15 +1431,13 @@ opacity:.65;
 
 /**** POSESIONES ****/
 
-.ps-possessions {
-grid-column:2 / 3;
-}
-
 .ps-poss-content {
 padding:16px;
 display:flex;
 flex-direction:column;
 gap:8px;
+max-height:255px;
+overflow:auto;
 }
 
 .ps-poss-card {
@@ -1468,114 +1510,17 @@ opacity:.85;
 opacity:1;
 }
 
-/**** GOSSIP GIRL / MINI FEED ****/
-
-.ps-gossip-box {
-grid-column:1 / 2;
-}
-
-.ps-gossip-content {
-padding:16px;
-}
-
-.ps-gossip-feed {
-height:185px;
-overflow:auto;
-padding-right:6px;
-display:flex;
-flex-direction:column;
-gap:10px;
-}
-
-.ps-gossip-card {
-background:linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,.015));
-border:var(--borde2);
-border-radius:18px 18px 8px 8px;
-overflow:hidden;
-position:relative;
-}
-
-.ps-gossip-card:before {
-content:"";
-position:absolute;
-left:0;
-right:0;
-top:0;
-height:3px;
-background:var(--gradient1);
-opacity:.9;
-}
-
-.ps-gossip-date {
-min-height:30px;
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:0 13px;
-background:var(--fondo2);
-border-bottom:var(--borde2);
-font-size:8px;
-font-weight:900;
-line-height:100%;
-letter-spacing:2px;
-text-transform:uppercase;
-color:var(--grupo-color);
-}
-
-.ps-gossip-date:before {
-content:"xoxo";
-margin-right:8px;
-font-size:8px;
-font-weight:900;
-letter-spacing:2px;
-text-transform:uppercase;
-color:var(--textobase);
-opacity:.75;
-}
-
-.ps-gossip-rumor {
-display:block;
-padding:13px;
-font-size:10px;
-line-height:150%;
-text-align:justify;
-color:var(--textobase);
-}
-
-.ps-gossip-rumor:before {
-content:"“";
-font-family:var(--fuente2);
-font-size:24px;
-line-height:0;
-color:var(--grupo-color);
-margin-right:4px;
-vertical-align:-7px;
-}
-
-.ps-gossip-rumor:after {
-content:"”";
-font-family:var(--fuente2);
-font-size:20px;
-line-height:0;
-color:var(--grupo-color);
-margin-left:4px;
-vertical-align:-6px;
-}
-
 /**** MEDALLERO ****/
 
-.ps-medals-box {
-grid-column:2 / 3;
-}
-
 .ps-medals-scroll {
-height:185px;
+height:140px;
 padding:16px;
 box-sizing:border-box;
 display:flex;
 flex-wrap:wrap;
 align-content:flex-start;
-gap:8px;
+justify-content:flex-start;
+gap:12px 18px;
 overflow:auto;
 }
 
@@ -1594,6 +1539,105 @@ transition:.3s ease;
 .ps-medals-scroll img:hover {
 filter:grayscale(0);
 opacity:1;
+}
+
+/**** IMAGEN EXTRA DEL PERFIL ****/
+
+.ps-profile-imgbox {
+width:300px;
+height:320px;
+background:#bfbfbf;
+border:var(--borde2);
+display:flex;
+align-items:center;
+justify-content:center;
+box-sizing:border-box;
+overflow:hidden;
+font-size:11px;
+line-height:100%;
+text-transform:uppercase;
+text-align:center;
+color:#111;
+}
+
+.ps-profile-imgbox span {
+opacity:.75;
+}
+
+.ps-profile-imgbox img {
+width:300px;
+height:320px;
+max-width:none!important;
+max-height:none!important;
+object-fit:cover;
+object-position:center;
+display:block;
+filter:grayscale(1);
+}
+
+/**** GOSSIP GIRL ****/
+
+.ps-gossip-content {
+padding:16px;
+}
+
+.ps-gossip-feed {
+height:170px;
+overflow:auto;
+padding-right:7px;
+display:block;
+}
+
+.ps-gossip-card {
+background:transparent;
+border:0;
+border-radius:0;
+overflow:visible;
+position:relative;
+margin-bottom:12px;
+}
+
+.ps-gossip-card:before {
+display:none;
+}
+
+.ps-gossip-date {
+display:block;
+min-height:0;
+padding:0;
+background:transparent;
+border:0;
+font-size:8px;
+font-weight:900;
+line-height:100%;
+letter-spacing:2px;
+text-transform:uppercase;
+color:var(--grupo-color);
+margin-bottom:7px;
+}
+
+.ps-gossip-date:before {
+content:"xoxo / ";
+font-size:8px;
+font-weight:900;
+letter-spacing:2px;
+text-transform:uppercase;
+color:var(--textobase);
+opacity:.75;
+}
+
+.ps-gossip-rumor {
+display:block;
+padding:0;
+font-size:11px;
+line-height:150%;
+text-align:justify;
+color:var(--textobase);
+}
+
+.ps-gossip-rumor:before,
+.ps-gossip-rumor:after {
+display:none;
 }
 
 /**** CONTACTO ****/
@@ -1634,10 +1678,6 @@ background:var(--fondo2);
 max-width:22px;
 max-height:22px;
 object-fit:contain;
-}
-
-.ps-fields-source {
-display:none!important;
 }
 
 /**** SPOILER , CODE , QUOTE , HIDE ****/
