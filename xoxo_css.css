@@ -5297,62 +5297,69 @@ box-shadow:none!important;
 box-sizing:border-box!important;
 }
 
-/* Toolbar */
+/**** BOTONES SCEDITOR - MÁS GRANDES Y SEPARADOS ****/
+
+/* Barra general de botones */
+.sceditor-toolbar,
 .pb-wrap .sceditor-toolbar {
 width:100%!important;
 max-width:100%!important;
-min-width:0!important;
-
-background:var(--fondo2)!important;
-border:0!important;
-border-bottom:var(--borde2)!important;
-
-padding:8px!important;
-margin:0!important;
 
 display:flex!important;
 flex-wrap:wrap!important;
 align-items:center!important;
 justify-content:center!important;
-gap:6px!important;
+
+gap:12px!important;
+
+background:var(--fondo2)!important;
+border:0!important;
+border-bottom:var(--borde2)!important;
+
+padding:16px 18px!important;
+margin:0!important;
 
 box-sizing:border-box!important;
-overflow:hidden!important;
+overflow:visible!important;
 text-align:center!important;
 }
 
-/* Grupos de botones */
-
+/* Cada grupo de botones */
+.sceditor-group,
 .pb-wrap .sceditor-group {
-background:var(--fondo3)!important;
-border:var(--borde2)!important;
-border-radius:0!important;
-
-margin:0!important;
-padding:5px 7px!important;
+height:auto!important;
+min-height:42px!important;
 
 display:flex!important;
 align-items:center!important;
 justify-content:center!important;
 flex-wrap:nowrap!important;
-gap:5px!important;
 
-box-sizing:border-box!important;
-max-width:100%!important;
-height:34px!important;
+gap:8px!important;
 
 float:none!important;
 clear:none!important;
+
+background:var(--fondo3)!important;
+border:var(--borde2)!important;
+border-radius:0!important;
+
+margin:0!important;
+padding:7px 10px!important;
+
+box-sizing:border-box!important;
+overflow:visible!important;
 }
 
-/* Botones */
-
+/* Botón individual */
+.sceditor-button,
+a.sceditor-button,
 .pb-wrap .sceditor-button,
 .pb-wrap a.sceditor-button {
-width:22px!important;
-height:22px!important;
-min-width:22px!important;
-min-height:22px!important;
+width:30px!important;
+height:30px!important;
+min-width:30px!important;
+min-height:30px!important;
 
 display:flex!important;
 align-items:center!important;
@@ -5361,26 +5368,56 @@ justify-content:center!important;
 float:none!important;
 clear:none!important;
 
-border-radius:0!important;
 margin:0!important;
 padding:0!important;
 
-box-sizing:border-box!important;
+border:0!important;
+border-radius:0!important;
 
 background:transparent!important;
-border:0!important;
+background-image:none!important;
+box-shadow:none!important;
 
-opacity:.8;
+box-sizing:border-box!important;
+
+opacity:.85;
+overflow:hidden!important;
 transition:.25s ease;
 }
 
+/* Hover */
+.sceditor-button:hover,
+a.sceditor-button:hover,
 .pb-wrap .sceditor-button:hover,
 .pb-wrap a.sceditor-button:hover {
-background:rgba(255,255,255,.04)!important;
+background:rgba(255,255,255,.06)!important;
 opacity:1;
 }
 
-.pb-wrap .sceditor-button div,
+/* Icono interno del botón */
+.sceditor-button div,
+.pb-wrap .sceditor-button div {
+width:20px!important;
+height:20px!important;
+
+display:block!important;
+
+margin:0!important;
+padding:0!important;
+
+float:none!important;
+
+background-repeat:no-repeat!important;
+background-position:center center!important;
+
+line-height:20px!important;
+box-sizing:border-box!important;
+}
+
+/* Limpieza de elementos internos */
+.sceditor-button span,
+.sceditor-button i,
+.sceditor-button em,
 .pb-wrap .sceditor-button span,
 .pb-wrap .sceditor-button i,
 .pb-wrap .sceditor-button em {
@@ -5390,11 +5427,14 @@ padding:0!important;
 line-height:100%!important;
 }
 
+/* Botones desactivados */
+.sceditor-button.disabled,
+.sceditor-button.disabled:hover,
 .pb-wrap .sceditor-button.disabled,
 .pb-wrap .sceditor-button.disabled:hover {
 opacity:.35!important;
+cursor:default!important;
 }
-
 /* Área editable.
    NO se fuerza display:block aquí, porque SCEditor alterna iframe/textarea.
    Forzar display:block en ambos duplica el editor.
