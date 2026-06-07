@@ -1334,7 +1334,7 @@ display:none;
 
 /**** FUENTE OCULTA ****/
 
-.ps-fields-source {
+.perfils.ps-ready .ps-fields-source {
 display:none!important;
 }
 
