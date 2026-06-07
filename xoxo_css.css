@@ -1484,8 +1484,6 @@ flex-direction:column;
 gap:10px;
 }
 
-/* Cada rumor individual */
-
 .ps-gossip-card {
 background:linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,.015));
 border:var(--borde2);
@@ -1504,8 +1502,6 @@ height:3px;
 background:var(--gradient1);
 opacity:.9;
 }
-
-/* Fecha */
 
 .ps-gossip-date {
 min-height:30px;
@@ -1533,8 +1529,6 @@ text-transform:uppercase;
 color:var(--textobase);
 opacity:.75;
 }
-
-/* Texto del rumor */
 
 .ps-gossip-rumor {
 display:block;
