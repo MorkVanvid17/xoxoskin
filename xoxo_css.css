@@ -4153,7 +4153,7 @@ content: '\e06f';
 
 /**** BASICO ****/
 
-html, body {
+body {
     max-width:100%;
     overflow-x:hidden;
     background: var(--imagen-fondo)!important;
@@ -4167,15 +4167,19 @@ html, body {
 #wrap { background:var(--fondo1);
 margin:0 auto 50px;
 margin-top:-28px!important;
-width:calc(100% - 30px);
-max-width:1280px;
+
+width:1280px;
+max-width:calc(100vw - 30px);
 min-width:0!important;
+
 padding:15px!important;
 padding-top:83px!important;
 box-sizing:border-box;
+
 position:relative;
 backdrop-filter:blur(1px);
-outline:var(--borde1);}
+outline:var(--borde1);
+overflow:hidden;}
 
 #search-box {display: none;}
 
