@@ -7093,7 +7093,6 @@ color:var(--xrum-muted);
 .xi-footer-left{font-size:8px;font-weight:900;line-height:100%;letter-spacing:3px;text-transform:uppercase;color:var(--color1);}
 .xi-footer-right{font-size:9px;line-height:140%;text-align:right;color:var(--xi-muted);}
 
-
 /**** GUIDEBOOK XOXO NEXT GEN - COMPLETO Y ACTUALIZADO ****/
 
 .xoxo-guide,
@@ -8334,177 +8333,69 @@ text-align:right;
 color:var(--gb-soft);
 }
 
-/**** RESPONSIVE ****/
+/**** HARD FIX XOXO GUIDE V2 — NO DEPENDE DEL CSS ANTERIOR ****/
 
-@media (max-width: 980px) {
-
-.xoxo-guide {
-width:96%;
+.xoxo-guide.xoxo-guide-v2 input[type="radio"].xgb-radio,
+.xoxo-guide.xoxo-guide-v2 input[type="radio"].xcanon-radio {
+position:absolute!important;
+left:-9999px!important;
+top:auto!important;
+display:block!important;
+width:1px!important;
+height:1px!important;
+margin:0!important;
+padding:0!important;
+opacity:0!important;
+pointer-events:none!important;
+appearance:none!important;
+-webkit-appearance:none!important;
 }
 
-.xgb-shell {
-grid-template-columns:1fr;
+.xoxo-guide.xoxo-guide-v2 .xgb-pane {
+display:none!important;
 }
 
-.xgb-sidebar {
-border-right:0;
-border-bottom:var(--borde2);
+.xoxo-guide.xoxo-guide-v2 #xgb-tab-amb:checked ~ .xgb-shell .xgb-pane-amb,
+.xoxo-guide.xoxo-guide-v2 #xgb-tab-normas:checked ~ .xgb-shell .xgb-pane-normas,
+.xoxo-guide.xoxo-guide-v2 #xgb-tab-npc:checked ~ .xgb-shell .xgb-pane-npc,
+.xoxo-guide.xoxo-guide-v2 #xgb-tab-canon:checked ~ .xgb-shell .xgb-pane-canon,
+.xoxo-guide.xoxo-guide-v2 #xgb-tab-guia:checked ~ .xgb-shell .xgb-pane-guia,
+.xoxo-guide.xoxo-guide-v2 #xgb-tab-sistemas:checked ~ .xgb-shell .xgb-pane-sistemas {
+display:block!important;
 }
 
-.xgb-tabs {
-display:grid;
-grid-template-columns:1fr 1fr;
+.xoxo-guide.xoxo-guide-v2 .xcanon-pane {
+display:none!important;
 }
 
-.xgb-topbar {
-height:auto;
-min-height:82px;
-grid-template-columns:1fr;
-padding:20px;
+.xoxo-guide.xoxo-guide-v2 #xcanon-tab-original:checked ~ .xcanon-phone .xcanon-pane-original,
+.xoxo-guide.xoxo-guide-v2 #xcanon-tab-reboot:checked ~ .xcanon-phone .xcanon-pane-reboot,
+.xoxo-guide.xoxo-guide-v2 #xcanon-tab-otros:checked ~ .xcanon-phone .xcanon-pane-otros,
+.xoxo-guide.xoxo-guide-v2 #xcanon-tab-originales:checked ~ .xcanon-phone .xcanon-pane-originales {
+display:block!important;
 }
 
-.xgb-status {
-width:fit-content;
+.xoxo-guide.xoxo-guide-v2 .xcanon-grid {
+display:grid!important;
+grid-template-columns:1fr 1fr!important;
+gap:18px!important;
 }
 
-.xgb-content {
-padding:20px;
+.xoxo-guide.xoxo-guide-v2 .xcanon-card {
+display:grid!important;
+grid-template-columns:43% 57%!important;
 }
 
-.xgb-grid-2,
-.xgb-grid-3,
-.xgb-mini-cards {
-grid-template-columns:1fr;
+.xoxo-guide.xoxo-guide-v2 .xcanon-card.is-reverse {
+grid-template-columns:57% 43%!important;
 }
 
-.xcanon-phone {
-padding:36px 16px 18px;
-border-radius:30px;
+.xoxo-guide.xoxo-guide-v2 .xcanon-nav {
+display:flex!important;
 }
 
-.xcanon-head {
-grid-template-columns:64px 1fr;
-}
-
-.xcanon-status {
-grid-column:1 / -1;
-border-left:0;
-border-top:var(--borde2);
-min-height:42px;
-}
-
-.xcanon-nav {
-justify-content:center;
-flex-wrap:wrap;
-}
-
-.xcanon-nav label {
-flex:1 1 130px;
-}
-
-.xcanon-grid {
-grid-template-columns:1fr;
-}
-
-.xcanon-card,
-.xcanon-card.is-reverse {
-grid-template-columns:40% 60%;
-}
-
-.xcanon-card.is-reverse .xcanon-img,
-.xcanon-card.is-reverse .xcanon-info {
-order:initial;
-}
-
-}
-
-@media (max-width: 620px) {
-
-.xoxo-guide {
-width:100%;
-margin:25px auto;
-}
-
-.xgb-sidebar {
-padding:16px;
-}
-
-.xgb-tabs {
-grid-template-columns:1fr;
-}
-
-.xgb-content {
-padding:16px;
-}
-
-.xgb-page-head,
-.xcanon-head {
-grid-template-columns:1fr;
-}
-
-.xgb-page-icon {
-width:100%;
-height:54px;
-}
-
-.xgb-block-head {
-grid-template-columns:1fr;
-}
-
-.xgb-brand {
-align-items:flex-start;
-}
-
-.xgb-brand-title,
-.xgb-side-title,
-.xgb-page-title,
-.xgb-block-title,
-.xgb-list-title {
-font-size:26px;
-}
-
-.xgb-big-img img {
-aspect-ratio:4/3;
-}
-
-.xcanon-head-icon {
-min-height:54px;
-border-right:0;
-border-bottom:var(--borde2);
-}
-
-.xcanon-head-main {
-padding:18px;
-}
-
-.xcanon-title {
-font-size:30px;
-}
-
-.xcanon-card,
-.xcanon-card.is-reverse {
-grid-template-columns:1fr;
-}
-
-.xcanon-img {
-height:250px;
-min-height:250px;
-}
-
-.xcanon-info {
-padding:22px;
-}
-
-.xcanon-cluster-head,
-.xcanon-footer {
-flex-direction:column;
-align-items:flex-start;
-}
-
-.xcanon-footer span {
-text-align:left;
-}
-
+.xoxo-guide.xoxo-guide-v2 .xcanon-nav label {
+display:flex!important;
 }
 
 /**** TABLILLA FICHA DE PERSONAJE XOXO ****/
