@@ -7838,7 +7838,11 @@ text-transform:uppercase;
 color:var(--color1);
 }
 
-/**** CANON Y SEMICANON - BOTONES ACTUALIZADOS ****/
+/**** CANON Y SEMICANON — GUIDEBOOK ****/
+
+.xcanon-radio {
+display:none!important;
+}
 
 .xcanon-wrap,
 .xcanon-wrap * {
@@ -7868,7 +7872,7 @@ color:var(--gb-text);
 
 .xcanon-phone {
 width:100%;
-max-width:980px;
+max-width:1000px;
 margin:0 auto;
 padding:38px 24px 24px;
 background:
@@ -7918,12 +7922,11 @@ transform:translateX(-50%);
 
 .xcanon-head {
 display:grid;
-grid-template-columns:78px minmax(0, 1fr) 150px;
+grid-template-columns:78px minmax(0,1fr) 120px;
 gap:18px;
 align-items:stretch;
 background:rgba(9,9,9,.82);
 border:var(--borde2);
-border-radius:0;
 overflow:hidden;
 position:relative;
 z-index:2;
@@ -7982,7 +7985,7 @@ text-shadow:var(--sombra);
 
 .xcanon-subtitle {
 margin-top:12px;
-max-width:560px;
+max-width:620px;
 font-size:9px;
 font-weight:900;
 letter-spacing:3px;
@@ -8019,8 +8022,8 @@ z-index:3;
 }
 
 .xcanon-nav label {
-height:34px;
-min-width:92px;
+height:36px;
+min-width:120px;
 padding:0 18px;
 display:flex;
 align-items:center;
@@ -8046,8 +8049,7 @@ color:var(--color1);
 
 #xcanon-tab-original:checked ~ .xcanon-phone .xcanon-nav label[for="xcanon-tab-original"],
 #xcanon-tab-reboot:checked ~ .xcanon-phone .xcanon-nav label[for="xcanon-tab-reboot"],
-#xcanon-tab-otros:checked ~ .xcanon-phone .xcanon-nav label[for="xcanon-tab-otros"],
-#xcanon-tab-originales:checked ~ .xcanon-phone .xcanon-nav label[for="xcanon-tab-originales"] {
+#xcanon-tab-otros:checked ~ .xcanon-phone .xcanon-nav label[for="xcanon-tab-otros"] {
 background:rgba(204,186,217,.13);
 border-color:var(--color1);
 color:var(--gb-text);
@@ -8065,8 +8067,7 @@ display:none;
 
 #xcanon-tab-original:checked ~ .xcanon-phone .xcanon-pane-original,
 #xcanon-tab-reboot:checked ~ .xcanon-phone .xcanon-pane-reboot,
-#xcanon-tab-otros:checked ~ .xcanon-phone .xcanon-pane-otros,
-#xcanon-tab-originales:checked ~ .xcanon-phone .xcanon-pane-originales {
+#xcanon-tab-otros:checked ~ .xcanon-phone .xcanon-pane-otros {
 display:block;
 }
 
@@ -8082,7 +8083,8 @@ border:var(--borde2);
 border-radius:18px;
 }
 
-.xcanon-cluster-head b {
+.xcanon-cluster-head b,
+.xcanon-cluster-head strong {
 display:block;
 font-family:var(--fuente2);
 font-size:31px;
@@ -8123,184 +8125,200 @@ text-transform:uppercase;
 color:var(--gb-soft);
 }
 
-.xcanon-grid {
-display:grid;
-grid-template-columns:1fr 1fr;
+.xcanon-familylist {
+display:flex;
+flex-direction:column;
 gap:18px;
-align-items:stretch;
 }
 
-.xcanon-card {
-min-height:205px;
+.xcanon-family {
 display:grid;
-grid-template-columns:43% 57%;
+grid-template-columns:280px 1fr;
 background:rgba(255,255,255,.035);
 border:var(--borde2);
-border-radius:24px;
+border-radius:26px;
 overflow:hidden;
 position:relative;
 }
 
-.xcanon-card:before {
+.xcanon-family:before {
 content:"";
 position:absolute;
 inset:0;
 background:
-linear-gradient(120deg, rgba(204,186,217,.08), transparent 42%),
-radial-gradient(circle at 0% 0%, rgba(145,135,179,.18), transparent 26%);
+linear-gradient(120deg, rgba(204,186,217,.05), transparent 40%),
+radial-gradient(circle at 0 0, rgba(145,135,179,.13), transparent 23%);
 pointer-events:none;
-z-index:3;
-opacity:.65;
 }
 
-.xcanon-card:hover {
-border-color:var(--color1);
+.xcanon-family.simple {
+grid-template-columns:1fr;
 }
 
-.xcanon-card.is-reverse {
-grid-template-columns:57% 43%;
-}
-
-.xcanon-card.is-reverse .xcanon-img {
-order:2;
-}
-
-.xcanon-card.is-reverse .xcanon-info {
-order:1;
-}
-
-.xcanon-img {
+.xcanon-family-visual {
 position:relative;
-min-height:205px;
-background:rgba(204,186,217,.12);
+min-height:100%;
+background:rgba(204,186,217,.10);
 overflow:hidden;
+border-right:var(--borde2);
 }
 
-.xcanon-img:before {
-content:"";
-position:absolute;
-inset:16px;
-border:1px solid rgba(237,237,237,.28);
-z-index:4;
-pointer-events:none;
+.xcanon-family.simple .xcanon-family-visual {
+display:none;
 }
 
-.xcanon-img:after {
+.xcanon-family-visual:before {
 content:"";
 position:absolute;
-inset:0;
-background:
-linear-gradient(90deg, rgba(54,31,73,.62), rgba(54,31,73,.14)),
-linear-gradient(180deg, transparent, rgba(0,0,0,.28));
-mix-blend-mode:screen;
+inset:18px;
+border:1px solid rgba(255,255,255,.18);
 z-index:3;
 pointer-events:none;
 }
 
-.xcanon-img img {
-width:100%!important;
-height:100%!important;
-max-width:none!important;
-max-height:none!important;
+.xcanon-family-visual img {
+width:100%;
+height:100%;
 display:block;
 object-fit:cover;
 object-position:center;
 filter:grayscale(1) contrast(1.05) brightness(.82);
-opacity:.82;
-transition:.35s ease;
+opacity:.85;
 }
 
-.xcanon-card:hover .xcanon-img img {
-filter:grayscale(1) contrast(1.08) brightness(.95);
-opacity:.95;
-}
-
-.xcanon-info {
-padding:24px 24px 22px;
-display:flex;
-flex-direction:column;
-justify-content:flex-start;
+.xcanon-family-body {
+padding:24px;
 position:relative;
-z-index:5;
-min-width:0;
-height: 300px;
+z-index:2;
 }
 
-.xcanon-name {
+.xcanon-family-top {
+display:flex;
+align-items:flex-start;
+justify-content:space-between;
+gap:16px;
+padding-bottom:16px;
+margin-bottom:16px;
+border-bottom:var(--borde2);
+}
+
+.xcanon-family-name {
 font-family:var(--fuente2);
-font-size:28px;
+font-size:31px;
 font-weight:400;
-line-height:82%;
+line-height:85%;
 text-transform:uppercase;
 color:var(--gb-text);
 text-shadow:var(--sombra);
 }
 
-.xcanon-role {
-margin-top:13px;
+.xcanon-family-meta {
+margin-top:10px;
 font-size:8px;
 font-weight:900;
 letter-spacing:3px;
-line-height:120%;
+line-height:130%;
 text-transform:uppercase;
 color:var(--color1);
 }
 
-.xcanon-text {
-margin-top:16px;
-font-size:11px;
-line-height:150%;
-text-align:justify;
-color:var(--gb-text);
-max-height:245px;
-overflow:auto;
-padding-right:7px;
-}
-
-.xcanon-text b {
-font-weight:900;
-color:var(--color1);
-text-transform:uppercase;
-font-size:9px;
-letter-spacing:1px;
-}
-
-.xcanon-tags {
-display:flex;
-flex-wrap:wrap;
-gap:8px;
-margin-top:18px;
-}
-
-.xcanon-tags span {
-display:flex;
-align-items:center;
-justify-content:center;
-min-height:26px;
-padding:8px 11px;
+.xcanon-family-badge {
+min-width:110px;
+padding:10px 14px;
 background:rgba(0,0,0,.22);
 border:var(--borde2);
 border-radius:999px;
-font-size:7px;
+font-size:8px;
 font-weight:900;
-letter-spacing:1.5px;
+letter-spacing:2px;
 line-height:100%;
 text-transform:uppercase;
+text-align:center;
 color:var(--gb-soft);
 }
 
-.xcanon-tags span.is-free {
-color:#d8cfe0;
-border-color:rgba(204,186,217,.35);
+.xcanon-family-desc {
+font-size:12px;
+line-height:160%;
+text-align:justify;
+color:var(--gb-text);
+margin-bottom:18px;
 }
 
-.xcanon-tags span.is-reserved {
-color:#c9bad4;
+.xcanon-members {
+display:grid;
+grid-template-columns:repeat(2, minmax(0,1fr));
+gap:12px;
+}
+
+.xcanon-members-alone {
+grid-template-columns:repeat(3, minmax(0,1fr));
+}
+
+.xmember {
+background:rgba(0,0,0,.24);
+border:var(--borde2);
+padding:14px;
+border-radius:18px;
+display:flex;
+flex-direction:column;
+gap:8px;
+position:relative;
+overflow:hidden;
+}
+
+.xmember:before {
+content:"";
+position:absolute;
+left:0;
+right:0;
+top:0;
+height:3px;
+background:var(--gradient1);
+opacity:.85;
+}
+
+.xmember strong {
+display:block;
+font-family:var(--fuente2);
+font-size:21px;
+font-weight:400;
+line-height:90%;
+text-transform:uppercase;
+color:var(--gb-text);
+text-shadow:var(--sombra);
+position:relative;
+z-index:2;
+}
+
+.xmember span {
+display:block;
+font-size:8px;
+font-weight:900;
+letter-spacing:2px;
+line-height:130%;
+text-transform:uppercase;
+color:var(--color1);
+position:relative;
+z-index:2;
+}
+
+.xmember small {
+display:block;
+font-size:11px;
+line-height:155%;
+color:var(--gb-soft);
+position:relative;
+z-index:2;
+}
+
+.xmember.reserved {
 border-color:rgba(145,135,179,.55);
+background:linear-gradient(180deg, rgba(73,57,86,.36), rgba(0,0,0,.24));
 }
 
-.xcanon-tags span.is-taken {
-opacity:.55;
+.xmember.reserved span {
+color:#d9cae4;
 }
 
 .xcanon-footer {
@@ -8332,71 +8350,6 @@ font-size:10px;
 line-height:140%;
 text-align:right;
 color:var(--gb-soft);
-}
-
-/**** HARD FIX XOXO GUIDE V2 — NO DEPENDE DEL CSS ANTERIOR ****/
-
-.xoxo-guide.xoxo-guide-v2 input[type="radio"].xgb-radio,
-.xoxo-guide.xoxo-guide-v2 input[type="radio"].xcanon-radio {
-position:absolute!important;
-left:-9999px!important;
-top:auto!important;
-display:block!important;
-width:1px!important;
-height:1px!important;
-margin:0!important;
-padding:0!important;
-opacity:0!important;
-pointer-events:none!important;
-appearance:none!important;
--webkit-appearance:none!important;
-}
-
-.xoxo-guide.xoxo-guide-v2 .xgb-pane {
-display:none!important;
-}
-
-.xoxo-guide.xoxo-guide-v2 #xgb-tab-amb:checked ~ .xgb-shell .xgb-pane-amb,
-.xoxo-guide.xoxo-guide-v2 #xgb-tab-normas:checked ~ .xgb-shell .xgb-pane-normas,
-.xoxo-guide.xoxo-guide-v2 #xgb-tab-npc:checked ~ .xgb-shell .xgb-pane-npc,
-.xoxo-guide.xoxo-guide-v2 #xgb-tab-canon:checked ~ .xgb-shell .xgb-pane-canon,
-.xoxo-guide.xoxo-guide-v2 #xgb-tab-guia:checked ~ .xgb-shell .xgb-pane-guia,
-.xoxo-guide.xoxo-guide-v2 #xgb-tab-sistemas:checked ~ .xgb-shell .xgb-pane-sistemas {
-display:block!important;
-}
-
-.xoxo-guide.xoxo-guide-v2 .xcanon-pane {
-display:none!important;
-}
-
-.xoxo-guide.xoxo-guide-v2 #xcanon-tab-original:checked ~ .xcanon-phone .xcanon-pane-original,
-.xoxo-guide.xoxo-guide-v2 #xcanon-tab-reboot:checked ~ .xcanon-phone .xcanon-pane-reboot,
-.xoxo-guide.xoxo-guide-v2 #xcanon-tab-otros:checked ~ .xcanon-phone .xcanon-pane-otros,
-.xoxo-guide.xoxo-guide-v2 #xcanon-tab-originales:checked ~ .xcanon-phone .xcanon-pane-originales {
-display:block!important;
-}
-
-.xoxo-guide.xoxo-guide-v2 .xcanon-grid {
-display:grid!important;
-grid-template-columns:1fr 1fr!important;
-gap:18px!important;
-}
-
-.xoxo-guide.xoxo-guide-v2 .xcanon-card {
-display:grid!important;
-grid-template-columns:43% 57%!important;
-}
-
-.xoxo-guide.xoxo-guide-v2 .xcanon-card.is-reverse {
-grid-template-columns:57% 43%!important;
-}
-
-.xoxo-guide.xoxo-guide-v2 .xcanon-nav {
-display:flex!important;
-}
-
-.xoxo-guide.xoxo-guide-v2 .xcanon-nav label {
-display:flex!important;
 }
 
 /**** TABLILLA FICHA DE PERSONAJE XOXO ****/
