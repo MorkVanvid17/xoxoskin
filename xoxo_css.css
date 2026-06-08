@@ -6631,6 +6631,8 @@ font-size:12px;
 line-height:145%;
 text-align:justify;
 color:var(--xadm-muted);
+height: 280px;
+overflow: auto;
 }
 
 .xoxoadmin-note {
