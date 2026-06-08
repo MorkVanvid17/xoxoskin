@@ -7844,6 +7844,12 @@ color:var(--color1);
 display:none!important;
 }
 
+.xcanon-wrap {
+width:100%;
+font-family:var(--fuente1);
+color:var(--gb-text);
+}
+
 .xcanon-wrap,
 .xcanon-wrap * {
 box-sizing:border-box;
@@ -7862,12 +7868,6 @@ background:transparent;
 
 .xcanon-wrap ::-webkit-scrollbar-thumb {
 background:var(--color1);
-}
-
-.xcanon-wrap {
-width:100%;
-font-family:var(--fuente1);
-color:var(--gb-text);
 }
 
 .xcanon-phone {
