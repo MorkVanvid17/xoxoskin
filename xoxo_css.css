@@ -6491,7 +6491,58 @@ letter-spacing:3px;
 text-transform:uppercase;
 color:var(--color1);
 }
+/**** XOXO ADMIN — SECTION BOX ****/
 
+.xoxoadmin-sectionbox {
+width:100%;
+box-sizing:border-box;
+display:flex;
+flex-direction:column;
+align-items:flex-start;
+justify-content:flex-start;
+gap:3px;
+margin:0 0 10px 0;
+padding:3px;
+background:var(--gradient1);
+border:var(--borde1);
+overflow:hidden;
+}
+
+.xoxoadmin-listblock .xoxoadmin-sectionbox {
+width:100%;
+}
+
+.xoxoadmin-sectionbox .xoxoadmin-sectiontitle {
+display:block;
+width:100%;
+box-sizing:border-box;
+margin:0;
+padding:0;
+font-family:var(--fuente2), serif;
+font-size:24px;
+font-weight:400;
+line-height:90%;
+letter-spacing:.4px;
+text-transform:uppercase;
+color:var(--textobase);
+text-shadow:var(--sombra);
+}
+
+.xoxoadmin-sectionbox .xoxoadmin-minititle {
+display:block;
+width:100%;
+box-sizing:border-box;
+margin:0;
+padding:0;
+font-family:var(--fuente1);
+font-size:9px;
+font-weight:900;
+line-height:100%;
+letter-spacing:3px;
+text-transform:uppercase;
+color:var(--textobase);
+text-shadow:var(--sombra);
+}
 .xoxoadmin ol,
 .xoxoadmin ul {
 margin:12px 0 0;
