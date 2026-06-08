@@ -8223,6 +8223,7 @@ justify-content:flex-start;
 position:relative;
 z-index:5;
 min-width:0;
+height: 300px;
 }
 
 .xcanon-name {
