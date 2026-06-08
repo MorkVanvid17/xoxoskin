@@ -1407,10 +1407,10 @@ border-radius:2px;
 }
 
 .intro-psc .psccont {
-font-size:13px;
+font-size:11px;
 line-height:120%;
 font-style:italic;
-font-weight:700;
+font-weight:100;
 color:var(--textobase);
 text-align:right;
 }
