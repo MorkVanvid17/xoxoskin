@@ -2854,6 +2854,7 @@ font-size:24px;
 font-weight:900;
 line-height:100%;
 color:var(--textobase);
+text-transform: uppercase;
 }
 
 .ms-season-box span {
