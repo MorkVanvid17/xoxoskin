@@ -8787,7 +8787,7 @@ backdrop-filter:blur(3px);
 }
 
 .xr2-rumor{
-    width: 695px;
+    width: 650px;
     padding: 24px;
     display: flex;
     flex-direction: column;
@@ -8870,7 +8870,7 @@ color:#ffffff;
 }
 
 .xr2-text{
-font-size: 13px;
+font-size: 12px;
     line-height: 1.5;
     text-align: justify;
     color: #efedf2
