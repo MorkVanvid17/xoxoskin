@@ -6698,7 +6698,7 @@ color:var(--color1)!important;
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 columnas por defecto */
     gap: 15px;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 /* Caja individual */
