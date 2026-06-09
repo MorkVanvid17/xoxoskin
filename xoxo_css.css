@@ -6691,6 +6691,120 @@ border-color:var(--borde1-c);
 color:var(--color1)!important;
 }
 
+/* Aquí metí mi cochinota mano; NUEVO SISTEMA DE 12 CAJAS PARA FACECLAIMS */
+
+/* Contenedor principal de las 12 cajas */
+.xoxoadmin-fc-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas por defecto */
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Caja individual */
+.xoxoadmin-fc-box {
+    position: relative;
+    background: var(--xadm-bg-dark);
+    border: var(--borde2);
+    height: 180px; /* Altura fija para que sean simétricas */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Efecto hover en la caja */
+.xoxoadmin-fc-box:hover {
+    border-color: var(--color1);
+    background: var(--xadm-bg-soft);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Iniciales visibles por defecto */
+.fc-box-letter {
+    font-family: var(--fuente2), serif;
+    font-size: 26px;
+    color: var(--xadm-text);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease-in-out;
+    opacity: 0.9;
+}
+
+/* Al pasar el mouse, la letra se desvanece un poco y escala */
+.xoxoadmin-fc-box:hover .fc-box-letter {
+    opacity: 0.05;
+    transform: scale(1.2);
+}
+
+/* Contenido oculto que aparece al pasar el mouse */
+.fc-box-content {
+    position: absolute;
+    inset: 0;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease-in-out;
+    overflow-y: auto; /* Por si añades demasiados nombres en una sola caja */
+    scrollbar-width: thin;
+    scrollbar-color: var(--color1) transparent;
+}
+
+/* Scrollbars para navegadores basados en Webkit (Chrome, Edge, Safari) */
+.fc-box-content::-webkit-scrollbar {
+    width: 3px;
+}
+.fc-box-content::-webkit-scrollbar-thumb {
+    background: var(--color1);
+}
+
+/* Al pasar el mouse, el contenido se vuelve visible */
+.xoxoadmin-fc-box:hover .fc-box-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Estilo para cada nombre */
+.fc-name {
+    font-family: var(--fuente1);
+    font-size: 11px;
+    line-height: 1.6;
+    color: var(--xadm-muted);
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: color 0.2s ease;
+}
+
+.fc-name:hover {
+    color: var(--color1);
+}
+
+/* Adaptabilidad para pantallas más pequeñas (Móviles y Tablets) */
+@media (max-width: 900px) {
+    .xoxoadmin-fc-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .xoxoadmin-fc-grid {
+        grid-template-columns: 1fr; /* 1 columna en móviles */
+    }
+}
+/***Aquí se terminan las cajitas del las reservas de FC***/
+
+
 /**** TABLILLA RUMORES / PHONE UI XOXO ****/
 
 .xoxorumor,
