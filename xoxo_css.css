@@ -6695,21 +6695,19 @@ color:var(--color1)!important;
 
 /* Contenedor principal corregido */
 .xoxoadmin-fc-grid {
-    display: grid;
-    /* Ajustamos el tamaño mínimo a 120px para obligar a que entren las 4 columnas */
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); 
-    gap: 15px;
-    margin: 5px 0 10px 0;
-    width: 100% !important; /* Nos aseguramos de que use todo el ancho del bloque */
-    box-sizing: border-box;
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important; 
+    gap: 15px !important;
+    margin: 25px 0 10px 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
 }
-
 /* Caja individual */
 .xoxoadmin-fc-box {
     position: relative;
     background: var(--xadm-bg-dark);
     border: var(--borde2);
-    height: 150px; /* Reducimos un poco la altura para que se vea más estético en 4 columnas */
+    height: 150px; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -6718,31 +6716,27 @@ color:var(--color1)!important;
     transition: all 0.3s ease-in-out;
     box-sizing: border-box;
 }
-
 /* Efecto hover en la caja */
 .xoxoadmin-fc-box:hover {
     border-color: var(--color1);
     background: var(--xadm-bg-soft);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
-
 /* Iniciales visibles por defecto */
 .fc-box-letter {
     font-family: var(--fuente2), serif;
-    font-size: 24px; /* Un pelín más pequeña para que no rompa en cajas compactas */
+    font-size: 24px; 
     color: var(--xadm-text);
     text-transform: uppercase;
     letter-spacing: 2px;
     transition: all 0.3s ease-in-out;
     opacity: 0.9;
 }
-
 /* Al pasar el mouse, la letra se desvanece y escala */
 .xoxoadmin-fc-box:hover .fc-box-letter {
     opacity: 0.05;
     transform: scale(1.2);
 }
-
 /* Contenido oculto que aparece al pasar el mouse */
 .fc-box-content {
     position: absolute;
@@ -6762,7 +6756,6 @@ color:var(--color1)!important;
     scrollbar-color: var(--color1) transparent;
     box-sizing: border-box;
 }
-
 /* Scrollbars para Webkit */
 .fc-box-content::-webkit-scrollbar {
     width: 3px;
@@ -6770,12 +6763,37 @@ color:var(--color1)!important;
 .fc-box-content::-webkit-scrollbar-thumb {
     background: var(--color1);
 }
-
 /* Al pasar el mouse, el contenido se vuelve visible */
 .xoxoadmin-fc-box:hover .fc-box-content {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
+}
+/* Estilo para cada nombre */
+.fc-name {
+    font-family: var(--fuente1);
+    font-size: 11px;
+    line-height: 1.6;
+    color: var(--xadm-muted);
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: color 0.2s ease;
+}
+.fc-name:hover {
+    color: var(--color1);
+}
+/* RESPONSIVE: En tablets baja a 2 columnas y en móviles a 1 */
+@media (max-width: 950px) {
+    .xoxoadmin-fc-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+@media (max-width: 480px) {
+    .xoxoadmin-fc-grid {
+        grid-template-columns: 1fr !important;
+    }
 }
 
 /* Estilo para cada nombre */
