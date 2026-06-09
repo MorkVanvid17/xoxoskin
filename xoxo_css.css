@@ -6697,7 +6697,7 @@ color:var(--color1)!important;
 .xoxoadmin-fc-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 columnas por defecto */
-    gap: 10px;
+    gap: 5px;
     margin-top: 20px;
 }
 
