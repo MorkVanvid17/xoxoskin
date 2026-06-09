@@ -6693,12 +6693,15 @@ color:var(--color1)!important;
 
 /* Aquí metí mi cochinota mano; NUEVO SISTEMA DE 12 CAJAS PARA FACECLAIMS */
 
-/* Contenedor principal de las 12 cajas */
+/* Contenedor principal corregido */
 .xoxoadmin-fc-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas por defecto */
+    /* Ajustamos el tamaño mínimo a 120px para obligar a que entren las 4 columnas */
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); 
     gap: 15px;
-    margin-top: 20px;
+    margin: 25px 0 10px 0;
+    width: 100% !important; /* Nos aseguramos de que use todo el ancho del bloque */
+    box-sizing: border-box;
 }
 
 /* Caja individual */
@@ -6706,13 +6709,14 @@ color:var(--color1)!important;
     position: relative;
     background: var(--xadm-bg-dark);
     border: var(--borde2);
-    height: 180px; /* Altura fija para que sean simétricas */
+    height: 150px; /* Reducimos un poco la altura para que se vea más estético en 4 columnas */
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+    box-sizing: border-box;
 }
 
 /* Efecto hover en la caja */
@@ -6725,7 +6729,7 @@ color:var(--color1)!important;
 /* Iniciales visibles por defecto */
 .fc-box-letter {
     font-family: var(--fuente2), serif;
-    font-size: 26px;
+    font-size: 24px; /* Un pelín más pequeña para que no rompa en cajas compactas */
     color: var(--xadm-text);
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -6733,7 +6737,7 @@ color:var(--color1)!important;
     opacity: 0.9;
 }
 
-/* Al pasar el mouse, la letra se desvanece un poco y escala */
+/* Al pasar el mouse, la letra se desvanece y escala */
 .xoxoadmin-fc-box:hover .fc-box-letter {
     opacity: 0.05;
     transform: scale(1.2);
@@ -6743,7 +6747,7 @@ color:var(--color1)!important;
 .fc-box-content {
     position: absolute;
     inset: 0;
-    padding: 15px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -6753,12 +6757,13 @@ color:var(--color1)!important;
     visibility: hidden;
     transform: translateY(10px);
     transition: all 0.3s ease-in-out;
-    overflow-y: auto; /* Por si añades demasiados nombres en una sola caja */
+    overflow-y: auto;
     scrollbar-width: thin;
     scrollbar-color: var(--color1) transparent;
+    box-sizing: border-box;
 }
 
-/* Scrollbars para navegadores basados en Webkit (Chrome, Edge, Safari) */
+/* Scrollbars para Webkit */
 .fc-box-content::-webkit-scrollbar {
     width: 3px;
 }
@@ -6790,18 +6795,13 @@ color:var(--color1)!important;
     color: var(--color1);
 }
 
-/* Adaptabilidad para pantallas más pequeñas (Móviles y Tablets) */
-@media (max-width: 900px) {
+/* Adaptabilidad corregida para pantallas muy pequeñas (Móviles) */
+@media (max-width: 580px) {
     .xoxoadmin-fc-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets */
+        grid-template-columns: repeat(2, 1fr); /* En móviles se mantendrán 2 columnas cómodamente */
     }
 }
 
-@media (max-width: 480px) {
-    .xoxoadmin-fc-grid {
-        grid-template-columns: 1fr; /* 1 columna en móviles */
-    }
-}
 /***Aquí se terminan las cajitas del las reservas de FC***/
 
 
