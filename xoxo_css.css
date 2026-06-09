@@ -6699,7 +6699,7 @@ color:var(--color1)!important;
     /* Ajustamos el tamaño mínimo a 120px para obligar a que entren las 4 columnas */
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); 
     gap: 15px;
-    margin: 25px 0 10px 0;
+    margin: 5px 0 10px 0;
     width: 100% !important; /* Nos aseguramos de que use todo el ancho del bloque */
     box-sizing: border-box;
 }
