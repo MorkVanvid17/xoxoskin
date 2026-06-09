@@ -6816,9 +6816,90 @@ color:var(--color1)!important;
 .fc-columna-scroll::-webkit-scrollbar-thumb {
     background: var(--color1);
 }
-
 /***Aquí se terminan las cajitas del las reservas de FC***/
 
+/**** COLUMNAS PARA CANONS Y SEMICANONS ****/
+/* Contenedor principal en dos columnas simétricas */
+.canon-contenedor-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+}
+/* Cajas estructurales de las columnas */
+.canon-columna-box {
+    background: var(--xadm-bg-dark);
+    border: var(--borde2);
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+/* Encabezados internos (Canons / Semicanons) */
+.canon-columna-titulo {
+    background: rgba(255, 255, 255, 0.02);
+    border-bottom: var(--borde2);
+    padding: 12px 15px;
+    font-family: var(--fuente1);
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--color1);
+    text-align: center;
+}
+/* Zona de scroll para Personajes Ocupados (Fijo en 600px) */
+.canon-scroll-ocupados {
+    padding: 15px;
+    height: 600px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color1) transparent;
+}
+/* Zona de scroll para Personajes Reservados (Fijo en 300px - la mitad) */
+.canon-scroll-reservados {
+    padding: 15px;
+    height: 300px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color1) transparent;
+}
+/* Estilo de cada fila del listado */
+.canon-item {
+    padding: 8px 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    font-size: 12px;
+    line-height: 150%;
+    color: var(--xadm-text);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.canon-item:last-child {
+    border-bottom: none;
+}
+/* Estilo Automático: Personaje en Negritas y Mayúsculas */
+.canon-pj {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+/* Estilo Automático: Faceclaim en Minúsculas */
+.canon-fc {
+    text-transform: lowercase;
+    color: var(--xadm-muted);
+}
+/* Unificación de barras de scroll para navegadores basados en Webkit (Chrome, Edge, Safari) */
+.canon-scroll-ocupados::-webkit-scrollbar,
+.canon-scroll-reservados::-webkit-scrollbar {
+    width: 3px;
+}
+.canon-scroll-ocupados::-webkit-scrollbar-thumb,
+.canon-scroll-reservados::-webkit-scrollbar-thumb {
+    background: var(--color1);
+}
+
+/***Aquí se terminan las columnas de los canon y semi***/
 
 /**** TABLILLA RUMORES / PHONE UI XOXO ****/
 
