@@ -6696,7 +6696,7 @@ color:var(--color1)!important;
 /* Contenedor principal corregido */
 .xoxoadmin-fc-grid {
     display: grid !important;
-    grid-template-columns: repeat(4, 1fr) !important; 
+    grid-template-columns: repeat(3, 1fr) !important; 
     gap: 15px !important;
     margin: 25px 0 10px 0 !important;
     width: 100% !important;
