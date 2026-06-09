@@ -6693,131 +6693,128 @@ color:var(--color1)!important;
 
 /* Aquí metí mi cochinota mano; NUEVO SISTEMA DE 12 CAJAS PARA FACECLAIMS */
 
-/* Contenedor principal corregido */
-.xoxoadmin-fc-grid {
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important; 
-    gap: 15px !important;
-    margin: 25px 0 10px 0 !important;
-    width: 100% !important;
-    box-sizing: border-box !important;
+/* Grid de 12 cajas para Ocupados (Adaptable a pantallas grandes y pequeñas) */
+.fc-ocupados-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
 }
-/* Caja individual */
-.xoxoadmin-fc-box {
-    position: relative;
+
+/* Diseño base de cada una de las 12 cajas */
+.fc-caja {
     background: var(--xadm-bg-dark);
     border: var(--borde2);
-    height: 150px; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 150px; /* Altura idéntica para mantener simetría */
+    position: relative;
     overflow: hidden;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    box-sizing: border-box;
-}
-/* Efecto hover en la caja */
-.xoxoadmin-fc-box:hover {
-    border-color: var(--color1);
-    background: var(--xadm-bg-soft);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-/* Iniciales visibles por defecto */
-.fc-box-letter {
-    font-family: var(--fuente2), serif;
-    font-size: 24px; 
-    color: var(--xadm-text);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    transition: all 0.3s ease-in-out;
-    opacity: 0.9;
-}
-/* Al pasar el mouse, la letra se desvanece y escala */
-.xoxoadmin-fc-box:hover .fc-box-letter {
-    opacity: 0.05;
-    transform: scale(1.2);
-}
-/* Contenido oculto que aparece al pasar el mouse */
-.fc-box-content {
-    position: absolute;
-    inset: 0;
-    padding: 10px;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+    border-radius: 2px;
+}
+
+/* Título de la caja (Las letras que se ven al inicio) */
+.fc-caja-titulo {
+    font-family: var(--fuente2), serif;
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: var(--color1);
+    text-transform: uppercase;
+    transition: all 0.4s ease-in-out;
+    pointer-events: none;
+}
+
+/* Contenido oculto con los nombres y su respectivo scroll */
+.fc-caja-contenido {
+    position: absolute;
+    inset: 0;
+    background: var(--xadm-bg-soft);
+    padding: 12px;
+    font-size: 11px;
+    line-height: 160%;
+    text-align: left;
+    overflow-y: auto;
     opacity: 0;
     visibility: hidden;
     transform: translateY(10px);
     transition: all 0.3s ease-in-out;
-    overflow-y: auto;
     scrollbar-width: thin;
     scrollbar-color: var(--color1) transparent;
-    box-sizing: border-box;
 }
-/* Scrollbars para Webkit */
-.fc-box-content::-webkit-scrollbar {
-    width: 3px;
+
+/* Efecto Hover: Al pasar el mouse, el título se desvanece y sube la lista */
+.fc-caja:hover .fc-caja-titulo {
+    opacity: 0;
+    transform: scale(0.8);
 }
-.fc-box-content::-webkit-scrollbar-thumb {
-    background: var(--color1);
-}
-/* Al pasar el mouse, el contenido se vuelve visible */
-.xoxoadmin-fc-box:hover .fc-box-content {
+
+.fc-caja:hover .fc-caja-contenido {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
 }
-/* Estilo para cada nombre */
-.fc-name {
-    font-family: var(--fuente1);
-    font-size: 11px;
-    line-height: 1.6;
-    color: var(--xadm-muted);
-    width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    transition: color 0.2s ease;
-}
-.fc-name:hover {
-    color: var(--color1);
-}
-/* RESPONSIVE: En tablets baja a 2 columnas y en móviles a 1 */
-@media (max-width: 950px) {
-    .xoxoadmin-fc-grid {
-        grid-template-columns: repeat(2, 1fr) !important;
-    }
-}
-@media (max-width: 480px) {
-    .xoxoadmin-fc-grid {
-        grid-template-columns: 1fr !important;
-    }
+
+/* Estilos de los renglones internos de nombres */
+.fc-caja-contenido div, .fc-columna-scroll div {
+    padding: 4px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    color: var(--xadm-text);
 }
 
-/* Estilo para cada nombre */
-.fc-name {
-    font-family: var(--fuente1);
-    font-size: 11px;
-    line-height: 1.6;
-    color: var(--xadm-muted);
-    width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    transition: color 0.2s ease;
+.fc-caja-contenido div:last-child, .fc-columna-scroll div:last-child {
+    border-bottom: none;
 }
 
-.fc-name:hover {
+/* Contenedor de Reservados en dos Columnas */
+.fc-reservados-columnas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* Cajas de las columnas (Hombres / Mujeres) */
+.fc-columna-box {
+    background: var(--xadm-bg-dark);
+    border: var(--borde2);
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Cabeceras internas de las columnas */
+.fc-columna-titulo {
+    background: rgba(255, 255, 255, 0.02);
+    border-bottom: var(--borde2);
+    padding: 10px 15px;
+    font-family: var(--fuente1);
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
     color: var(--color1);
 }
 
-/* Adaptabilidad corregida para pantallas muy pequeñas (Móviles) */
-@media (max-width: 580px) {
-    .xoxoadmin-fc-grid {
-        grid-template-columns: repeat(2, 1fr); /* En móviles se mantendrán 2 columnas cómodamente */
-    }
+/* Zona interna con scroll de las columnas */
+.fc-columna-scroll {
+    padding: 15px;
+    height: 150px; /* Misma altura fija que las cajas de arriba */
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color1) transparent;
+    font-size: 12px;
+    line-height: 160%;
+}
+
+/* Soporte de scroll para navegadores Webkit (Chrome/Edge/Safari) en las nuevas secciones */
+.fc-caja-contenido::-webkit-scrollbar,
+.fc-columna-scroll::-webkit-scrollbar {
+    width: 3px;
+}
+.fc-caja-contenido::-webkit-scrollbar-thumb,
+.fc-columna-scroll::-webkit-scrollbar-thumb {
+    background: var(--color1);
 }
 
 /***Aquí se terminan las cajitas del las reservas de FC***/
