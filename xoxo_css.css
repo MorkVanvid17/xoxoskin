@@ -3309,7 +3309,7 @@ background:var(--gradient1);
 border-top:var(--borde2);
 background:var(--fondo3);
 display:grid;
-grid-template-columns:1fr;
+grid-template-columns:1fr 1fr 1fr;
 }
 
 .ms-bottom-box {
@@ -6287,620 +6287,369 @@ box-sizing:border-box!important;
 
 .xoxoadmin,
 .xoxoadmin * {
-box-sizing:border-box;
-scrollbar-width:thin;
-scrollbar-color:var(--color1) transparent;
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color1) transparent;
 }
 
 .xoxoadmin ::-webkit-scrollbar {
-width:3px;
-height:3px;
+  width: 3px;
+  height: 3px;
 }
 
 .xoxoadmin ::-webkit-scrollbar-track {
-background:transparent;
+  background: transparent;
 }
 
 .xoxoadmin ::-webkit-scrollbar-thumb {
-background:var(--color1);
+  background: var(--color1);
 }
 
 .xoxoadmin {
---xadm-bg:#181818;
---xadm-bg-dark:#101010;
---xadm-bg-soft:#202020;
---xadm-text:#f0edf2;
---xadm-muted:#d7cce0;
---xadm-line:#2a2a2a;
---xadm-title-size:36px;
---xadm-subtitle-size:10px;
-width:90%;
-margin:35px auto;
-background:var(--xadm-bg);
-border:var(--borde2);
-font-family:var(--fuente1);
-color:var(--xadm-text);
-position:relative;
-overflow:hidden;
-isolation:isolate;
+  --xadm-bg: #181818;
+  --xadm-bg-dark: #101010;
+  --xadm-bg-soft: #202020;
+  --xadm-text: #f0edf2;
+  --xadm-muted: #d7cce0;
+  --xadm-line: #2a2a2a;
+  --xadm-title-size: 36px;
+  --xadm-subtitle-size: 10px;
+  width: 90%;
+  margin: 35px auto;
+  background: var(--xadm-bg);
+  border: var(--borde2);
+  font-family: var(--fuente1);
+  color: var(--xadm-text);
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
 }
 
 .xoxoadmin:before {
-content:"";
-position:absolute;
-left:0;
-right:0;
-top:0;
-height:4px;
-background:var(--gradient1);
-z-index:5;
-pointer-events:none;
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 4px;
+  background: var(--gradient1);
+  z-index: 5;
+  pointer-events: none;
 }
 
 .xoxoadmin:after {
-content:"";
-position:absolute;
-inset:0;
-background:radial-gradient(circle at 15% 8%, rgba(204,186,217,.08), transparent 30%),radial-gradient(circle at 88% 80%, rgba(145,135,179,.07), transparent 32%),linear-gradient(135deg, rgba(255,255,255,.025), transparent 45%, rgba(0,0,0,.18));
-z-index:-1;
-pointer-events:none;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 15% 8%, rgba(204, 186, 217, .08), transparent 30%), radial-gradient(circle at 88% 80%, rgba(145, 135, 179, .07), transparent 32%), linear-gradient(135deg, rgba(255, 255, 255, .025), transparent 45%, rgba(0, 0, 0, .18));
+  z-index: -1;
+  pointer-events: none;
 }
 
 .xoxoadmin a {
-color:var(--xadm-text)!important;
-text-decoration:none!important;
-font-weight:900;
+  color: var(--xadm-text) !important;
+  text-decoration: none !important;
+  font-weight: 900;
 }
 
 .xoxoadmin a:hover {
-color:var(--color1)!important;
+  color: var(--color1) !important;
 }
 
 .xoxoadmin-head {
-width:100%;
-background:var(--xadm-bg-dark);
-border-bottom:var(--borde2);
-padding:34px 42px 30px;
-position:relative;
-text-align:center;
+  width: 100%;
+  background: var(--xadm-bg-dark);
+  border-bottom: var(--borde2);
+  padding: 34px 42px 30px;
+  position: relative;
+  text-align: center;
 }
 
 .xoxoadmin-head:after {
-content:"";
-position:absolute;
-left:42px;
-right:42px;
-bottom:0;
-height:1px;
-background:var(--xadm-line);
+  content: "";
+  position: absolute;
+  left: 42px;
+  right: 42px;
+  bottom: 0;
+  height: 1px;
+  background: var(--xadm-line);
 }
 
 .xoxoadmin-titlebox {
-width:100%;
-display:block;
+  width: 100%;
+  display: block;
 }
 
 .xoxoadmin-title {
-display:block;
-width:100%;
-font-family:var(--fuente2), serif;
-font-size:30px;
-font-weight:400;
-line-height:88%;
-letter-spacing:.5px;
-text-transform:uppercase;
-color:var(--xadm-text);
-text-shadow:var(--sombra);
-text-align:center;
-white-space:normal;
-overflow:visible;
-text-overflow:clip;
-overflow-wrap:anywhere;
-word-break:normal;
+  display: block;
+  width: 100%;
+  font-family: var(--fuente2), serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 88%;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  color: var(--xadm-text);
+  text-shadow: var(--sombra);
+  text-align: center;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+  overflow-wrap: anywhere;
+  word-break: normal;
 }
 
 .xoxoadmin-subtitle {
-display:block;
-width:100%;
-margin-top:12px;
-font-family:var(--fuente1);
-font-size:var(--xadm-subtitle-size);
-font-weight:900;
-line-height:130%;
-letter-spacing:4px;
-text-transform:uppercase;
-color:var(--color1);
-text-align:center;
-white-space:normal;
-overflow:visible;
-text-overflow:clip;
+  display: block;
+  width: 100%;
+  margin-top: 12px;
+  font-family: var(--fuente1);
+  font-size: var(--xadm-subtitle-size);
+  font-weight: 900;
+  line-height: 130%;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--color1);
+  text-align: center;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
 }
 
 .xoxoadmin-body {
-padding:34px 42px 40px;
-background:var(--xadm-bg);
+  padding: 34px 42px 40px;
+  background: var(--xadm-bg);
 }
 
-.xoxoadmin-bodyfull {
-background:var(--xadm-bg-soft);
-border:var(--borde2);
-padding:24px 28px;
-font-size:12px;
-line-height:165%;
-text-align:justify;
-color:var(--xadm-text);
+/* NUEVO ESTILO DE TÍTULO TIPO BARRA (SEGUNDA IMAGEN) */
+.xoxo-titulo-barra {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--xadm-bg-dark);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 14px 20px;
+  margin: 25px 0 18px 0;
 }
 
-.xoxoadmin-bodyfull + .xoxoadmin-bodycols,
-.xoxoadmin-bodyfull + .xoxoadmin-listblock,
-.xoxoadmin-bodycols + .xoxoadmin-listblock {
-margin-top:18px;
+.xoxo-titulo-barra:first-child {
+  margin-top: 0;
 }
 
-.xoxoadmin-bodycols {
-columns:2;
-column-gap:26px;
-column-rule:1px solid var(--xadm-line);
-background:var(--xadm-bg-dark);
-border:var(--borde2);
-padding:24px 28px;
-font-size:12px;
-line-height:165%;
-text-align:justify;
-color:var(--xadm-text);
+.xoxo-tb-izq {
+  font-family: var(--fuente2), serif;
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--xadm-text);
+  letter-spacing: 1px;
 }
 
-.xoxoadmin-bodycols div,
-.xoxoadmin-bodycols ul,
-.xoxoadmin-bodycols ol {
-break-inside:avoid;
-}
-
-.xoxoadmin-bodycols div + div {
-margin-top:12px;
+.xoxo-tb-der {
+  font-family: var(--fuente1), sans-serif;
+  font-size: 9px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--color1);
+  letter-spacing: 3px;
 }
 
 .xoxoadmin-listblock {
-background:var(--xadm-bg-soft);
-border:var(--borde2);
-padding:24px 28px;
-font-size:12px;
-line-height:160%;
-color:var(--xadm-text);
+  background: var(--xadm-bg-soft);
+  border: var(--borde2);
+  padding: 24px 28px;
+  font-size: 12px;
+  line-height: 160%;
+  color: var(--xadm-text);
 }
 
-.xoxoadmin-sectiontitle {
-display:block;
-margin:0 0 16px;
-font-family:var(--fuente2), serif;
-font-size:24px;
-font-weight:400;
-line-height:90%;
-letter-spacing:.4px;
-text-transform:uppercase;
-color:var(--xadm-text);
-text-shadow:var(--sombra);
-}
-
-.xoxoadmin-minititle {
-display:block;
-margin:0 0 10px;
-font-size:9px;
-font-weight:900;
-line-height:100%;
-letter-spacing:3px;
-text-transform:uppercase;
-color:var(--color1);
-}
-/**** XOXO ADMIN — SECTION BOX ****/
-
-.xoxoadmin-sectionbox {
-width:100%;
-box-sizing:border-box;
-display:flex;
-flex-direction:column;
-align-items:flex-start;
-justify-content:flex-start;
-gap:3px;
-margin:0 0 10px 0;
-padding:3px;
-background:var(--gradient1);
-border:var(--borde1);
-overflow:hidden;
-}
-
-.xoxoadmin-listblock .xoxoadmin-sectionbox {
-width:100%;
-}
-
-.xoxoadmin-sectionbox .xoxoadmin-sectiontitle {
-display:block;
-width:100%;
-box-sizing:border-box;
-margin:0;
-padding:0;
-font-family:var(--fuente2), serif;
-font-size:24px;
-font-weight:400;
-line-height:90%;
-letter-spacing:.4px;
-text-transform:uppercase;
-color:var(--textobase);
-text-shadow:var(--sombra);
-}
-
-.xoxoadmin-sectionbox .xoxoadmin-minititle {
-display:block;
-width:100%;
-box-sizing:border-box;
-margin:0;
-padding:0;
-font-family:var(--fuente1);
-font-size:9px;
-font-weight:900;
-line-height:100%;
-letter-spacing:3px;
-text-transform:uppercase;
-color:var(--textobase);
-text-shadow:var(--sombra);
-}
 .xoxoadmin ol,
 .xoxoadmin ul {
-margin:12px 0 0;
-padding:0;
-list-style:none;
-counter-reset:xoxoadmin-list;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: xoxoadmin-list;
 }
 
 .xoxoadmin li {
-position: relative;
-    margin: 0 0 2px;
-    padding: 11px 11px 11px 42px;
-    background: var(--xadm-bg-dark);
-    border: var(--borde2);
-    font-size: 12px;
-    line-height: 2;
-    text-align: justify;
-    color: var(--xadm-text);
-    break-inside: avoid;
+  position: relative;
+  margin: 0 0 4px;
+  padding: 11px 11px 11px 42px;
+  background: var(--xadm-bg-dark);
+  border: var(--borde2);
+  font-size: 12px;
+  line-height: 1.8;
+  text-align: justify;
+  color: var(--xadm-text);
+  break-inside: avoid;
 }
 
 .xoxoadmin li:last-child {
-margin-bottom:0;
-}
-
-.xoxoadmin ol > li {
-counter-increment:xoxoadmin-list;
-}
-
-.xoxoadmin ol > li:before {
-content:counter(xoxoadmin-list, decimal-leading-zero);
-position:absolute;
-left:10px;
-top:11px;
-width:22px;
-height:22px;
-display:flex;
-align-items:center;
-justify-content:center;
-background:var(--xadm-bg-soft);
-border:var(--borde2);
-font-size:8px;
-font-weight:900;
-line-height:100%;
-letter-spacing:.5px;
-color:var(--color1);
+  margin-bottom: 0;
 }
 
 .xoxoadmin ul > li:before {
-content:"✦";
-position:absolute;
-left:10px;
-top:11px;
-width:22px;
-height:22px;
-display:flex;
-align-items:center;
-justify-content:center;
-background:var(--xadm-bg-soft);
-border:var(--borde2);
-font-size:10px;
-font-weight:900;
-line-height:100%;
-color:var(--color1);
+  content: "✦";
+  position: absolute;
+  left: 10px;
+  top: 11px;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--xadm-bg-soft);
+  border: var(--borde2);
+  font-size: 10px;
+  font-weight: 900;
+  line-height: 100%;
+  color: var(--color1);
 }
 
-.xoxoadmin li ul,
-.xoxoadmin li ol {
-margin-top:10px;
-}
-
-.xoxoadmin li li {
-background:rgba(255,255,255,.025);
-padding-top:9px;
-padding-bottom:9px;
-font-size:12px;
-}
-
-.xoxoadmin-tab {
-display:block;
-margin:10px 0 0 22px;
-padding:10px 13px;
-background:rgba(255,255,255,.025);
-border-left:3px solid var(--color1);
-font-size:12px;
-line-height:145%;
-text-align:justify;
-color:var(--xadm-muted);
-height: 280px;
-overflow: auto;
-}
-
-.xoxoadmin-note {
-display:block;
-margin-top:16px;
-padding:13px 15px;
-background:var(--xadm-bg-dark);
-border:var(--borde2);
-font-size:9px;
-font-weight:900;
-line-height:140%;
-letter-spacing:1px;
-text-transform:uppercase;
-color:var(--xadm-muted);
-}
-
-.xoxoadmin-note:before {
-content:"!";
-display:inline-flex;
-align-items:center;
-justify-content:center;
-width:18px;
-height:18px;
-margin-right:8px;
-background:var(--xadm-bg-soft);
-border:var(--borde2);
-color:var(--color1);
-}
-
-.xoxoadmin-btns {
-display:flex;
-flex-wrap:wrap;
-gap:8px;
-margin-top:18px;
-}
-
-.xoxoadmin-btns a {
-min-height:28px;
-display:inline-flex;
-align-items:center;
-justify-content:center;
-padding:0 13px;
-background:var(--xadm-bg-dark);
-border:var(--borde2);
-font-size:8px;
-font-weight:900;
-line-height:100%;
-letter-spacing:1px;
-text-transform:uppercase;
-color:var(--xadm-text)!important;
-transition:.3s ease;
-}
-
-.xoxoadmin-btns a:hover {
-border-color:var(--borde1-c);
-color:var(--color1)!important;
-}
-
-/* Aquí metí mi cochinota mano; NUEVO SISTEMA DE 12 CAJAS PARA FACECLAIMS */
-
-/* Grid de 12 cajas para Ocupados (Adaptable a pantallas grandes y pequeñas) */
+/* SISTEMA DE 12 CAJAS PARA FACECLAIMS */
 .fc-ocupados-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 15px;
-    margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 15px;
+  margin-bottom: 0;
 }
 
-/* Diseño base de cada una de las 12 cajas */
 .fc-caja {
-    background: var(--xadm-bg-dark);
-    border: var(--borde2);
-    height: 150px; /* Altura idéntica para mantener simetría */
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    border-radius: 2px;
+  background: var(--xadm-bg-dark);
+  /* SE CAMBIA EL BORDE DE LAS CAJAS OCUPADAS PARA DARLE MÁS REALCE */
+  border: 1px solid var(--color1); 
+  height: 150px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 2px;
 }
 
-/* Título de la caja (Las letras que se ven al inicio) */
 .fc-caja-titulo {
-    font-family: var(--fuente2), serif;
-    font-size: 18px;
-    letter-spacing: 2px;
-    color: var(--color1);
-    text-transform: uppercase;
-    transition: all 0.4s ease-in-out;
-    pointer-events: none;
+  font-family: var(--fuente2), serif;
+  font-size: 18px;
+  letter-spacing: 2px;
+  color: var(--color1);
+  text-transform: uppercase;
+  transition: all 0.4s ease-in-out;
+  pointer-events: none;
 }
 
-/* Contenido oculto con los nombres y su respectivo scroll */
 .fc-caja-contenido {
-    position: absolute;
-    inset: 0;
-    background: var(--xadm-bg-soft);
-    padding: 12px;
-    font-size: 11px;
-    line-height: 160%;
-    text-align: left;
-    overflow-y: auto;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(10px);
-    transition: all 0.3s ease-in-out;
-    scrollbar-width: thin;
-    scrollbar-color: var(--color1) transparent;
+  position: absolute;
+  inset: 0;
+  background: var(--xadm-bg-soft);
+  padding: 12px;
+  font-size: 11px;
+  line-height: 160%;
+  text-align: left;
+  overflow-y: auto;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease-in-out;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color1) transparent;
 }
 
-/* Efecto Hover: Al pasar el mouse, el título se desvanece y sube la lista */
 .fc-caja:hover .fc-caja-titulo {
-    opacity: 0;
-    transform: scale(0.8);
+  opacity: 0;
+  transform: scale(0.8);
 }
 
 .fc-caja:hover .fc-caja-contenido {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
-/* Estilos de los renglones internos de nombres */
 .fc-caja-contenido div, .fc-columna-scroll div {
-    padding: 4px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-    color: var(--xadm-text);
+  padding: 4px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  color: var(--xadm-text);
 }
 
 .fc-caja-contenido div:last-child, .fc-columna-scroll div:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 /* Contenedor de Reservados en dos Columnas */
 .fc-reservados-columnas {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
 
-/* Cajas de las columnas (Hombres / Mujeres) */
 .fc-columna-box {
-    background: var(--xadm-bg-dark);
-    border: var(--borde2);
-    border-radius: 2px;
-    display: flex;
-    flex-direction: column;
+  background: var(--xadm-bg-dark);
+  border: var(--borde2);
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Cabeceras internas de las columnas */
 .fc-columna-titulo {
-    background: rgba(255, 255, 255, 0.02);
-    border-bottom: var(--borde2);
-    padding: 10px 15px;
-    font-family: var(--fuente1);
-    font-size: 10px;
-    font-weight: 900;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--color1);
+  background: rgba(255, 255, 255, 0.02);
+  border-bottom: var(--borde2);
+  padding: 10px 15px;
+  font-family: var(--fuente1);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color1);
 }
 
-/* Zona interna con scroll de las columnas */
 .fc-columna-scroll {
-    padding: 15px;
-    height: 150px; /* Misma altura fija que las cajas de arriba */
-    overflow-y: auto;
-    scrollbar-width: thin;
-    scrollbar-color: var(--color1) transparent;
-    font-size: 12px;
-    line-height: 160%;
+  padding: 15px;
+  height: 150px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color1) transparent;
+  font-size: 12px;
+  line-height: 160%;
 }
 
-/* Soporte de scroll para navegadores Webkit (Chrome/Edge/Safari) en las nuevas secciones */
 .fc-caja-contenido::-webkit-scrollbar,
 .fc-columna-scroll::-webkit-scrollbar {
-    width: 3px;
+  width: 3px;
 }
 .fc-caja-contenido::-webkit-scrollbar-thumb,
 .fc-columna-scroll::-webkit-scrollbar-thumb {
-    background: var(--color1);
-}
-/***Aquí se terminan las cajitas del las reservas de FC***/
-
-/**** COLUMNAS PARA CANONS Y SEMICANONS ****/
-/* Contenedor principal en dos columnas simétricas */
-.canon-contenedor-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    width: 100%;
-}
-/* Cajas estructurales de las columnas */
-.canon-columna-box {
-    background: var(--xadm-bg-dark);
-    border: var(--borde2);
-    border-radius: 2px;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-}
-/* Encabezados internos (Canons / Semicanons) */
-.canon-columna-titulo {
-    background: rgba(255, 255, 255, 0.02);
-    border-bottom: var(--borde2);
-    padding: 12px 15px;
-    font-family: var(--fuente1);
-    font-size: 11px;
-    font-weight: 900;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--color1);
-    text-align: center;
-}
-/* Zona de scroll para Personajes Ocupados (Fijo en 600px) */
-.canon-scroll-ocupados {
-    padding: 15px;
-    height: 600px;
-    overflow-y: auto;
-    scrollbar-width: thin;
-    scrollbar-color: var(--color1) transparent;
-}
-/* Zona de scroll para Personajes Reservados (Fijo en 300px - la mitad) */
-.canon-scroll-reservados {
-    padding: 15px;
-    height: 300px;
-    overflow-y: auto;
-    scrollbar-width: thin;
-    scrollbar-color: var(--color1) transparent;
-}
-/* Estilo de cada fila del listado */
-.canon-item {
-    padding: 8px 10px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-    font-size: 12px;
-    line-height: 150%;
-    color: var(--xadm-text);
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-}
-.canon-item:last-child {
-    border-bottom: none;
-}
-/* Estilo Automático: Personaje en Negritas y Mayúsculas */
-.canon-pj {
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-/* Estilo Automático: Faceclaim en Minúsculas */
-.canon-fc {
-    text-transform: lowercase;
-    color: var(--xadm-muted);
-}
-/* Unificación de barras de scroll para navegadores basados en Webkit (Chrome, Edge, Safari) */
-.canon-scroll-ocupados::-webkit-scrollbar,
-.canon-scroll-reservados::-webkit-scrollbar {
-    width: 3px;
-}
-.canon-scroll-ocupados::-webkit-scrollbar-thumb,
-.canon-scroll-reservados::-webkit-scrollbar-thumb {
-    background: var(--color1);
+  background: var(--color1);
 }
 
-/***Aquí se terminan las columnas de los canon y semi***/
+/* NUEVA CUARTA SECCIÓN: CAJA DE CÓDIGO */
+.xoxo-codigo-box {
+  background: var(--xadm-bg-dark);
+  border: var(--borde2);
+  padding: 15px;
+}
+
+.xoxo-codigo-box textarea {
+  width: 100%;
+  height: 120px;
+  background: var(--xadm-bg-soft);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--xadm-muted);
+  font-family: monospace;
+  font-size: 11px;
+  padding: 12px;
+  resize: none;
+  outline: none;
+  scrollbar-width: thin;
+}
+
+/* CLASES PARA COLORES DE GRUPOS (Cambia los HEX según tus necesidades) */
+.g-staff { color: #ff6b6b !important; font-weight: bold; }
+.g-grupo1 { color: #4dadf7 !important; }
+.g-grupo2 { color: #a5d8ff !important; }
+
+/***Aquí se terminan las cajitas de los FCs y las columnas de los canon y semi***/
 
 /**** TABLILLA RUMORES / PHONE UI XOXO ****/
 
