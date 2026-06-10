@@ -3304,12 +3304,11 @@ background:var(--gradient1);
 
 /**YO METI MANO AQUI**/
 /**** BOTONES INFERIORES ****/
-
 .ms-bottom {
 border-top:var(--borde2);
 background:var(--fondo3);
 display:grid;
-grid-template-columns:1fr 1fr 1fr;
+grid-template-columns:1fr 1fr;
 }
 
 .ms-bottom-box {
