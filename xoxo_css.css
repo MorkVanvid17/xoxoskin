@@ -6643,11 +6643,11 @@ box-sizing:border-box!important;
   scrollbar-width: thin;
 }
 
-/* CLASES PARA COLORES DE GRUPOS (Cambia los HEX según tus necesidades) */
-.g-staff { color: #5B4A80 !important; font-weight: bold; }
-.g-Insiders { color: #A47AB8 !important; }
-.g-Outsiders { color: #8C3B53 !important; }
-.g-reservas { color: #e39f9f !important; }
+/* CLASES PARA COLORES DE GRUPOS (Compatibles con enlaces <a>) */
+.xoxoadmin .g-staff, .xoxoadmin .g-staff a { color: #5B4A80 !important; font-weight: bold; }
+.xoxoadmin .g-grupo1, .xoxoadmin .g-Insiders a { color: #A47AB8 !important; }
+.xoxoadmin .g-grupo2, .xoxoadmin .g-Outsiders a { color: #8C3B53 !important; }
+.xoxoadmin .g-grupo3, .xoxoadmin .g-reservas a { color: #e39f9f !important; }
 
 /***Aquí se terminan las cajitas de los FCs y las columnas de los canon y semi***/
 
