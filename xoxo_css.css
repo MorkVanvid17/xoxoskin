@@ -6505,57 +6505,58 @@ box-sizing:border-box!important;
   line-height: 100%;
   color: var(--color1);
 }
+
 .xoxoadmin-note {
-display:block;
-margin-top:16px;
-padding:13px 15px;
-background:var(--xadm-bg-dark);
-border:var(--borde2);
-font-size:9px;
-font-weight:900;
-line-height:140%;
-letter-spacing:1px;
-text-transform:uppercase;
-color:var(--xadm-muted);
+  display:block;
+  margin-top:16px;
+  padding:13px 15px;
+  background:var(--xadm-bg-dark);
+  border:var(--borde2);
+  font-size:9px;
+  font-weight:900;
+  line-height:140%;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  color:var(--xadm-muted);
 }
 
 .xoxoadmin-note:before {
-content:"!";
-display:inline-flex;
-align-items:center;
-justify-content:center;
-width:18px;
-height:18px;
-margin-right:8px;
-background:var(--xadm-bg-soft);
-border:var(--borde2);
-color:var(--color1);
+  content:"!";
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:18px;
+  height:18px;
+  margin-right:8px;
+  background:var(--xadm-bg-soft);
+  border:var(--borde2);
+  color:var(--color1);
 }
 .xoxoadmin-btns {
-display:flex;
-flex-wrap:wrap;
-gap:8px;
-margin-top:18px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:18px;
 }
 .xoxoadmin-btns a {
-min-height:28px;
-display:inline-flex;
-align-items:center;
-justify-content:center;
-padding:0 13px;
-background:var(--xadm-bg-dark);
-border:var(--borde2);
-font-size:8px;
-font-weight:900;
-line-height:100%;
-letter-spacing:1px;
-text-transform:uppercase;
-color:var(--xadm-text)!important;
-transition:.3s ease;
+  min-height:28px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:0 13px;
+  background:var(--xadm-bg-dark);
+  border:var(--borde2);
+  font-size:8px;
+  font-weight:900;
+  line-height:100%;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  color:var(--xadm-text)!important;
+  transition:.3s ease;
 }
 .xoxoadmin-btns a:hover {
-border-color:var(--borde1-c);
-color:var(--color1)!important;
+  border-color:var(--borde1-c);
+  color:var(--color1)!important;
 }
 
 /* SISTEMA DE 12 CAJAS PARA FACECLAIMS */
