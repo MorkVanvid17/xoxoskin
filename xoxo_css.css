@@ -6774,12 +6774,12 @@ box-sizing:border-box!important;
 }
 
 .xoxoadmin .canon-fc {
+    text-transform: lowercase !important;
     color: var(--xadm-muted) !important;
-    font-family: "Style Script", cursive !important;
-    font-weight: 400 !important;
+    font-family: "Playfair Display", serif !important;
+    font-optical-sizing: auto !important;
+    font-weight: <weight> !important;
     font-style: normal !important;
-    font-size: 13px !important;
-    letter-spacing: 5px;
 }
 
 /* Barras de scroll Webkit */
