@@ -3322,7 +3322,7 @@ min-width:0;
 color:var(--textobase)!important;
 text-decoration:none!important;
 position:relative;
-overflow:auto;
+overflow:hidden;
 transition:.3s ease;
 }
 
