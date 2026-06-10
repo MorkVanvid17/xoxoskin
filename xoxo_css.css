@@ -6531,14 +6531,12 @@ background:var(--xadm-bg-soft);
 border:var(--borde2);
 color:var(--color1);
 }
-
 .xoxoadmin-btns {
 display:flex;
 flex-wrap:wrap;
 gap:8px;
 margin-top:18px;
 }
-
 .xoxoadmin-btns a {
 min-height:28px;
 display:inline-flex;
@@ -6555,7 +6553,6 @@ text-transform:uppercase;
 color:var(--xadm-text)!important;
 transition:.3s ease;
 }
-
 .xoxoadmin-btns a:hover {
 border-color:var(--borde1-c);
 color:var(--color1)!important;
