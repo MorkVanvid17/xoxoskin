@@ -3306,94 +3306,90 @@ background:var(--gradient1);
 /**** BOTONES INFERIORES ****/
 
 .ms-bottom {
-  border-top: var(--borde2);
-  background: var(--fondo3);
-  display: grid;
-  /* CAMBIO: Dejamos una sola columna */
-  grid-template-columns: 1fr; 
+border-top:var(--borde2);
+background:var(--fondo3);
+display:grid;
+grid-template-columns:1fr 1fr;
 }
 
 .ms-bottom-box {
-  padding: 16px 18px;
-  /* CAMBIO: Cambiamos el borde derecho por uno inferior para la vista vertical */
-  border-bottom: var(--borde2); 
-  display: grid;
-  grid-template-columns: 62px 1fr;
-  gap: 15px;
-  align-items: center;
-  min-width: 0;
-  color: var(--textobase)!important;
-  text-decoration: none!important;
-  position: relative;
-  overflow: hidden;
-  transition: .3s ease;
+padding:16px 18px;
+border-right:var(--borde2);
+display:grid;
+grid-template-columns:62px 1fr;
+gap:15px;
+align-items:center;
+min-width:0;
+color:var(--textobase)!important;
+text-decoration:none!important;
+position:relative;
+overflow:hidden;
+transition:.3s ease;
 }
 
-/* CAMBIO: Quitamos el borde inferior al último elemento */
 .ms-bottom-box:last-child {
-  border-bottom: 0; 
+border-right:0;
 }
 
 .ms-bottom-box:before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: var(--gradient1);
-  opacity: 0;
-  transition: .3s ease;
-  pointer-events: none;
+content:"";
+position:absolute;
+inset:0;
+background:var(--gradient1);
+opacity:0;
+transition:.3s ease;
+pointer-events:none;
 }
 
 .ms-bottom-box:hover:before {
-  opacity: .10;
+opacity:.10;
 }
 
 .ms-bottom-icon {
-  width: 62px;
-  height: 62px;
-  border: var(--borde2);
-  background: var(--fondo2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 26px;
-  color: var(--color1);
-  position: relative;
-  z-index: 2;
+width:62px;
+height:62px;
+border:var(--borde2);
+background:var(--fondo2);
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:26px;
+color:var(--color1);
+position:relative;
+z-index:2;
 }
 
 .ms-bottom-text {
-  min-width: 0;
-  position: relative;
-  z-index: 2;
+min-width:0;
+position:relative;
+z-index:2;
 }
 
 .ms-bottom-text b {
-  display: block;
-  font-family: var(--fuente1);
-  font-size: 13px;
-  font-weight: 900;
-  text-transform: uppercase;
-  color: var(--textobase);
-  line-height: 120%;
-  margin-bottom: 5px;
+display:block;
+font-family:var(--fuente1);
+font-size:13px;
+font-weight:900;
+text-transform:uppercase;
+color:var(--textobase);
+line-height:120%;
+margin-bottom:5px;
 }
 
 .ms-bottom-text span {
-  display: block;
-  font-family: var(--fuente1);
-  font-size: 12px;
-  line-height: 130%;
-  text-align: justify;
-  color: var(--textobase);
-  opacity: .85;
+display:block;
+font-family:var(--fuente1);
+font-size:12px;
+line-height:130%;
+text-align:justify;
+color:var(--textobase);
+opacity:.85;
 }
 
 .ms-bottom-box:hover .ms-bottom-text b,
 .ms-bottom-box:hover .ms-bottom-icon {
-  color: var(--color1);
+color:var(--color1);
 }
-
 /**AQUÍ TERMINA MI MANOTA**/
 
 /**** TEMAS ****/
