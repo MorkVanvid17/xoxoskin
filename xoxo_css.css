@@ -3309,7 +3309,7 @@ background:var(--gradient1);
 border-top:var(--borde2);
 background:var(--fondo3);
 display:grid;
-grid-template-columns:1fr 1fr;
+grid-template-columns:1fr;
 }
 
 .ms-bottom-box {
