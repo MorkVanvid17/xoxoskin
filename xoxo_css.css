@@ -3321,7 +3321,7 @@ align-items:center;
 min-width:0;
 color:var(--textobase)!important;
 text-decoration:none!important;
-position:relative;
+position:relative; 
 overflow:hidden;
 transition:.3s ease;
 }
