@@ -6649,6 +6649,92 @@ box-sizing:border-box!important;
 .xoxoadmin .g-grupo2, .xoxoadmin .g-Outsiders a { color: #8C3B53 !important; }
 .xoxoadmin .g-grupo3, .xoxoadmin .g-reservas a { color: #e39f9f !important; }
 
+/* REFUERZO SEGURO PARA LAS COLUMNAS DE CANONS Y ALTURAS */
+.xoxoadmin .canon-contenedor-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 20px !important;
+    width: 100% !important;
+    margin-bottom: 20px !important;
+}
+
+.xoxoadmin .canon-columna-box {
+    background: var(--xadm-bg-dark) !important;
+    border: var(--borde2) !important;
+    border-radius: 2px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden !important;
+}
+
+.xoxoadmin .canon-columna-titulo {
+    background: rgba(255, 255, 255, 0.02) !important;
+    border-bottom: var(--borde2) !important;
+    padding: 12px 15px !important;
+    font-family: var(--fuente1) !important;
+    font-size: 11px !important;
+    font-weight: 900 !important;
+    letter-spacing: 2px !important;
+    text-transform: uppercase !important;
+    color: var(--color1) !important;
+    text-align: center !important;
+}
+
+/* Altura de 400px con scroll para Personajes Ocupados */
+.xoxoadmin .canon-scroll-ocupados {
+    padding: 15px !important;
+    height: 400px !important;
+    overflow-y: auto !important;
+    scrollbar-width: thin !important;
+    scrollbar-color: var(--color1) transparent !important;
+}
+
+/* Altura de 200px (la mitad) con scroll para Personajes Reservados */
+.xoxoadmin .canon-scroll-reservados {
+    padding: 15px !important;
+    height: 200px !important;
+    overflow-y: auto !important;
+    scrollbar-width: thin !important;
+    scrollbar-color: var(--color1) transparent !important;
+}
+
+.xoxoadmin .canon-item {
+    padding: 8px 10px !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03) !important;
+    font-size: 12px !important;
+    line-height: 150% !important;
+    color: var(--xadm-text) !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+}
+
+.xoxoadmin .canon-item:last-child {
+    border-bottom: none !important;
+}
+
+/* Formato de texto: Personajes en negrita/mayúscula y FC en minúscula */
+.xoxoadmin .canon-pj {
+    font-weight: bold !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+}
+
+.xoxoadmin .canon-fc {
+    text-transform: lowercase !important;
+    color: var(--xadm-muted) !important;
+}
+
+/* Barras de scroll Webkit */
+.xoxoadmin .canon-scroll-ocupados::-webkit-scrollbar,
+.xoxoadmin .canon-scroll-reservados::-webkit-scrollbar {
+    width: 3px !important;
+}
+.xoxoadmin .canon-scroll-ocupados::-webkit-scrollbar-thumb,
+.xoxoadmin .canon-scroll-reservados::-webkit-scrollbar-thumb {
+    background: var(--color1) !important;
+}
+
 /***Aquí se terminan las cajitas de los FCs y las columnas de los canon y semi***/
 
 /**** TABLILLA RUMORES / PHONE UI XOXO ****/
