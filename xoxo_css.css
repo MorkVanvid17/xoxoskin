@@ -3309,7 +3309,6 @@ border-top:var(--borde2);
 background:var(--fondo3);
 display:grid;
 grid-template-columns:1fr 1fr 1fr;
-overflow: auto;
 }
 
 .ms-bottom-box {
@@ -3323,7 +3322,7 @@ min-width:0;
 color:var(--textobase)!important;
 text-decoration:none!important;
 position:relative;
-overflow:hidden;
+overflow:auto;
 transition:.3s ease;
 }
 
