@@ -8536,6 +8536,8 @@ color:var(--gb-soft);
 }
 
 /***AQUI METI MI COCHINA MANOTA EN LA FICHA***/
+/**** TABLILLA FICHA DE PERSONAJE XOXO ****/
+
 .xoxoficha,
 .xoxoficha * {
 box-sizing:border-box;
@@ -8774,7 +8776,7 @@ gap:18px;
 align-items:stretch;
 }
 
-/* AQUÍ SE REALIZÓ EL AJUSTE PARA CENTRAR LAS IMÁGENES VERTICALMENTE */
+/* MODIFICADO: Contenedor flex dinámico */
 .xf-id-left {
 background:var(--xf-bg-soft);
 border:var(--borde2);
@@ -8783,7 +8785,6 @@ position:relative;
 overflow:hidden;
 display: flex;
 flex-direction: column;
-justify-content: center;
 }
 
 .xf-id-left:before {
@@ -8797,16 +8798,19 @@ background:var(--gradient1);
 z-index:3;
 }
 
+/* MODIFICADO: Ahora crece para absorber el espacio vacío */
 .xf-main-photo {
 position:relative;
 background:var(--xf-bg-dark);
 border:var(--borde2);
 overflow:hidden;
+flex: 1;
 }
 
+/* MODIFICADO: Se adapta al alto dinámico sin deformarse gracias a object-fit */
 .xf-main-photo img {
 width:100%;
-aspect-ratio:3/4;
+height:100%;
 object-fit:cover;
 object-position:center;
 display:block;
