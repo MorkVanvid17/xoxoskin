@@ -6419,15 +6419,14 @@ box-sizing:border-box!important;
   padding: 34px 42px 40px;
   background: var(--xadm-bg);
 }
-
-/* NUEVO ESTILO DE TÍTULO TIPO BARRA (SEGUNDA IMAGEN) */
+/* NUEVO ESTILO DE TÍTULO TIPO BARRA (BORDES CON COLOR DEL FORO) */
 .xoxo-titulo-barra {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: var(--xadm-bg-dark);
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  border-top: 1px solid var(--color1); /* Línea superior color del foro */
+  border-bottom: 1px solid var(--color1); /* Línea inferior color del foro */
   padding: 14px 20px;
   margin: 25px 0 18px 0;
 }
@@ -6463,12 +6462,16 @@ box-sizing:border-box!important;
   color: var(--xadm-text);
 }
 
+/* SISTEMA DE LISTAS Y NUMERACIÓN CONTINUA */
 .xoxoadmin ol,
 .xoxoadmin ul {
   margin: 0;
   padding: 0;
   list-style: none;
-  counter-reset: xoxoadmin-list;
+}
+
+.xoxoadmin ol {
+  counter-reset: xoxoadmin-list; /* Inicializa el contador para la numeración */
 }
 
 .xoxoadmin li {
@@ -6488,6 +6491,30 @@ box-sizing:border-box!important;
   margin-bottom: 0;
 }
 
+/* Configuración para los números de las Reglas (ol) */
+.xoxoadmin ol > li {
+  counter-increment: xoxoadmin-list;
+}
+
+.xoxoadmin ol > li:before {
+  content: counter(xoxoadmin-list); /* Muestra el número continuo de forma automática */
+  position: absolute;
+  left: 10px;
+  top: 11px;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--xadm-bg-soft);
+  border: var(--borde2);
+  font-size: 10px;
+  font-weight: 900;
+  line-height: 100%;
+  color: var(--color1);
+}
+
+/* Configuración para los sub-apartados con estrellas (ul) */
 .xoxoadmin ul > li:before {
   content: "✦";
   position: absolute;
