@@ -8535,8 +8535,7 @@ text-align:right;
 color:var(--gb-soft);
 }
 
-/**** TABLILLA FICHA DE PERSONAJE XOXO ****/
-
+/***AQUI METI MI COCHINA MANOTA EN LA FICHA***/
 .xoxoficha,
 .xoxoficha * {
 box-sizing:border-box;
@@ -8775,12 +8774,16 @@ gap:18px;
 align-items:stretch;
 }
 
+/* AQUÍ SE REALIZÓ EL AJUSTE PARA CENTRAR LAS IMÁGENES VERTICALMENTE */
 .xf-id-left {
 background:var(--xf-bg-soft);
 border:var(--borde2);
 padding:15px;
 position:relative;
 overflow:hidden;
+display: flex;
+flex-direction: column;
+justify-content: center;
 }
 
 .xf-id-left:before {
@@ -9169,6 +9172,8 @@ letter-spacing:3px;
 text-transform:uppercase;
 color:var(--color1);
 }
+
+/***AQUI TERMINA MI INTERVENCIÓN EN LA FICHA***/
 
 /**** TABLILLA RUMORES 2 - BLOG / UI TELÉFONO ****/
 
