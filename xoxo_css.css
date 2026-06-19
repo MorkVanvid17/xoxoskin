@@ -12108,22 +12108,35 @@ color:var(--rol-purple-light);
 /**** FIN  COLOR DE GRUPO EN TABLILLAS XOXO ****/
 
 /**** COLOR DE GRUPO EN AUTORES DE ULTIMOS TEMAS - FUERTE ****/
+/**** RESPETAR COLOR DE GRUPO EN ULTIMOS TEMAS ****/
 
-.ms-last-slot .rec-todo a[href*="/u"]:not(.recent1),
-.ms-last-slot li a[href*="/u"]:not(:first-of-type),
-.ms-last-slot > div a[href*="/u"]:not(:first-of-type) {
-  color:revert!important;
-  font-family:var(--fuente1)!important;
-  font-size:10px!important;
-  font-weight:900!important;
-  line-height:120%!important;
-  text-transform:uppercase!important;
-  letter-spacing:1px!important;
-}
-
-.ms-last-slot .rec-todo a[href*="/u"]:not(.recent1) span,
-.ms-last-slot li a[href*="/u"]:not(:first-of-type) span,
-.ms-last-slot > div a[href*="/u"]:not(:first-of-type) span {
+.ms-last-slot .recent2 [class*="group-"],
+.ms-last-slot .recent2 [class*="group-"] *,
+.ms-last-slot .rec-todo [class*="group-"],
+.ms-last-slot .rec-todo [class*="group-"] *,
+.ms-last-slot [class*="usr_grp"],
+.ms-last-slot [class*="usr_grp"] * {
   color:inherit!important;
 }
+
+.ms-last-slot .group-1,
+.ms-last-slot .group-1 * {
+  color:#5B4A80!important;
+}
+
+.ms-last-slot .group-2,
+.ms-last-slot .group-2 * {
+  color:#A47AB8!important;
+}
+
+.ms-last-slot .group-3,
+.ms-last-slot .group-3 * {
+  color:#8C3B53!important;
+}
+
+.ms-last-slot .group-4,
+.ms-last-slot .group-4 * {
+  color:#8C3B53!important;
+}
+
 /**** FIN COLOR DE GRUPO EN AUTORES DE ULTIMOS TEMAS - FUERTE ****/
