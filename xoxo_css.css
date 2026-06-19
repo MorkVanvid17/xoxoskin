@@ -11882,3 +11882,31 @@ color:var(--rol-purple-light);
   }
 }
 /***FIN TABLILLAS ADMINISTRATIVAS***/
+
+/**** CENTRAR ENLACES DEL TABLON PRINCIPAL ****/
+
+.ms-nav {
+  display:flex!important;
+  align-items:stretch!important;
+  justify-content:center!important;
+  gap:0!important;
+  min-width:0!important;
+  overflow:hidden!important;
+}
+
+.ms-nav a {
+  width:116px!important;
+  flex:0 0 116px!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  padding:0 8px!important;
+  border-right:var(--borde2)!important;
+  text-align:center!important;
+}
+
+.ms-nav a:first-child {
+  border-left:var(--borde2)!important;
+}
+
+/**** FIN CENTRAR ENLACES DEL TABLON PRINCIPAL ****/
