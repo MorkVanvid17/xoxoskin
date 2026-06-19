@@ -9821,8 +9821,7 @@ width:100%!important;
 padding:0 8px;
 }
 
-/* Las tablillas principales ya no usan medidas de escritorio en pantallas chicas. */
-.xoxo-guide,
+/* La ficha y las tablillas de rol ya no usan medidas de escritorio en pantallas chicas. */
 .xoxoficha,
 .xoxo-tablillarol1,
 .xoxo-tablillarol2{
@@ -9830,84 +9829,6 @@ width:100%!important;
 max-width:100%!important;
 margin:24px auto!important;
 box-sizing:border-box;
-}
-
-/* GUIDEBOOK */
-.xgb-shell{
-display:block;
-min-height:0;
-}
-
-.xgb-sidebar,
-.xgb-main,
-.xgb-content{
-width:100%;
-min-width:0;
-box-sizing:border-box;
-}
-
-.xgb-sidebar{
-border-right:0;
-border-bottom:var(--borde2);
-padding:16px;
-}
-
-.xgb-tabs{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:7px;
-}
-
-.xgb-tabs label{
-min-height:38px;
-grid-template-columns:24px 1fr;
-padding:0 9px;
-font-size:8px;
-letter-spacing:.6px;
-}
-
-.xgb-topbar,
-.xgb-block-head,
-.xgb-footer,
-.xcanon-footer{
-grid-template-columns:1fr;
-display:grid;
-height:auto;
-gap:10px;
-padding:16px;
-text-align:left;
-}
-
-.xgb-content{
-padding:16px;
-}
-
-.xgb-page-head,
-.xgb-grid-2,
-.xgb-grid-3,
-.xgb-mini-cards,
-.xcanon-head{
-grid-template-columns:1fr;
-}
-
-.xgb-page-icon{
-width:52px;
-height:52px;
-font-size:24px;
-}
-
-.xgb-page-title,
-.xgb-block-title,
-.xgb-list-title,
-.xgb-side-title,
-.xgb-brand-title{
-font-size:24px;
-}
-
-.xgb-text,
-.xgb-solid,
-.xgb-listbox{
-padding:15px;
 }
 
 /* FICHA DE PERSONAJE */
