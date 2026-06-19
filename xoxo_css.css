@@ -12112,7 +12112,7 @@ color:var(--rol-purple-light);
 /* Grupo 1 */
 .ms-tablon .ms-last-slot .rec-todo .recent2 a span[class*="group-1"],
 .ms-tablon .ms-last-slot .rec-todo .recent2 a span[class*="group-1"] strong {
-  color:red!important;
+  color:#5B4A80!important;
 }
 
 /* Grupo 2 */
