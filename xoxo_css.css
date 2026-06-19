@@ -11846,6 +11846,13 @@ color:var(--rol-purple-light);
 .xoxo-admin-note--warning .xoxo-admin-note-icon i {
   color:var(--color1);
 }
+.xoxo-admin-note--reward .xoxo-admin-note-icon i,
+.xoxo-admin-note--loss .xoxo-admin-note-icon i,
+.xoxo-admin-note--purchase .xoxo-admin-note-icon i,
+.xoxo-admin-note--reject .xoxo-admin-note-icon i,
+.xoxo-admin-note--progress .xoxo-admin-note-icon i {
+  color:var(--color1);
+}
 
 /**** RESPONSIVE ADMINISTRATIVO XOXO ****/
 
