@@ -9802,14 +9802,17 @@ color:var(--rol-purple-light);
 /***TABLILLAS ROL RESPONSIVE***/
 / COMPATIBILIDAD MÓVIL PARA TABLILLAS XOXO /
 @media (max-width: 768px) {
-    /* 1. Volver las tablillas principales fluidas */
+    /* Forzar a las tablillas a perder sus anchos rígidos */
     .xoxo-tablillarol1, 
     .xoxo-tablillarol2 {
-        width: 100% !important; /* Ocupan todo el ancho del mensaje */
-        max-width: 100% !important;
-        margin: 15px auto !important; /* Reducimos el margen vertical externo */
-        padding: 8px !important; /* Un poco menos de borde para ganar espacio */
+        display: block !important;
+        width: 100% !important;
+        max-width: 92vw !important; /* Mide el 92% de la pantalla real del celular */
+        min-width: 0 !important;
+        margin: 15px auto !important;
+        padding: 8px !important;
     }
+}
 
     /* 2. Reducir rellenos internos en móviles */
     .rol1-inner, 
