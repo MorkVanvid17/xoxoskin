@@ -9892,3 +9892,26 @@ color:var(--rol-purple-light);
 
 }
 /*** AQUI TERMINA MI INTERVENCIÓN PARA INTENTAR HACER RESPONSIVE LA SKIN***/
+
+/**PRUEBA PRUEBOSA**/
+
+/**** PRUEBA RESPONSIVE - BORRAR DESPUES ****/
+
+@media (max-width:1300px), (max-device-width:900px){
+
+  body:before {
+    content:"MODO MOVIL ACTIVO";
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index:999999;
+    background:red;
+    color:white;
+    font:700 14px Arial;
+    text-align:center;
+    padding:8px;
+  }
+
+}
+/**TERMINA LA PRUEBA**/
