@@ -9799,135 +9799,81 @@ line-height:100%;
 text-transform:uppercase;
 color:var(--rol-purple-light);
 }
+/***TABLILLAS ROL RESPONSIVE***/
+/ COMPATIBILIDAD MÓVIL PARA TABLILLAS XOXO /
+@media (max-width: 768px) {
+    /* 1. Volver las tablillas principales fluidas */
+    .xoxo-tablillarol1, 
+    .xoxo-tablillarol2 {
+        width: 100% !important; /* Ocupan todo el ancho del mensaje */
+        max-width: 100% !important;
+        margin: 15px auto !important; /* Reducimos el margen vertical externo */
+        padding: 8px !important; /* Un poco menos de borde para ganar espacio */
+    }
 
-/**PRUEBA PRUEBOSA**/
+    /* 2. Reducir rellenos internos en móviles */
+    .rol1-inner, 
+    .rol2-body {
+        padding: 15px !important; /* Evitamos que el texto quede muy apretado */
+    }
 
-/**** PRUEBA RESPONSIVE - BORRAR DESPUES ****/
+    /* 3. Romper la grilla de la Tablilla 1 para apilarla verticalmente */
+    .rol1-inner {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important; /* Centra el icono decorativo arriba */
+        gap: 15px !important;
+    }
 
-@media (max-width:1300px), (max-device-width:900px){
+    .rol1-content {
+        text-align: left; /* Mantiene el texto del post alineado */
+        width: 100% !important;
+    }
 
-  body:before {
-    content:"MODO MOVIL ACTIVO";
-    position:fixed;
-    top:0;
-    left:0;
-    right:0;
-    z-index:999999;
-    background:red;
-    color:white;
-    font:700 14px Arial;
-    text-align:center;
-    padding:8px;
-  }
+    /* 4. Romper la grilla de la cabecera en la Tablilla 2 */
+    .rol2-header {
+        padding: 15px !important; /* Menos espacio muerto en la cabecera */
+        min-height: auto !important; /* Evita que la cabecera sea innecesariamente alta */
+    }
 
+    .rol2-head-content {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important; /* Centra el avatar circular arriba */
+        text-align: center !important;
+        gap: 15px !important;
+    }
+
+    /* 5. Ajustes tipográficos menores para que no se saturen las pantallas pequeñas */
+    .rol1-title, 
+    .rol2-title {
+        font-size: 24px !important; /* Títulos ligeramente más pequeños */
+    }
+.rol1-text, 
+    .rol2-text {
+        font-size: 14px !important; /* Ajuste óptimo de lectura en celular */
+        text-align: left !important; /* Opcional: la justificación suele dejar huecos raros en pantallas angostas */
+    }
 }
-/**TERMINA LA PRUEBA**/
 
+/***PRUEBA DE RESPONSIVE DIFERENTE***/
 
-/** AQUI COMIENZA MI INTERVENCIÓN PARA INTENTAR HACER LA SKIN RESPONSIVE **/
-/**** RESPONSIVE REAL PARA TEMAS XOXO ****/
+@media (max-width: 768px) {
+    /* Fuerza a que el contenedor del post sea vertical */
+    .post, .postbody {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        float: none !important;
+        box-sizing: border-box;
+    }
 
-@media (max-width:1300px), (max-device-width:900px){
-
-  body {
-    overflow-x:hidden!important;
-  }
-
-  #wrap {
-    width:100%!important;
-    max-width:100%!important;
-    margin:0 auto!important;
-    padding:10px!important;
-    box-sizing:border-box!important;
-  }
-
-  .headpost {
-    height:auto!important;
-    min-height:80px!important;
-    padding:20px!important;
-    justify-content:center!important;
-    text-align:center!important;
-  }
-
-  .envopost {
-    display:block!important;
-    width:100%!important;
-    min-height:0!important;
-    overflow:hidden!important;
-  }
-
-  .post-perfil {
-    width:100%!important;
-    max-width:100%!important;
-    flex:none!important;
-    margin:0!important;
-    padding:20px 0!important;
-  }
-
-  .perfilt-contacto {
-    position:relative!important;
-    top:auto!important;
-    margin:0 auto 10px!important;
-    display:flex!important;
-    justify-content:center!important;
-    width:auto!important;
-  }
-
-  .perfilt {
-    width:280px!important;
-    height:360px!important;
-    position:relative!important;
-    top:auto!important;
-    margin:0 auto!important;
-  }
-
-  .perfilt0,
-  .perfilt-avatar,
-  .perfilt-avatar img {
-    width:250px!important;
-    height:330px!important;
-  }
-
-  .post-post {
-    width:100%!important;
-    max-width:100%!important;
-    min-width:0!important;
-  }
-
-  .post-up {
-    margin:10px!important;
-    flex-wrap:wrap!important;
-  }
-
-  .post-contenido {
-    width:100%!important;
-    max-width:100%!important;
-    padding:10px!important;
-    box-sizing:border-box!important;
-    overflow:hidden!important;
-  }
-
-  .post-contenido img,
-  .post-contenido iframe,
-  .post-contenido table {
-    max-width:100%!important;
-  }
-
-  .xoxoficha,
-  .xoxo-tablillarol1,
-  .xoxo-tablillarol2 {
-    width:100%!important;
-    max-width:100%!important;
-    margin:20px auto!important;
-    box-sizing:border-box!important;
-  }
-
-  .rol1-inner,
-  .xf-id-grid,
-  .xf-story-layout,
-  .xf-extra-layout {
-    grid-template-columns:1fr!important;
-  }
-
+    /* Ajusta el bloque del perfil arriba del mensaje */
+    .postprofile {
+        width: 100% !important;
+        float: none !important;
+        margin-bottom: 15px !important;
+        text-align: center; /* Centra el avatar y el rango */
+    }
 }
-/*** AQUI TERMINA MI INTERVENCIÓN PARA INTENTAR HACER RESPONSIVE LA SKIN***/
+/***TERMINA LA PRUEBA DEL RESPONSIVE DIFERENTE***/
