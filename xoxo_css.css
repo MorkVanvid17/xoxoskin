@@ -9800,7 +9800,7 @@ text-transform:uppercase;
 color:var(--rol-purple-light);
 }
 /***TABLILLAS ROL RESPONSIVE***/
-/ COMPATIBILIDAD MÓVIL PARA TABLILLAS XOXO /
+/* COMPATIBILIDAD MÓVIL PARA TABLILLAS XOXO */
 @media (max-width: 768px) {
     /* Forzar a las tablillas a perder sus anchos rígidos */
     .xoxo-tablillarol1, 
