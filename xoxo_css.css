@@ -12107,26 +12107,12 @@ color:var(--rol-purple-light);
 
 /**** FIN  COLOR DE GRUPO EN TABLILLAS XOXO ****/
 
-/**** COLOR DE GRUPO EN AUTORES DE ULTIMOS TEMAS ****/
+/**** COLOR DE GRUPO EN AUTORES DE ULTIMOS TEMAS - FUERTE ****/
 
-/* Evita que el tablón borre el color de grupo del autor */
-.ms-last-slot .rec-todo a:not(.recent1):last-of-type,
-.ms-last-slot li a:not(:first-of-type):last-of-type,
-.ms-last-slot > div a:not(:first-of-type):last-of-type {
-  color:inherit!important;
-}
-
-/* Si Foroactivo mete el color en un span dentro del link, lo respetamos */
-.ms-last-slot .rec-todo a:not(.recent1):last-of-type span,
-.ms-last-slot li a:not(:first-of-type):last-of-type span,
-.ms-last-slot > div a:not(:first-of-type):last-of-type span {
-  color:inherit!important;
-}
-
-/* Mantiene el estilo bonito del tablón */
-.ms-last-slot .rec-todo a:not(.recent1):last-of-type,
-.ms-last-slot li a:not(:first-of-type):last-of-type,
-.ms-last-slot > div a:not(:first-of-type):last-of-type {
+.ms-last-slot .rec-todo a[href*="/u"]:not(.recent1),
+.ms-last-slot li a[href*="/u"]:not(:first-of-type),
+.ms-last-slot > div a[href*="/u"]:not(:first-of-type) {
+  color:revert!important;
   font-family:var(--fuente1)!important;
   font-size:10px!important;
   font-weight:900!important;
@@ -12134,4 +12120,10 @@ color:var(--rol-purple-light);
   text-transform:uppercase!important;
   letter-spacing:1px!important;
 }
-/**** FIN COLOR DE GRUPO EN TABLILLAS XOXO ****/
+
+.ms-last-slot .rec-todo a[href*="/u"]:not(.recent1) span,
+.ms-last-slot li a[href*="/u"]:not(:first-of-type) span,
+.ms-last-slot > div a[href*="/u"]:not(:first-of-type) span {
+  color:inherit!important;
+}
+/**** FIN COLOR DE GRUPO EN AUTORES DE ULTIMOS TEMAS - FUERTE ****/
