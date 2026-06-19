@@ -11735,3 +11735,143 @@ color:var(--rol-purple-light);
 }
 
 /**** TERMINO MENSAJE CELULAR XOXO ****/
+/***TABLILLAS ADMINISTRATIVAS***/
+/**** TABLILLAS ADMINISTRATIVAS XOXO ****/
+
+.xoxo-admin-note,
+.xoxo-admin-note * {
+  box-sizing:border-box;
+}
+
+.xoxo-admin-note {
+  width:520px;
+  max-width:100%;
+  margin:25px auto;
+  display:grid;
+  grid-template-columns:90px minmax(0, 1fr);
+  background:var(--fondo3);
+  border:var(--borde2);
+  color:var(--textobase);
+  font-family:var(--fuente1);
+  overflow:hidden;
+}
+
+.xoxo-admin-note-icon {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:var(--fondo2);
+  border-right:var(--borde2);
+  position:relative;
+}
+
+.xoxo-admin-note-icon:before {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:var(--gradient1);
+  opacity:.14;
+}
+
+.xoxo-admin-note-icon i {
+  position:relative;
+  z-index:2;
+  width:46px;
+  height:46px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:var(--fondo3);
+  border:var(--borde2);
+  border-radius:100%;
+  color:var(--color1);
+  font-size:20px;
+  line-height:100%;
+}
+
+.xoxo-admin-note-content {
+  min-width:0;
+  padding:24px 28px;
+  background:
+    radial-gradient(circle at 95% 20%, rgba(204,186,217,.10), transparent 28%),
+    var(--fondo3);
+}
+
+.xoxo-admin-note-title {
+  font-family:var(--fuente2);
+  font-size:34px;
+  line-height:85%;
+  text-transform:uppercase;
+  color:var(--color1);
+  text-shadow:var(--sombra);
+}
+
+.xoxo-admin-note-text {
+  margin-top:12px;
+  color:var(--textobase);
+  font-family:var(--fuente1);
+  font-size:12px;
+  line-height:155%;
+  text-align:justify;
+}
+
+.xoxo-admin-note-text b,
+.xoxo-admin-note-text strong,
+.xoxo-admin-note-text i,
+.xoxo-admin-note-text u {
+  color:var(--color1);
+}
+
+.xoxo-admin-note-text a {
+  color:var(--color1)!important;
+  text-decoration:none!important;
+  font-weight:900;
+  text-transform:uppercase;
+}
+
+/**** VARIANTES ADMINISTRATIVAS ****/
+
+.xoxo-admin-note--ok .xoxo-admin-note-icon i {
+  color:var(--color1);
+}
+
+.xoxo-admin-note--update .xoxo-admin-note-icon i {
+  color:var(--color1);
+}
+
+.xoxo-admin-note--close .xoxo-admin-note-icon i {
+  color:var(--color1);
+}
+
+.xoxo-admin-note--warning .xoxo-admin-note-icon i {
+  color:var(--color1);
+}
+
+/**** RESPONSIVE ADMINISTRATIVO XOXO ****/
+
+@media (max-width:500px) {
+  .xoxo-admin-note {
+    grid-template-columns:1fr;
+  }
+
+  .xoxo-admin-note-icon {
+    min-height:82px;
+    border-right:0;
+    border-bottom:var(--borde2);
+  }
+
+  .xoxo-admin-note-content {
+    padding:22px;
+    text-align:center;
+  }
+
+  .xoxo-admin-note-title {
+    font-size:29px;
+    text-align:center;
+  }
+
+  .xoxo-admin-note-text {
+    text-align:center;
+  }
+}
+/***FIN TABLILLAS ADMINISTRATIVAS***/
