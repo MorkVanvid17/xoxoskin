@@ -6819,6 +6819,49 @@ box-sizing:border-box!important;
     background: var(--color1) !important;
 }
 
+/**  AQUÍ METI MI MANOTA PARA LA TABLILLA DE TIENDA, BORRAR DESDE AQUI SU NO FUNCIONA  **/
+/* Esto alinea las dos columnas grandes una al lado de la otra */
+.canon-contenedor-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px; /* Espacio elegante entre la columna izquierda y derecha */
+    width: 100%;
+}
+
+/* Alineación de las cajas individuales de las columnas */
+.canon-columna-box {
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.03); /* Sutil fondo translúcido estilo cristal */
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+    padding: 15px;
+}
+
+/* Transforma los ítems de lista en filas horizontales perfectas */
+.canon-item {
+    display: flex !important;
+    justify-content: space-between; /* Manda el texto a la izquierda y el precio a la derecha */
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Línea divisoria muy fina */
+    font-size: 13px;
+}
+
+/* Elimina la línea divisoria del último elemento para que se vea limpio */
+.canon-item:last-child {
+    border-bottom: none;
+}
+
+/* Estilo destacado sutil para los precios a la derecha */
+.canon-item strong {
+    color: #e5c158; /* Un tono dorado o el color de acento que uses en tu foro */
+    font-weight: 600;
+    margin-left: 15px;
+    white-space: nowrap; /* Evita que el precio se rompa en dos líneas */
+}
+/***  AQUÍ TERMINA MI INTERVENCIÓN PARA LA TABLILLA DE TIENDA, BORRAR HASTA AQUI SU NO FUNCIONA  ***/
+
 /***Aquí se terminan las cajitas de los FCs y las columnas de los canon y semi***/
 
 /**** TABLILLA RUMORES / PHONE UI XOXO ****/
