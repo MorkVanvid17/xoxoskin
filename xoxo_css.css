@@ -9800,8 +9800,9 @@ text-transform:uppercase;
 color:var(--rol-purple-light);
 }
 
-/** AQUI COMIENZA MI INTERVENCIÓN PARA INTENTAR HACER LA SKIN RESPONSIVE **/
-/**** RESPONSIVE REAL PARA TEMAS XOXO ****/
+/** AQUI COMIENZA MI INTERVENCION PARA HACER LA SKIN RESPONSIVE **/
+
+/**** BASE RESPONSIVE GENERAL ****/
 
 @media (max-width:1300px), (max-device-width:900px){
 
@@ -9823,55 +9824,6 @@ color:var(--rol-purple-light);
     padding:20px!important;
     justify-content:center!important;
     text-align:center!important;
-  }
-
-  .envopost {
-  display:flex!important;
-  flex-direction:row!important;
-  align-items:flex-start!important;
-  width:100%!important;
-  min-height:0!important;
-  overflow:hidden!important;
-}
-
-.post-perfil {
-  width:115px!important;
-  max-width:115px!important;
-  flex:0 0 115px!important;
-  margin:0!important;
-  padding:10px 0!important;
-}
-
-.perfilt-contacto {
-  position:relative!important;
-  top:auto!important;
-  margin:0 auto 6px!important;
-  display:flex!important;
-  justify-content:center!important;
-  width:92px!important;
-}
-  }
-
-  .perfilt {
-  width:92px!important;
-  height:150px!important;
-  padding:6px!important;
-  position:relative!important;
-  top:auto!important;
-  margin:0 auto!important;
-}
-
-.perfilt0,
-.perfilt-avatar,
-.perfilt-avatar img {
-  width:80px!important;
-  height:138px!important;
-}
-
-  .post-post {
-    width:100%!important;
-    max-width:100%!important;
-    min-width:0!important;
   }
 
   .post-up {
@@ -9910,4 +9862,110 @@ color:var(--rol-purple-light);
   }
 
 }
-/*** AQUI TERMINA MI INTERVENCIÓN PARA INTENTAR HACER RESPONSIVE LA SKIN***/
+
+/**** TABLET: PERFIL AL LADO DEL POST ****/
+
+@media (max-width:900px) and (min-width:501px){
+
+  .envopost {
+    display:flex!important;
+    flex-direction:row!important;
+    align-items:flex-start!important;
+    width:100%!important;
+    min-height:0!important;
+    overflow:hidden!important;
+  }
+
+  .post-perfil {
+    width:145px!important;
+    max-width:145px!important;
+    flex:0 0 145px!important;
+    margin:0!important;
+    padding:12px 0!important;
+  }
+
+  .perfilt-contacto {
+    position:relative!important;
+    top:auto!important;
+    margin:0 auto 8px!important;
+    display:flex!important;
+    justify-content:center!important;
+    width:120px!important;
+  }
+
+  .perfilt {
+    width:120px!important;
+    height:190px!important;
+    padding:7px!important;
+    position:relative!important;
+    top:auto!important;
+    margin:0 auto!important;
+  }
+
+  .perfilt0,
+  .perfilt-avatar,
+  .perfilt-avatar img {
+    width:106px!important;
+    height:176px!important;
+  }
+
+  .post-post {
+    width:calc(100% - 145px)!important;
+    max-width:calc(100% - 145px)!important;
+    min-width:0!important;
+  }
+
+}
+
+/**** MOVIL: PERFIL ARRIBA DEL POST ****/
+
+@media (max-width:500px){
+
+  .envopost {
+    display:block!important;
+    width:100%!important;
+    min-height:0!important;
+    overflow:hidden!important;
+  }
+
+  .post-perfil {
+    width:100%!important;
+    max-width:100%!important;
+    flex:none!important;
+    margin:0!important;
+    padding:16px 0!important;
+  }
+
+  .perfilt-contacto {
+    position:relative!important;
+    top:auto!important;
+    margin:0 auto 10px!important;
+    display:flex!important;
+    justify-content:center!important;
+    width:auto!important;
+  }
+
+  .perfilt {
+    width:260px!important;
+    height:340px!important;
+    position:relative!important;
+    top:auto!important;
+    margin:0 auto!important;
+  }
+
+  .perfilt0,
+  .perfilt-avatar,
+  .perfilt-avatar img {
+    width:230px!important;
+    height:310px!important;
+  }
+
+  .post-post {
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+  }
+
+}
+
+/*** AQUI TERMINA MI INTERVENCION PARA HACER RESPONSIVE LA SKIN ***/
