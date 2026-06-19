@@ -9804,12 +9804,49 @@ color:var(--rol-purple-light);
 
 /**** AJUSTE MOVIL DEL ANCHO DEL FORO ****/
 
-@media (max-width:700px){
+/* FUERZA RESPONSIVE SIN ACTIVAR MÓVIL */
+html, body {
+    min-width: 0 !important;
+    width: 100% !important;
+    overflow-x: hidden !important;
+}
 
-  #wrap {
-    width:100%!important;
-    max-width:calc(100vw - 24px)!important;
-  }
+#wrap, .pun, .pun table, .pun td, .pun tbody, .pun tr {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: block !important;
+    box-sizing: border-box !important;
+}
 
+/* Hace que las tablas principales sean scroll horizontal */
+.pun table, .ipb_table {
+    display: table !important;
+    width: 100% !important;
+    overflow-x: auto !important;
+    white-space: nowrap;
+}
+
+/* Fuerza a los elementos a ocupar el ancho del móvil */
+.pun td, .pun th, .pun .row1, .pun .row2, .pun .row3 {
+    display: block !important;
+    width: 100% !important;
+    float: none !important;
+    clear: both !important;
+}
+
+/* Ajusta imágenes y vídeos */
+.pun img, .pun iframe, .pun object {
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+/* Oculta columnas molestas en móvil (ej: fecha exacta, contador) */
+.pun .post-info, .pun .post-date {
+    font-size: 12px !important;
+}
+
+/* Mejora el padding para dedos */
+.pun .main-content, .pun .post-body {
+    padding: 10px !important;
 }
 /*** AQUI TERMINA MI INTERVENCIÓN PARA INTENTAR HACER RESPONSIVE LA SKIN***/
