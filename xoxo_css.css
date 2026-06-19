@@ -12110,15 +12110,6 @@ color:var(--rol-purple-light);
 /**** COLOR DE GRUPO EN AUTORES DE ULTIMOS TEMAS - FUERTE ****/
 /**** RESPETAR COLOR DE GRUPO EN ULTIMOS TEMAS ****/
 
-.ms-last-slot .recent2 [class*="group-"],
-.ms-last-slot .recent2 [class*="group-"] *,
-.ms-last-slot .rec-todo [class*="group-"],
-.ms-last-slot .rec-todo [class*="group-"] *,
-.ms-last-slot [class*="usr_grp"],
-.ms-last-slot [class*="usr_grp"] * {
-  color:inherit!important;
-}
-
 .ms-last-slot .group-1,
 .ms-last-slot .group-1 * {
   color:#5B4A80!important;
