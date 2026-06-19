@@ -10380,11 +10380,15 @@ color:var(--rol-purple-light);
   .xoxo-crono-item a {
     font-size:9px;
   }
+  .xoxo-crono img {
+  max-width:100%!important;
 }
+}
+
 /***AQUÍ TERMINA LA CRONOLOGÍA***/
 /***AQUÍ COMIENZA LAS RELACIONES***/
 /***PRUEBA PRUEBOSA***/
-.xoxo-links {
-  outline:5px solid red!important;
+.xoxo-crono img {
+  max-width:100%!important;
 }
 /***FIN DE PRUEBA PRUEBOSA***/
