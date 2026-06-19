@@ -10899,11 +10899,7 @@ color:var(--rol-purple-light);
 /*** TERMINA TABLILLA RELACIONES***/
 /**** AQUÍ COMIENZA LA TABLILLA FARANDULA ****/
 /*** INICIA FARANDULA 1 PORTADA BLOG ***/
-
-.xoxo-fara,
-.xoxo-fara * {
-  box-sizing:border-box;
-}
+/**** PACK FARANDULA XOXO - PORTADA CORREGIDA ****/
 
 .xoxo-fara {
   width:470px;
@@ -10932,19 +10928,20 @@ color:var(--rol-purple-light);
   display:flex;
   align-items:center;
   gap:12px;
-  color:var(--textobase);
 }
 
 .xoxo-fara-browser i {
   font-size:11px;
-  line-height:100%;
+  color:var(--textobase);
 }
 
 .xoxo-fara-browser-left .fa-arrow-right {
   opacity:.35;
 }
 
-.xoxo-fara-browser-right .fa-user-circle {
+.xoxo-fara-browser-right .fa-user-circle,
+.xoxo-fara-url .fa-lock,
+.xoxo-fara-url .fa-star {
   color:var(--color1);
 }
 
@@ -10962,63 +10959,41 @@ color:var(--rol-purple-light);
 }
 
 .xoxo-fara-url span {
-  min-width:0;
   overflow:hidden;
   text-overflow:ellipsis;
   white-space:nowrap;
-  color:var(--textobase);
-  font-family:var(--fuente1);
   font-size:10px;
-  line-height:100%;
-}
-
-.xoxo-fara-url .fa-lock {
-  color:var(--color1);
-}
-
-.xoxo-fara-url .fa-star {
-  color:var(--color1);
+  color:var(--textobase);
 }
 
 .xoxo-fara-nav {
+  height:60px;
   display:flex;
   align-items:center;
   justify-content:center;
-  flex-wrap:wrap;
   gap:9px;
-  min-height:58px;
-  padding:16px 20px;
+  padding:0 20px;
   background:var(--fondo1);
   border-bottom:var(--borde2);
 }
 
 .xoxo-fara-nav span {
-  color:var(--textobase);
-  opacity:.65;
-  font-family:var(--fuente1);
   font-size:9px;
   font-weight:900;
   letter-spacing:1px;
-  line-height:100%;
   text-transform:uppercase;
-  cursor:pointer;
-  transition:.3s ease;
+  color:var(--textobase);
+  opacity:.7;
 }
 
 .xoxo-fara-nav i {
-  color:var(--color1);
   font-size:8px;
-  line-height:100%;
-}
-
-.xoxo-fara-nav span:hover {
   color:var(--color1);
-  opacity:1;
 }
 
 .xoxo-fara-hero {
   width:100%;
-  aspect-ratio:47/25;
+  height:250px;
   background:var(--fondo2);
   border-bottom:var(--borde2);
   overflow:hidden;
@@ -11034,21 +11009,23 @@ color:var(--rol-purple-light);
 }
 
 .xoxo-fara-news-grid {
-  display:grid;
-  grid-template-columns:1fr 1.55fr;
-  gap:6px;
+  height:220px;
+  display:flex;
+  flex-wrap:wrap;
+  align-content:flex-start;
+  justify-content:center;
+  gap:4px;
   padding:40px;
   background:var(--fondo1);
 }
 
 .xoxo-fara-news {
-  min-height:100px;
+  height:100px;
   display:flex;
   flex-direction:column;
   align-items:center;
   justify-content:center;
   gap:10px;
-  padding:14px;
   background:var(--fondo2);
   border:var(--borde2);
   color:var(--textobase)!important;
@@ -11056,7 +11033,16 @@ color:var(--rol-purple-light);
   text-decoration:none!important;
   position:relative;
   overflow:hidden;
-  transition:.3s ease;
+}
+
+.xoxo-fara-news--one,
+.xoxo-fara-news--four {
+  width:150px;
+}
+
+.xoxo-fara-news--two,
+.xoxo-fara-news--three {
+  width:230px;
 }
 
 .xoxo-fara-news:before {
@@ -11064,20 +11050,7 @@ color:var(--rol-purple-light);
   position:absolute;
   inset:0;
   background:var(--gradient1);
-  opacity:.14;
-  transition:.3s ease;
-}
-
-.xoxo-fara-news--two:before {
-  opacity:.10;
-}
-
-.xoxo-fara-news--three:before {
   opacity:.18;
-}
-
-.xoxo-fara-news--four:before {
-  opacity:.12;
 }
 
 .xoxo-fara-news i,
@@ -11087,29 +11060,21 @@ color:var(--rol-purple-light);
 }
 
 .xoxo-fara-news i {
-  color:var(--color1);
   font-size:22px;
-  line-height:100%;
-  transition:.3s ease;
+  color:var(--color1);
 }
 
 .xoxo-fara-news span {
-  color:var(--textobase);
-  font-family:var(--fuente1);
   font-size:10px;
   font-weight:900;
   letter-spacing:1px;
   line-height:110%;
   text-transform:uppercase;
+  color:var(--textobase);
 }
 
 .xoxo-fara-news:hover {
   border-color:var(--color1);
-  background:var(--fondo3);
-}
-
-.xoxo-fara-news:hover:before {
-  opacity:.28;
 }
 
 .xoxo-fara-news:hover span {
@@ -11117,22 +11082,20 @@ color:var(--rol-purple-light);
 }
 
 .xoxo-fara-footer {
-  min-height:96px;
+  height:100px;
   display:flex;
   align-items:center;
   justify-content:flex-end;
-  padding:34px 40px;
-  background:rgba(0,0,0,.72);
+  padding:40px;
+  background:#050505;
   border-top:var(--borde2);
   text-align:right;
 }
 
 .xoxo-fara-footer span {
-  color:var(--textobase);
-  font-family:var(--fuente1);
   font-size:10px;
   font-style:italic;
-  line-height:100%;
+  color:var(--textobase);
 }
 
 .xoxo-fara-credit {
@@ -11154,6 +11117,46 @@ color:var(--rol-purple-light);
   letter-spacing:2px;
   line-height:100%;
   text-transform:uppercase;
+}
+
+/**** RESPONSIVE PORTADA FARANDULA ****/
+
+@media (max-width:500px) {
+  .xoxo-fara {
+    width:100%;
+  }
+
+  .xoxo-fara-browser {
+    grid-template-columns:1fr;
+    gap:8px;
+  }
+
+  .xoxo-fara-browser-left,
+  .xoxo-fara-browser-right {
+    justify-content:center;
+  }
+
+  .xoxo-fara-hero {
+    height:210px;
+  }
+
+  .xoxo-fara-news-grid {
+    height:auto;
+    padding:24px;
+    gap:8px;
+  }
+
+  .xoxo-fara-news--one,
+  .xoxo-fara-news--two,
+  .xoxo-fara-news--three,
+  .xoxo-fara-news--four {
+    width:calc(50% - 4px);
+  }
+
+  .xoxo-fara-footer {
+    height:76px;
+    padding:24px;
+  }
 }
 
 /**** RESPONSIVE PACK FARANDULA XOXO - PORTADA ****/
@@ -11436,8 +11439,3 @@ color:var(--rol-purple-light);
 }
 /*** TERMINA FARANDULA 4 CHISME 3 PERSONAS BLOG ***/
 
-/***PRUEBA PRUEBOSA***/
-.xoxo-fara-people--three {
-  max-width:100%!important;
-}
-/***FIN DE PRUEBA PRUEBOSA***/
