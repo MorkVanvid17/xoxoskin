@@ -10898,5 +10898,9 @@ color:var(--rol-purple-light);
 /**** TERMINA TABLILLA RELACIONES CON DESCRIPCION XOXO ****/
 /*** TERMINA TABLILLA RELACIONES***/
 /**** AQUÍ COMIENZA LA TABLILLA FARANDULA ****/
-
+/***PRUEBA PRUEBOSA***/
+.xoxo-rel-desc {
+  max-width:100%!important;
+}
+/***FIN DE PRUEBA PRUEBOSA***/
 
