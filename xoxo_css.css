@@ -9800,99 +9800,6 @@ text-transform:uppercase;
 color:var(--rol-purple-light);
 }
 
-/** AQUI COMIENZA MI INTERVENCIÓN PARA INTENTAR HACER LA SKIN RESPONSIVE **/
-/**** BASE RESPONSIVE XOXO - MOVIL ****/
-
-@media (max-width:900px){
-
-  /* Caja grande del foro */
-  #wrap {
-    width:100%!important;
-    max-width:calc(100vw - 20px)!important;
-    margin:0 auto 30px!important;
-  }
-
-  /* Evita que el cuerpo cree scroll horizontal feo */
-  body {
-    overflow-x:hidden!important;
-  }
-
-  /* Caja completa del post */
-  .envopost {
-    display:flex!important;
-    flex-direction:column!important;
-    width:100%!important;
-    min-height:0!important;
-    overflow:hidden!important;
-  }
-
-  /* Perfil del usuario: deja de ocupar 400px al lado */
-  .post-perfil {
-    width:100%!important;
-    flex:0 0 auto!important;
-    margin:0!important;
-    padding:20px 0!important;
-  }
-
-  /* Tarjeta del perfil más pequeña en móvil */
-  .perfilt {
-    width:280px!important;
-    height:360px!important;
-    position:relative!important;
-    top:auto!important;
-  }
-
-  .perfilt0,
-  .perfilt-avatar,
-  .perfilt-avatar img {
-    width:250px!important;
-    height:330px!important;
-  }
-
-  /* Contactos del perfil acomodados arriba */
-  .perfilt-contacto {
-    position:relative!important;
-    top:auto!important;
-    margin-top:0!important;
-  }
-
-  /* Parte del mensaje */
-  .post-post {
-    width:100%!important;
-    min-width:0!important;
-  }
-
-  .post-up {
-    margin:10px!important;
-  }
-
-  .post-contenido {
-    width:100%!important;
-    max-width:100%!important;
-    padding:0 10px 20px!important;
-    box-sizing:border-box!important;
-    overflow:hidden!important;
-  }
-
-  /* Imágenes y tablillas no se salen de la pantalla */
-  .post-contenido img,
-  .post-contenido iframe,
-  .post-contenido table {
-    max-width:100%!important;
-  }
-
-  /* Ficha y tablillas de rol */
-  .xoxoficha,
-  .xoxo-tablillarol1,
-  .xoxo-tablillarol2 {
-    width:100%!important;
-    max-width:100%!important;
-    box-sizing:border-box!important;
-  }
-
-}
-/*** AQUI TERMINA MI INTERVENCIÓN PARA INTENTAR HACER RESPONSIVE LA SKIN***/
-
 /**PRUEBA PRUEBOSA**/
 
 /**** PRUEBA RESPONSIVE - BORRAR DESPUES ****/
@@ -9915,3 +9822,112 @@ color:var(--rol-purple-light);
 
 }
 /**TERMINA LA PRUEBA**/
+
+
+/** AQUI COMIENZA MI INTERVENCIÓN PARA INTENTAR HACER LA SKIN RESPONSIVE **/
+/**** RESPONSIVE REAL PARA TEMAS XOXO ****/
+
+@media (max-width:1300px), (max-device-width:900px){
+
+  body {
+    overflow-x:hidden!important;
+  }
+
+  #wrap {
+    width:100%!important;
+    max-width:100%!important;
+    margin:0 auto!important;
+    padding:10px!important;
+    box-sizing:border-box!important;
+  }
+
+  .headpost {
+    height:auto!important;
+    min-height:80px!important;
+    padding:20px!important;
+    justify-content:center!important;
+    text-align:center!important;
+  }
+
+  .envopost {
+    display:block!important;
+    width:100%!important;
+    min-height:0!important;
+    overflow:hidden!important;
+  }
+
+  .post-perfil {
+    width:100%!important;
+    max-width:100%!important;
+    flex:none!important;
+    margin:0!important;
+    padding:20px 0!important;
+  }
+
+  .perfilt-contacto {
+    position:relative!important;
+    top:auto!important;
+    margin:0 auto 10px!important;
+    display:flex!important;
+    justify-content:center!important;
+    width:auto!important;
+  }
+
+  .perfilt {
+    width:280px!important;
+    height:360px!important;
+    position:relative!important;
+    top:auto!important;
+    margin:0 auto!important;
+  }
+
+  .perfilt0,
+  .perfilt-avatar,
+  .perfilt-avatar img {
+    width:250px!important;
+    height:330px!important;
+  }
+
+  .post-post {
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+  }
+
+  .post-up {
+    margin:10px!important;
+    flex-wrap:wrap!important;
+  }
+
+  .post-contenido {
+    width:100%!important;
+    max-width:100%!important;
+    padding:10px!important;
+    box-sizing:border-box!important;
+    overflow:hidden!important;
+  }
+
+  .post-contenido img,
+  .post-contenido iframe,
+  .post-contenido table {
+    max-width:100%!important;
+  }
+
+  .xoxoficha,
+  .xoxo-tablillarol1,
+  .xoxo-tablillarol2 {
+    width:100%!important;
+    max-width:100%!important;
+    margin:20px auto!important;
+    box-sizing:border-box!important;
+  }
+
+  .rol1-inner,
+  .xf-id-grid,
+  .xf-story-layout,
+  .xf-extra-layout {
+    grid-template-columns:1fr!important;
+  }
+
+}
+/*** AQUI TERMINA MI INTERVENCIÓN PARA INTENTAR HACER RESPONSIVE LA SKIN***/
