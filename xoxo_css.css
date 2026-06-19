@@ -9801,14 +9801,93 @@ color:var(--rol-purple-light);
 }
 
 /** AQUI COMIENZA MI INTERVENCIÓN PARA INTENTAR HACER LA SKIN RESPONSIVE **/
+/**** BASE RESPONSIVE XOXO - MOVIL ****/
 
-/**** AJUSTE MOVIL DEL ANCHO DEL FORO ****/
+@media (max-width:900px){
 
-@media (max-width:700px){
-
+  /* Caja grande del foro */
   #wrap {
     width:100%!important;
-    max-width:calc(100vw - 24px)!important;
+    max-width:calc(100vw - 20px)!important;
+    margin:0 auto 30px!important;
+  }
+
+  /* Evita que el cuerpo cree scroll horizontal feo */
+  body {
+    overflow-x:hidden!important;
+  }
+
+  /* Caja completa del post */
+  .envopost {
+    display:flex!important;
+    flex-direction:column!important;
+    width:100%!important;
+    min-height:0!important;
+    overflow:hidden!important;
+  }
+
+  /* Perfil del usuario: deja de ocupar 400px al lado */
+  .post-perfil {
+    width:100%!important;
+    flex:0 0 auto!important;
+    margin:0!important;
+    padding:20px 0!important;
+  }
+
+  /* Tarjeta del perfil más pequeña en móvil */
+  .perfilt {
+    width:280px!important;
+    height:360px!important;
+    position:relative!important;
+    top:auto!important;
+  }
+
+  .perfilt0,
+  .perfilt-avatar,
+  .perfilt-avatar img {
+    width:250px!important;
+    height:330px!important;
+  }
+
+  /* Contactos del perfil acomodados arriba */
+  .perfilt-contacto {
+    position:relative!important;
+    top:auto!important;
+    margin-top:0!important;
+  }
+
+  /* Parte del mensaje */
+  .post-post {
+    width:100%!important;
+    min-width:0!important;
+  }
+
+  .post-up {
+    margin:10px!important;
+  }
+
+  .post-contenido {
+    width:100%!important;
+    max-width:100%!important;
+    padding:0 10px 20px!important;
+    box-sizing:border-box!important;
+    overflow:hidden!important;
+  }
+
+  /* Imágenes y tablillas no se salen de la pantalla */
+  .post-contenido img,
+  .post-contenido iframe,
+  .post-contenido table {
+    max-width:100%!important;
+  }
+
+  /* Ficha y tablillas de rol */
+  .xoxoficha,
+  .xoxo-tablillarol1,
+  .xoxo-tablillarol2 {
+    width:100%!important;
+    max-width:100%!important;
+    box-sizing:border-box!important;
   }
 
 }
