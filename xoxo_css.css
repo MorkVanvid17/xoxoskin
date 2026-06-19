@@ -10387,8 +10387,516 @@ color:var(--rol-purple-light);
 
 /***AQUÍ TERMINA LA CRONOLOGÍA***/
 /***AQUÍ COMIENZA LAS RELACIONES***/
-/***PRUEBA PRUEBOSA***/
-.xoxo-crono img {
-  max-width:100%!important;
+/**** TABLILLA RELACIONES XOXO SIN DESCRIPCIONES ****/
+
+.xoxo-rel,
+.xoxo-rel * {
+  box-sizing:border-box;
 }
-/***FIN DE PRUEBA PRUEBOSA***/
+
+.xoxo-rel {
+  width:400px;
+  max-width:100%;
+  margin:20px auto 0;
+  background:var(--fondo3);
+  border:var(--borde2);
+  color:var(--textobase);
+  font-family:var(--fuente1);
+  overflow:hidden;
+}
+
+.xoxo-rel-head {
+  min-height:140px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px 30px;
+  background:var(--fondo1);
+  border-bottom:var(--borde2);
+}
+
+.xoxo-rel-avatar {
+  width:120px;
+  height:120px;
+  position:relative;
+  padding:9px;
+  background:var(--fondo2);
+  border:var(--borde1);
+  border-radius:100%;
+}
+
+.xoxo-rel-avatar img {
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+  object-position:center;
+  border-radius:100%;
+  filter:grayscale(1) contrast(1.05);
+}
+
+.xoxo-rel-avatar i {
+  width:42px;
+  height:42px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:absolute;
+  right:-10px;
+  bottom:8px;
+  background:var(--gradient1);
+  border:4px solid var(--fondo3);
+  border-radius:100%;
+  color:var(--fondo2);
+  font-size:16px;
+  line-height:100%;
+}
+
+.xoxo-rel-title {
+  padding:13px 30px;
+  background:var(--fondo2);
+  border-bottom:var(--borde2);
+  font-family:var(--fuente2);
+  font-size:24px;
+  line-height:85%;
+  text-align:right;
+  text-transform:uppercase;
+  color:var(--color1);
+  text-shadow:var(--sombra);
+}
+
+.xoxo-rel-grid {
+  width:360px;
+  max-width:calc(100% - 32px);
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:20px;
+  margin:22px auto;
+}
+
+.xoxo-rel-card {
+  aspect-ratio:1/1;
+  position:relative;
+  background:var(--fondo2);
+  border:var(--borde2);
+  overflow:hidden;
+}
+
+.xoxo-rel-card > img {
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+  object-position:center;
+  filter:grayscale(1) contrast(1.05);
+  transition:.5s ease;
+}
+
+.xoxo-rel-info {
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:14px;
+  background:rgba(14,14,14,.88);
+  transform:translateY(100%);
+  transition:.5s ease;
+}
+
+.xoxo-rel-card:hover .xoxo-rel-info {
+  transform:translateY(0);
+}
+
+.xoxo-rel-card:hover > img {
+  transform:scale(1.08);
+  opacity:.35;
+}
+
+.xoxo-rel-info-inner {
+  width:100%;
+  min-height:90px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:14px;
+  border:var(--borde2);
+  text-align:center;
+}
+
+.xoxo-rel-info-inner > i {
+  color:var(--color1);
+  font-size:20px;
+  line-height:100%;
+}
+
+.xoxo-rel-info-inner b {
+  display:block;
+  margin-bottom:5px;
+  color:var(--color1);
+  font-family:var(--fuente1);
+  font-size:10px;
+  font-weight:900;
+  line-height:100%;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+
+.xoxo-rel-info-inner span {
+  display:block;
+  color:var(--textobase);
+  font-family:var(--fuente1);
+  font-size:10px;
+  line-height:135%;
+}
+
+.xoxo-rel-credit {
+  width:280px;
+  max-width:90%;
+  margin:0 auto 20px;
+  padding:5px 10px;
+  background:var(--fondo2);
+  border:var(--borde2);
+  text-align:center;
+}
+
+.xoxo-rel-credit a {
+  color:var(--color1)!important;
+  text-decoration:none!important;
+  font-family:var(--fuente1);
+  font-size:8px;
+  font-weight:900;
+  letter-spacing:2px;
+  line-height:100%;
+  text-transform:uppercase;
+}
+
+/**** RESPONSIVE TABLILLA RELACIONES XOXO ****/
+
+@media (max-width:500px) {
+  .xoxo-rel {
+    width:100%;
+  }
+
+  .xoxo-rel-head {
+    min-height:125px;
+    padding:18px;
+  }
+
+  .xoxo-rel-avatar {
+    width:105px;
+    height:105px;
+  }
+
+  .xoxo-rel-title {
+    padding:13px 20px;
+    font-size:22px;
+    text-align:center;
+  }
+
+  .xoxo-rel-grid {
+    width:100%;
+    max-width:calc(100% - 24px);
+    gap:12px;
+    margin:18px auto;
+  }
+
+  .xoxo-rel-info {
+    padding:10px;
+  }
+
+  .xoxo-rel-info-inner {
+    min-height:76px;
+    padding:10px;
+  }
+
+  .xoxo-rel-info-inner > i {
+    font-size:17px;
+  }
+
+  .xoxo-rel-info-inner b,
+  .xoxo-rel-info-inner span {
+    font-size:9px;
+  }
+}
+/**** TERMINA TABLILLA RELACIONES XOXO SIN DESCRIPCIONES ****/
+/**** TABLILLA RELACIONES CON DESCRIPCION XOXO ****/
+
+.xoxo-rel-desc,
+.xoxo-rel-desc * {
+  box-sizing:border-box;
+  scrollbar-width:thin;
+  scrollbar-color:var(--color1) transparent;
+}
+
+.xoxo-rel-desc ::-webkit-scrollbar {
+  width:3px;
+  height:3px;
+}
+
+.xoxo-rel-desc ::-webkit-scrollbar-track {
+  background:transparent;
+}
+
+.xoxo-rel-desc ::-webkit-scrollbar-thumb {
+  background:var(--color1);
+}
+
+.xoxo-rel-desc {
+  width:400px;
+  max-width:100%;
+  margin:20px auto 0;
+  background:var(--fondo3);
+  border:var(--borde2);
+  color:var(--textobase);
+  font-family:var(--fuente1);
+  overflow:hidden;
+}
+
+.xoxo-rel-desc-head {
+  min-height:140px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px 30px;
+  background:var(--fondo1);
+  border-bottom:var(--borde2);
+}
+
+.xoxo-rel-desc-avatar {
+  width:120px;
+  height:120px;
+  position:relative;
+  padding:9px;
+  background:var(--fondo2);
+  border:var(--borde1);
+  border-radius:100%;
+}
+
+.xoxo-rel-desc-avatar img {
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+  object-position:center;
+  border-radius:100%;
+  filter:grayscale(1) contrast(1.05);
+}
+
+.xoxo-rel-desc-avatar i {
+  width:42px;
+  height:42px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:absolute;
+  right:-10px;
+  bottom:8px;
+  background:var(--gradient1);
+  border:4px solid var(--fondo3);
+  border-radius:100%;
+  color:var(--fondo2);
+  font-size:16px;
+  line-height:100%;
+}
+
+.xoxo-rel-desc-title {
+  padding:13px 30px;
+  background:var(--fondo2);
+  border-bottom:var(--borde2);
+  font-family:var(--fuente2);
+  font-size:24px;
+  line-height:85%;
+  text-align:right;
+  text-transform:uppercase;
+  color:var(--color1);
+  text-shadow:var(--sombra);
+}
+
+.xoxo-rel-desc-grid {
+  width:360px;
+  max-width:calc(100% - 32px);
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:20px;
+  margin:22px auto;
+}
+
+.xoxo-rel-desc-card {
+  aspect-ratio:1/1;
+  position:relative;
+  background:var(--fondo2);
+  border:var(--borde2);
+  overflow:hidden;
+}
+
+.xoxo-rel-desc-card > img {
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+  object-position:center;
+  filter:grayscale(1) contrast(1.05);
+  transition:.5s ease;
+}
+
+.xoxo-rel-desc-panel {
+  position:absolute;
+  left:0;
+  right:0;
+  top:100%;
+  height:100%;
+  padding:9px;
+  background:rgba(14,14,14,.94);
+  transition:.5s ease;
+}
+
+.xoxo-rel-desc-card:hover .xoxo-rel-desc-panel {
+  top:0;
+}
+
+.xoxo-rel-desc-card:hover > img {
+  transform:scale(1.08);
+  opacity:.32;
+}
+
+.xoxo-rel-desc-name {
+  display:grid;
+  grid-template-columns:34px minmax(0, 1fr);
+  align-items:center;
+  gap:8px;
+  padding:8px;
+  background:var(--fondo2);
+  border:var(--borde2);
+}
+
+.xoxo-rel-desc-name > i {
+  color:var(--color1);
+  font-size:17px;
+  line-height:100%;
+  text-align:center;
+}
+
+.xoxo-rel-desc-name b {
+  display:block;
+  color:var(--color1);
+  font-family:var(--fuente1);
+  font-size:10px;
+  font-weight:900;
+  line-height:100%;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+
+.xoxo-rel-desc-name span {
+  display:block;
+  margin-top:3px;
+  color:var(--textobase);
+  font-family:var(--fuente1);
+  font-size:9px;
+  line-height:125%;
+}
+
+.xoxo-rel-desc-text {
+  max-height:86px;
+  margin-top:8px;
+  padding:0 6px 0 0;
+  overflow:auto;
+  color:var(--textobase);
+  font-family:var(--fuente1);
+  font-size:10px;
+  line-height:145%;
+  text-align:justify;
+}
+
+.xoxo-rel-desc-text b,
+.xoxo-rel-desc-text i {
+  color:var(--color1);
+}
+
+.xoxo-rel-desc-credit {
+  width:280px;
+  max-width:90%;
+  margin:0 auto 20px;
+  padding:5px 10px;
+  background:var(--fondo2);
+  border:var(--borde2);
+  text-align:center;
+}
+
+.xoxo-rel-desc-credit a {
+  color:var(--color1)!important;
+  text-decoration:none!important;
+  font-family:var(--fuente1);
+  font-size:8px;
+  font-weight:900;
+  letter-spacing:2px;
+  line-height:100%;
+  text-transform:uppercase;
+}
+
+/**** RESPONSIVE TABLILLA RELACIONES CON DESCRIPCION XOXO ****/
+
+@media (max-width:500px) {
+  .xoxo-rel-desc {
+    width:100%;
+  }
+
+  .xoxo-rel-desc-head {
+    min-height:125px;
+    padding:18px;
+  }
+
+  .xoxo-rel-desc-avatar {
+    width:105px;
+    height:105px;
+  }
+
+  .xoxo-rel-desc-title {
+    padding:13px 20px;
+    font-size:22px;
+    text-align:center;
+  }
+
+  .xoxo-rel-desc-grid {
+    width:100%;
+    max-width:calc(100% - 24px);
+    gap:12px;
+    margin:18px auto;
+  }
+
+  .xoxo-rel-desc-panel {
+    padding:7px;
+  }
+
+  .xoxo-rel-desc-name {
+    grid-template-columns:28px minmax(0, 1fr);
+    gap:6px;
+    padding:7px;
+  }
+
+  .xoxo-rel-desc-name > i {
+    font-size:15px;
+  }
+
+  .xoxo-rel-desc-name b {
+    font-size:9px;
+  }
+
+  .xoxo-rel-desc-name span,
+  .xoxo-rel-desc-text {
+    font-size:8px;
+  }
+
+  .xoxo-rel-desc-text {
+    max-height:78px;
+    line-height:140%;
+  }
+}
+/**** TERMINA TABLILLA RELACIONES CON DESCRIPCION XOXO ****/
+/*** TERMINA TABLILLA RELACIONES***/
+/**** AQUÍ COMIENZA LA TABLILLA FARANDULA ****/
+
+
