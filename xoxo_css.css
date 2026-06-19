@@ -12107,27 +12107,30 @@ color:var(--rol-purple-light);
 
 /**** FIN  COLOR DE GRUPO EN TABLILLAS XOXO ****/
 
-/**** COLOR DE GRUPO EN AUTORES DE ULTIMOS TEMAS - FUERTE ****/
-/**** RESPETAR COLOR DE GRUPO EN ULTIMOS TEMAS ****/
+/**** COLOR DE GRUPO EN AUTORES DE ULTIMOS TEMAS - DEFINITIVO ****/
 
-.ms-last-slot .group-1,
-.ms-last-slot .group-1 * {
+/* Grupo 1 */
+.ms-tablon .ms-last-slot .rec-todo .recent2 a span[class*="group-1"],
+.ms-tablon .ms-last-slot .rec-todo .recent2 a span[class*="group-1"] strong {
   color:#5B4A80!important;
 }
 
-.ms-last-slot .group-2,
-.ms-last-slot .group-2 * {
+/* Grupo 2 */
+.ms-tablon .ms-last-slot .rec-todo .recent2 a span[class*="group-2"],
+.ms-tablon .ms-last-slot .rec-todo .recent2 a span[class*="group-2"] strong {
   color:#A47AB8!important;
 }
 
-.ms-last-slot .group-3,
-.ms-last-slot .group-3 * {
+/* Grupo 3 */
+.ms-tablon .ms-last-slot .rec-todo .recent2 a span[class*="group-3"],
+.ms-tablon .ms-last-slot .rec-todo .recent2 a span[class*="group-3"] strong {
   color:#8C3B53!important;
 }
 
-.ms-last-slot .group-4,
-.ms-last-slot .group-4 * {
+/* Grupo 4 */
+.ms-tablon .ms-last-slot .rec-todo .recent2 a span[class*="group-4"],
+.ms-tablon .ms-last-slot .rec-todo .recent2 a span[class*="group-4"] strong {
   color:#8C3B53!important;
 }
 
-/**** FIN COLOR DE GRUPO EN AUTORES DE ULTIMOS TEMAS - FUERTE ****/
+/**** FIN COLOR DE GRUPO EN AUTORES DE ULTIMOS TEMAS - DEFINITIVO ****/
