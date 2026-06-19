@@ -11438,3 +11438,280 @@ color:var(--rol-purple-light);
   }
 }
 /*** TERMINA FARANDULA 4 CHISME 3 PERSONAS BLOG ***/
+
+/**** AQUÍ COMIENZA TABLILLA CELULAR XOXO ****/
+
+.xoxo-phone,
+.xoxo-phone * {
+  box-sizing:border-box;
+}
+
+.xoxo-phone {
+  width:244px;
+  height:487px;
+  margin:20px auto 0;
+  position:relative;
+  overflow:hidden;
+  font-family:var(--fuente1);
+}
+
+.xoxo-phone-screen {
+  width:213px;
+  height:460px;
+  position:absolute;
+  left:16px;
+  top:14px;
+  background:#000;
+  overflow:hidden;
+  border-radius:24px;
+  border:var(--borde2);
+}
+
+.xoxo-phone:after {
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:10;
+  background:url(https://i.imgur.com/OjultUy.png) center/100% 100% no-repeat;
+  pointer-events:none;
+}
+
+.xoxo-phone-main,
+.xoxo-phone-second {
+  width:213px;
+  height:460px;
+  position:absolute;
+  inset:0;
+  background:#000;
+  overflow:hidden;
+  transition:1s ease;
+}
+
+.xoxo-phone-second {
+  z-index:1;
+  opacity:0;
+}
+
+.xoxo-phone-main {
+  z-index:2;
+}
+
+.xoxo-phone:hover .xoxo-phone-main {
+  transform:translateY(-500px);
+}
+
+.xoxo-phone:hover .xoxo-phone-second {
+  opacity:1;
+  transition:1.3s ease;
+}
+
+.xoxo-phone-bg {
+  width:213px;
+  height:460px;
+  display:block;
+  object-fit:cover;
+  object-position:center;
+  opacity:.62;
+  filter:grayscale(1) contrast(1.05);
+}
+
+.xoxo-phone-status {
+  position:absolute;
+  top:8px;
+  right:8px;
+  z-index:3;
+  display:flex;
+  align-items:center;
+  gap:4px;
+  width:42px;
+  padding-bottom:3px;
+  border-bottom:1px solid rgba(255,255,255,.35);
+  color:#fff;
+  font-size:7px;
+  line-height:100%;
+}
+
+.xoxo-phone-home {
+  position:absolute;
+  left:0;
+  right:0;
+  top:76px;
+  z-index:3;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  color:#fff;
+  font-family:var(--fuente1);
+}
+
+.xoxo-phone-home > i {
+  margin-bottom:22px;
+  color:#fff;
+  font-size:34px;
+  line-height:100%;
+}
+
+.xoxo-phone-time {
+  font-size:44px;
+  line-height:100%;
+  font-weight:400;
+}
+
+.xoxo-phone-date {
+  margin-top:9px;
+  font-size:12px;
+  line-height:100%;
+}
+
+.xoxo-phone-bottom {
+  position:absolute;
+  left:22px;
+  right:22px;
+  bottom:42px;
+  z-index:3;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  color:#eee;
+}
+
+.xoxo-phone-bottom i {
+  width:42px;
+  height:42px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(0,0,0,.45);
+  border:1px solid rgba(255,255,255,.24);
+  border-radius:100%;
+  font-size:18px;
+  line-height:100%;
+}
+
+.xoxo-phone-small-time {
+  position:absolute;
+  top:10px;
+  left:14px;
+  z-index:3;
+  color:#fff;
+  font-family:var(--fuente1);
+  font-size:10px;
+  line-height:100%;
+}
+
+.xoxo-phone-profile {
+  position:absolute;
+  top:90px;
+  left:0;
+  right:0;
+  z-index:3;
+  display:flex;
+  justify-content:center;
+}
+
+.xoxo-phone-avatar {
+  width:120px;
+  height:120px;
+  padding:6px;
+  background:var(--fondo2);
+  border:var(--borde1);
+  border-radius:100%;
+}
+
+.xoxo-phone-avatar img {
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+  object-position:center;
+  border-radius:100%;
+  filter:grayscale(1) contrast(1.05);
+}
+
+.xoxo-phone-profile > i {
+  width:36px;
+  height:36px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:absolute;
+  left:48px;
+  bottom:-8px;
+  background:var(--fondo2);
+  border:var(--borde2);
+  border-radius:100%;
+  color:var(--color1);
+  font-size:14px;
+  line-height:100%;
+}
+
+.xoxo-phone-message {
+  position:absolute;
+  left:10px;
+  right:10px;
+  bottom:58px;
+  z-index:3;
+  text-align:center;
+}
+
+.xoxo-phone-bubble {
+  padding:12px;
+  background:var(--fondo2);
+  border:var(--borde2);
+  border-radius:10px;
+  color:var(--textobase);
+  font-family:var(--fuente1);
+  font-size:11px;
+  line-height:135%;
+  text-align:left;
+}
+
+.xoxo-phone-bubble i {
+  margin-right:8px;
+  color:var(--color1);
+  opacity:.9;
+}
+
+.xoxo-phone-actions {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:4px;
+  margin-top:5px;
+}
+
+.xoxo-phone-actions div {
+  min-height:28px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:var(--fondo2);
+  border:var(--borde2);
+  border-radius:5px;
+  color:var(--color1);
+  font-size:12px;
+  line-height:100%;
+}
+
+.xoxo-phone-credit {
+  width:244px;
+  max-width:90%;
+  margin:0 auto 20px;
+  padding:5px 10px;
+  background:var(--fondo2);
+  border:var(--borde2);
+  text-align:center;
+}
+
+.xoxo-phone-credit a {
+  color:var(--color1)!important;
+  text-decoration:none!important;
+  font-family:var(--fuente1);
+  font-size:8px;
+  font-weight:900;
+  letter-spacing:2px;
+  line-height:100%;
+  text-transform:uppercase;
+}
+
+/**** AQUÍ COMIENZA TABLILLA CELULAR XOXO ****/
