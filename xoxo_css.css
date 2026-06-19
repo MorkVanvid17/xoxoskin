@@ -9802,132 +9802,14 @@ color:var(--rol-purple-light);
 
 /** AQUI COMIENZA MI INTERVENCIÓN PARA INTENTAR HACER LA SKIN RESPONSIVE **/
 
-/**** AJUSTE MOVIL PARA TABLILLAS XOXO ****/
+/**** AJUSTE MOVIL DEL ANCHO DEL FORO ****/
 
 @media (max-width:700px){
 
-/* Evita que el contenido del post empuje o corte las tablillas en celular. */
-.post .inner,
-.envopost,
-.post-post,
-.post-contenido{
-min-width:0!important;
-max-width:100%!important;
-box-sizing:border-box;
-}
-
-.post-contenido{
-width:100%!important;
-padding:0 8px;
-}
-
-/* La ficha y las tablillas de rol ya no usan medidas de escritorio en pantallas chicas. */
-.xoxoficha,
-.xoxo-tablillarol1,
-.xoxo-tablillarol2{
-width:100%!important;
-max-width:100%!important;
-margin:24px auto!important;
-box-sizing:border-box;
-}
-
-/* FICHA DE PERSONAJE */
-.xf-top,
-.xf-section-title,
-.xf-id-grid,
-.xf-story-layout,
-.xf-extra-layout{
-grid-template-columns:1fr;
-}
-
-.xf-top,
-.xf-pane{
-padding:16px;
-}
-
-.xf-tabs{
-grid-template-columns:1fr 1fr;
-}
-
-.xf-tabs label{
-min-height:38px;
-font-size:8px;
-letter-spacing:1px;
-}
-
-.xf-id-left,
-.xf-id-card,
-.xf-story-main,
-.xf-secret-box{
-min-width:0;
-width:100%;
-box-sizing:border-box;
-}
-
-.xf-story-main{
-height:auto;
-max-height:420px;
-}
-
-.xf-data-grid{
-grid-template-columns:1fr;
-}
-
-.xf-main-title,
-.xf-section-title div:first-child,
-.xf-name{
-font-size:24px;
-}
-
-/* TABLILLAS DE ROL */
-.xoxo-tablillarol1,
-.xoxo-tablillarol2{
-padding:8px;
-}
-
-.rol1-inner{
-grid-template-columns:1fr;
-gap:16px;
-padding:18px;
-}
-
-.rol1-icon{
-width:58px;
-height:58px;
-font-size:24px;
-}
-
-.rol2-header{
-min-height:210px;
-padding:20px;
-}
-
-.rol2-head-content{
-grid-template-columns:64px 1fr;
-gap:14px;
-}
-
-.rol2-icon{
-width:64px;
-height:64px;
-padding:5px;
-box-shadow:0 0 0 5px rgba(33,18,41,.55);
-}
-
-.rol2-body{
-padding:20px;
-}
-
-.rol1-title,
-.rol2-title{
-font-size:24px;
-}
-
-.rol1-text,
-.rol2-text{
-font-size:13px;
-line-height:165%;
-}
+  #wrap {
+    width:100%!important;
+    max-width:calc(100vw - 24px)!important;
+  }
 
 }
 /*** AQUI TERMINA MI INTERVENCIÓN PARA INTENTAR HACER RESPONSIVE LA SKIN***/
