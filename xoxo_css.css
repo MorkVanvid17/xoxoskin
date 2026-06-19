@@ -9969,3 +9969,217 @@ color:var(--rol-purple-light);
 }
 
 /*** AQUI TERMINA MI INTERVENCION PARA HACER RESPONSIVE LA SKIN ***/
+
+/***AQUÍ INICIAN LAS TABLILLAS BETTY***/
+/***AQUÍ COMIENZA EL BAÚL***/
+/**** TABLILLA DE LINKS XOXO ****/
+
+.xoxo-links,
+.xoxo-links * {
+  box-sizing:border-box;
+}
+
+.xoxo-links {
+  width:350px;
+  max-width:100%;
+  margin:20px auto 0;
+  padding-bottom:28px;
+  background:var(--fondo3);
+  border:var(--borde2);
+  color:var(--textobase);
+  font-family:var(--fuente1);
+  overflow:hidden;
+}
+
+.xoxo-links-title {
+  padding:28px 30px;
+  background:var(--fondo2);
+  border-bottom:var(--borde2);
+  font-family:var(--fuente2);
+  font-size:30px;
+  line-height:85%;
+  text-transform:uppercase;
+  text-align:right;
+  color:var(--color1);
+  text-shadow:var(--sombra);
+}
+
+.xoxo-links-imgbox {
+  display:flex;
+  justify-content:center;
+  padding:30px 0;
+  background:var(--fondo1);
+  border-bottom:var(--borde2);
+}
+
+.xoxo-links-avatar {
+  width:150px;
+  height:150px;
+  position:relative;
+  padding:8px;
+  background:var(--fondo2);
+  border:var(--borde1);
+  border-radius:100%;
+}
+
+.xoxo-links-avatar img {
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+  object-position:center;
+  border-radius:100%;
+  filter:grayscale(1) contrast(1.05);
+}
+
+.xoxo-links-avatar i {
+  width:48px;
+  height:48px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:absolute;
+  left:-12px;
+  bottom:5px;
+  background:var(--gradient1);
+  border:4px solid var(--fondo3);
+  border-radius:100%;
+  color:var(--fondo2);
+  font-size:19px;
+  line-height:100%;
+}
+
+.xoxo-links-subtitle {
+  margin:0 30px 16px;
+  padding:18px 0 12px;
+  border-bottom:var(--borde2);
+  font-family:var(--fuente1);
+  font-size:9px;
+  font-weight:900;
+  line-height:100%;
+  letter-spacing:3px;
+  text-align:center;
+  text-transform:uppercase;
+  color:var(--color1);
+}
+
+.xoxo-links-grid {
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:10px;
+  margin:0 48px;
+}
+
+.xoxo-links-grid a {
+  min-width:0;
+  display:flex;
+  justify-content:center;
+  position:relative;
+  text-decoration:none!important;
+}
+
+.xoxo-links-grid span {
+  width:54px;
+  height:54px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:var(--fondo2);
+  border:var(--borde2);
+  color:var(--textobase);
+  transition:.3s ease;
+}
+
+.xoxo-links-grid i {
+  font-size:24px;
+  line-height:100%;
+  color:var(--textobase);
+  opacity:.75;
+  transition:.3s ease;
+}
+
+.xoxo-links-grid a:hover span {
+  border-color:var(--color1);
+  background:var(--fondo1);
+}
+
+.xoxo-links-grid a:hover i {
+  color:var(--color1);
+  opacity:1;
+}
+
+.xoxo-links-grid a[data-title]:hover:after {
+  content:attr(data-title);
+  position:absolute;
+  top:58px;
+  left:50%;
+  z-index:5;
+  transform:translateX(-50%) rotate(-4deg);
+  width:max-content;
+  max-width:120px;
+  padding:5px 9px;
+  background:var(--color1);
+  color:var(--fondo2);
+  border-radius:2px;
+  font-family:var(--fuente1);
+  font-size:8px;
+  font-weight:900;
+  line-height:100%;
+  letter-spacing:1px;
+  text-align:center;
+  text-transform:uppercase;
+}
+
+.xoxo-links-credit {
+  width:280px;
+  max-width:90%;
+  margin:0 auto 20px;
+  padding:5px 10px;
+  background:var(--fondo2);
+  border:var(--borde2);
+  text-align:center;
+}
+
+.xoxo-links-credit a {
+  color:var(--color1)!important;
+  text-decoration:none!important;
+  font-family:var(--fuente1);
+  font-size:8px;
+  font-weight:900;
+  letter-spacing:2px;
+  line-height:100%;
+  text-transform:uppercase;
+}
+
+/**** RESPONSIVE TABLILLA DE LINKS XOXO ****/
+
+@media (max-width:500px) {
+  .xoxo-links {
+    width:100%;
+  }
+
+  .xoxo-links-title {
+    padding:24px 22px;
+    font-size:26px;
+    text-align:center;
+  }
+
+  .xoxo-links-grid {
+    margin:0 28px;
+    gap:8px;
+  }
+
+  .xoxo-links-grid span {
+    width:48px;
+    height:48px;
+  }
+
+  .xoxo-links-grid i {
+    font-size:21px;
+  }
+}
+/***AQUÍ TERMINA EL BAÚL***/
+
+/***AQUÍ COMIENZA LA CRONOLOGÍA***/
+
+
