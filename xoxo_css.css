@@ -12161,19 +12161,19 @@ color:var(--rol-purple-light);
 /* Grupo 2 */
 .ms-tablon .ms-last-slot .rec-todo .recent2 a span[class*="group-2"],
 .ms-tablon .ms-last-slot .rec-todo .recent2 a span[class*="group-2"] strong {
-  color:#A47AB8!important;
+  color:#8C3B53!important;
 }
 
 /* Grupo 3 */
 .ms-tablon .ms-last-slot .rec-todo .recent2 a span[class*="group-3"],
 .ms-tablon .ms-last-slot .rec-todo .recent2 a span[class*="group-3"] strong {
-  color:#8C3B53!important;
+  color:#A47AB8!important;
 }
 
 /* Grupo 4 */
 .ms-tablon .ms-last-slot .rec-todo .recent2 a span[class*="group-4"],
 .ms-tablon .ms-last-slot .rec-todo .recent2 a span[class*="group-4"] strong {
-  color:#8C3B53!important;
+  color:#ccbad9!important;
 }
 
 /**** FIN COLOR DE GRUPO EN AUTORES DE ULTIMOS TEMAS - DEFINITIVO ****/
