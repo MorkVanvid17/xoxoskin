@@ -12180,18 +12180,10 @@ color:var(--rol-purple-light);
 /* --- INICIO DE PERSONALIZACIÓN DE MPs (XOXO) --- */
 
 /* --- FORZANDO ESTILOS DE MPs --- */
-form[name="privmsg_list"] tr {
+/* Prueba general para forzar cambios en la tabla de MPs */
+.pmlist table, .pmlist tbody, .pmlist tr, .pmlist td {
     display: block !important;
-    background: rgba(0, 0, 0, 0.6) !important;
-    margin-bottom: 12px !important;
-    padding: 20px !important;
-    border-radius: 12px !important;
-    border: 1px solid rgba(255, 255, 255, 0.15) !important;
-}
-
-form[name="privmsg_list"] td {
-    display: block !important;
-    padding: 5px 0 !important;
-    border: none !important;
+    background: #ff0000 !important; /* Rojo intenso para ver si se aplica el cambio */
+    border: 5px solid yellow !important;
 }
 /* --- FIN DE PERSONALIZACIÓN DE MPs (XOXO) --- */
