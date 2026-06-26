@@ -12177,3 +12177,61 @@ color:var(--rol-purple-light);
 }
 
 /**** FIN COLOR DE GRUPO EN AUTORES DE ULTIMOS TEMAS - DEFINITIVO ****/
+/* --- INICIO DE PERSONALIZACIÓN DE MPs (XOXO) --- */
+
+/* 1. Limpiar el contenedor del formulario */
+form[name="privmsg_list"] {
+    background: transparent !important;
+    border: none !important;
+}
+
+/* 2. Convertir cada fila de mensaje en una tarjeta individual */
+form[name="privmsg_list"] tr {
+    display: block;
+    background: rgba(0, 0, 0, 0.6); /* Fondo semitransparente oscuro */
+    margin-bottom: 12px;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: all 0.3s ease;
+}
+
+/* 3. Efecto al pasar el cursor sobre la tarjeta */
+form[name="privmsg_list"] tr:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* 4. Alinear los elementos de la tabla correctamente */
+form[name="privmsg_list"] td {
+    display: block;
+    padding: 5px 0 !important;
+    border: none !important;
+}
+
+/* 5. Título del mensaje (Asunto) */
+form[name="privmsg_list"] a.topictitle {
+    font-size: 15px;
+    color: #ffffff !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* 6. Autor y fecha */
+form[name="privmsg_list"] .name, 
+form[name="privmsg_list"] .postdetails {
+    color: #aaaaaa !important;
+    font-size: 11px;
+    text-transform: uppercase;
+    margin-top: 5px;
+    display: block;
+}
+
+/* 7. Ocultar checkboxes para un look más limpio */
+form[name="privmsg_list"] input[type="checkbox"] {
+    display: none;
+}
+
+/* --- FIN DE PERSONALIZACIÓN DE MPs (XOXO) --- */
